@@ -5,6 +5,11 @@ var is_dragging = false #state management
 var mouse_offset #center mouse on click
 var delay = .2
 
+var original_position
+
+func _ready() -> void:
+	original_position = self.position
+
 func _physics_process(delta):
 	if is_dragging == true:
 		var tween = get_tree().create_tween()
@@ -19,3 +24,4 @@ func _input(event):
 				mouse_offset = get_global_mouse_position() - global_position
 		else:
 			is_dragging = false
+			self.position = original_position
