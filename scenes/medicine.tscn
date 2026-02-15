@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b4tbddb7wjg21"]
+
+[ext_resource type="Texture2D" uid="uid://ccmrww3h7pltf" path="res://icon.svg" id="1_nmuip"]
+[ext_resource type="Script" uid="uid://bxwwtyfi2whc7" path="res://scripts/medicine.gd" id="2_r8o0g"]
+
+[node name="Medicine" type="Sprite2D" unique_id=1463226475]
+texture = ExtResource("1_nmuip")
+script = ExtResource("2_r8o0g")

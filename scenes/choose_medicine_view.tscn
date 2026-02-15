@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://d35j4cqwebkal"]
+
+[ext_resource type="PackedScene" uid="uid://b4tbddb7wjg21" path="res://scenes/medicine.tscn" id="1_d418r"]
+
+[node name="ChooseMedicineView" type="Node2D" unique_id=1201031482]
+
+[node name="Medicine" parent="." unique_id=1463226475 instance=ExtResource("1_d418r")]
+position = Vector2(192, 158)
