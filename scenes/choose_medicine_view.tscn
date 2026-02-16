@@ -1,21 +1,32 @@
 [gd_scene format=3 uid="uid://d35j4cqwebkal"]
 
+[ext_resource type="Script" uid="uid://dbyvtms5elayt" path="res://scripts/choose_medicine_view.gd" id="1_2j03m"]
 [ext_resource type="PackedScene" uid="uid://b4tbddb7wjg21" path="res://scenes/medicine.tscn" id="1_d418r"]
 [ext_resource type="Texture2D" uid="uid://cgyf5h3euems1" path="res://assets/bg_chooseMedicine.png" id="1_hp3pr"]
 [ext_resource type="Script" uid="uid://ciuvaw47xpuds" path="res://scripts/add_medicine_area.gd" id="3_2ly6c"]
+[ext_resource type="Texture2D" uid="uid://dbti5rars5qu2" path="res://assets/bg_pillonator.jpeg" id="3_apwfp"]
 [ext_resource type="Texture2D" uid="uid://b3jc7jvnaqllr" path="res://assets/hoverRectangle.png" id="4_53vca"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d418r"]
 size = Vector2(290, 242)
 
 [node name="ChooseMedicineView" type="Node2D" unique_id=1201031482]
+script = ExtResource("1_2j03m")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1649444245]
+[node name="Background" type="Sprite2D" parent="." unique_id=1649444245]
 texture = ExtResource("1_hp3pr")
 centered = false
 
+[node name="BgPillonator" type="Sprite2D" parent="." unique_id=1385252514]
+position = Vector2(562, 327)
+scale = Vector2(1.1908396, 1.1908396)
+texture = ExtResource("3_apwfp")
+
+[node name="Medicine2" parent="." unique_id=575474353 instance=ExtResource("1_d418r")]
+position = Vector2(670, 192)
+
 [node name="Medicine" parent="." unique_id=1463226475 instance=ExtResource("1_d418r")]
-position = Vector2(201, 96)
+position = Vector2(335, 96)
 
 [node name="AddMedicineArea" type="Area2D" parent="." unique_id=664211797]
 script = ExtResource("3_2ly6c")
@@ -29,5 +40,20 @@ visible = false
 texture = ExtResource("4_53vca")
 centered = false
 
+[node name="Pill" type="Node2D" parent="." unique_id=1476526020]
+position = Vector2(1016, 314)
+
+[node name="Third" type="Sprite2D" parent="Pill" unique_id=1383077458]
+position = Vector2(0, -149)
+
+[node name="Second" type="Sprite2D" parent="Pill" unique_id=431044541]
+
+[node name="First" type="Sprite2D" parent="Pill" unique_id=210900779]
+position = Vector2(0, 143)
+
+[connection signal="medicine_dropped" from="Medicine2" to="." method="_on_medicine_dropped"]
+[connection signal="medicine_dropped" from="Medicine" to="." method="_on_medicine_dropped"]
+[connection signal="body_entered" from="AddMedicineArea" to="." method="_on_add_medicine_area_body_entered"]
 [connection signal="body_entered" from="AddMedicineArea" to="AddMedicineArea" method="_on_body_entered"]
+[connection signal="body_exited" from="AddMedicineArea" to="." method="_on_add_medicine_area_body_exited"]
 [connection signal="body_exited" from="AddMedicineArea" to="AddMedicineArea" method="_on_body_exited"]

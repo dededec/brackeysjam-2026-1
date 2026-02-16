@@ -1,5 +1,8 @@
 #bytemyke source code for https://www.youtube.com/watch?v=neZ9tLVUDk4&feature=youtu.be
-extends StaticBody2D
+extends AnimatableBody2D
+
+signal medicine_dropped(name: String, sprite: )
+
 @onready var sprite: Sprite2D = $Sprite
 
 var is_dragging = false #state management
@@ -23,6 +26,7 @@ func _input(event):
 			if sprite.get_rect().has_point(to_local(event.position)):
 				is_dragging = true
 				mouse_offset = get_global_mouse_position() - global_position
-		else:
-			is_dragging = false
+		elif is_dragging:
+			medicine_dropped.emit(self.name)
 			self.position = original_position
+			is_dragging = false

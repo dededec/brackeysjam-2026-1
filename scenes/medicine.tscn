@@ -6,11 +6,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r8o0g"]
 size = Vector2(138, 138)
 
-[node name="Medicine" type="AnimatableBody2D" unique_id=575474353]
+[node name="Medicine" type="AnimatableBody2D" unique_id=227287402]
 script = ExtResource("2_r8o0g")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1147173130]
-shape = SubResource("RectangleShape2D_r8o0g")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1463226475]
 texture = ExtResource("1_nmuip")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1147173130]
+shape = SubResource("RectangleShape2D_r8o0g")
