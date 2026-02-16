@@ -1,8 +1,33 @@
 [gd_scene format=3 uid="uid://d35j4cqwebkal"]
 
 [ext_resource type="PackedScene" uid="uid://b4tbddb7wjg21" path="res://scenes/medicine.tscn" id="1_d418r"]
+[ext_resource type="Texture2D" uid="uid://cgyf5h3euems1" path="res://assets/bg_chooseMedicine.png" id="1_hp3pr"]
+[ext_resource type="Script" uid="uid://ciuvaw47xpuds" path="res://scripts/add_medicine_area.gd" id="3_2ly6c"]
+[ext_resource type="Texture2D" uid="uid://b3jc7jvnaqllr" path="res://assets/hoverRectangle.png" id="4_53vca"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d418r"]
+size = Vector2(290, 242)
 
 [node name="ChooseMedicineView" type="Node2D" unique_id=1201031482]
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1649444245]
+texture = ExtResource("1_hp3pr")
+centered = false
+
 [node name="Medicine" parent="." unique_id=1463226475 instance=ExtResource("1_d418r")]
 position = Vector2(201, 96)
+
+[node name="AddMedicineArea" type="Area2D" parent="." unique_id=664211797]
+script = ExtResource("3_2ly6c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AddMedicineArea" unique_id=2113760127]
+position = Vector2(575, 454)
+shape = SubResource("RectangleShape2D_d418r")
+
+[node name="HoverRectangle" type="Sprite2D" parent="AddMedicineArea" unique_id=1113445500]
+visible = false
+texture = ExtResource("4_53vca")
+centered = false
+
+[connection signal="body_entered" from="AddMedicineArea" to="AddMedicineArea" method="_on_body_entered"]
+[connection signal="body_exited" from="AddMedicineArea" to="AddMedicineArea" method="_on_body_exited"]

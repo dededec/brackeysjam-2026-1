@@ -3,6 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://ccmrww3h7pltf" path="res://icon.svg" id="1_nmuip"]
 [ext_resource type="Script" uid="uid://bxwwtyfi2whc7" path="res://scripts/medicine.gd" id="2_r8o0g"]
 
-[node name="Medicine" type="Sprite2D" unique_id=1463226475]
-texture = ExtResource("1_nmuip")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r8o0g"]
+size = Vector2(138, 138)
+
+[node name="Medicine" type="AnimatableBody2D" unique_id=575474353]
 script = ExtResource("2_r8o0g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1147173130]
+shape = SubResource("RectangleShape2D_r8o0g")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1463226475]
+texture = ExtResource("1_nmuip")
