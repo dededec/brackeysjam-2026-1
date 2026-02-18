@@ -1,0 +1,17 @@
+~ start
+do Manager.change_pov_patient()
+Doctor: Otra jornada más
+Doctor: SIGUIENTE!
+
+do Manager.change_pov_doctor()
+Paco: Hola Doctor, que tal la familia?
+Paco: Venia porque me esta doliendo mucho el pie derecho
+Paco: Y además me molesta cuando respiro
+
+do Manager.change_pov_patient()
+Doctor: No puedes seguir asi Paco
+Doctor: Se para lo que utilizas las recetas que te mando
+Doctor: Vamos a ver que te pasa
+
+do Manager.dialog_finished()
+=> END
