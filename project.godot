@@ -22,7 +22,8 @@ Manager="*uid://c00xtjs62s382"
 
 [dialogue_manager]
 
-runtime/balloon_path="res://scenes/balloon.tscn"
+runtime/balloon_path="uid://dw5fadtbkdksl"
+editor/new_file_template=""
 
 [editor_plugins]
 

@@ -67,7 +67,6 @@ var _dotnet_dialogue_manager: RefCounted
 
 var _expression_parser: DMExpressionParser = DMExpressionParser.new()
 
-
 func _ready() -> void:
 	# Cache the known Node2D properties
 	_node_properties = ["Script Variables"]

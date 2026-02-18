@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dw5fadtbkdksl"]
 
-[ext_resource type="Script" uid="uid://beyg16s6h0fwf" path="res://scenes/balloon.gd" id="1_36de5"]
+[ext_resource type="Script" uid="uid://beyg16s6h0fwf" path="res://scripts/balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
 [ext_resource type="Texture2D" uid="uid://ccmrww3h7pltf" path="res://icon.svg" id="3_u045a"]
@@ -175,6 +175,7 @@ autoplay = &"progress"
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" unique_id=1448823398 node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

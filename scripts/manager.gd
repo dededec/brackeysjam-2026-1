@@ -9,7 +9,8 @@ var mouse_on_computer: bool = false
 var computer: Node2D = null
 var current_pov: String = "patient"
 var pov: AnimatedSprite2D = null
-
+var ballon: CanvasLayer = null
+var extra_canvas = null
 
 # ================================
 # REGISTER FUNCTIONS
@@ -28,9 +29,15 @@ func register_computer(node: Node2D) -> void:
 # ================================
 func _process(delta: float) -> void:
 	# Ignore dialogue input while computer is active
-	if computer.visible:
+	if computer and computer.visible:
 		return
-
+		
+	var node = get_tree().root.get_node_or_null("Consult/Ballon")
+	if node and ballon == null:
+		ballon = node
+		ballon.hide()
+		extra_canvas = get_tree().root.get_node_or_null("Consult/@CanvasLayer@11")
+		
 	# Start dialogue when space is pressed
 	if mouse_on_computer == false and Input.is_action_just_pressed("space"):
 		start_dialog()
@@ -77,9 +84,8 @@ func change_pov_doctor() -> void:
 # COMPUTER UI FUNCTIONS
 # ================================
 func activate_computer() -> void:
-	# Pause dialogue balloon
-	if DialogueManager.current_balloon != null:
-		DialogueManager.current_balloon.visible = false
+	extra_canvas.hide()
+	print("BALLOOON", ballon.visible)
 
 	# Show computer UI
 	if computer != null:
