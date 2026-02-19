@@ -11,10 +11,32 @@
 [ext_resource type="Texture2D" uid="uid://brnueefoy2h34" path="res://assets/00 PC_PANTALLA/00 PC_BOTON OJO 1.png" id="9_mkf0m"]
 [ext_resource type="Texture2D" uid="uid://dtwjaj5csttn4" path="res://assets/00 PC_PANTALLA/00 PC_BOTON OJO 2.png" id="10_usnea"]
 [ext_resource type="Texture2D" uid="uid://bbfxuorhfsxne" path="res://assets/00 PC_PANTALLA/00 PC_BOTON OJO CERRADO.png" id="11_mkf0m"]
+[ext_resource type="Texture2D" uid="uid://3u07iudlk1g1" path="res://assets/00 PC_PANTALLA/00 PC_BOTON READY 1.png" id="12_a46w6"]
+[ext_resource type="Texture2D" uid="uid://pl23tabil3f8" path="res://assets/00 PC_PANTALLA/00 PC_BOTON READY 2.png" id="13_rf3qt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q4ddm"]
 radius = 44.00824
 height = 251.4248
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxf2y"]
+atlas = ExtResource("9_mkf0m")
+region = Rect2(40.987278, 439.00848, 102.1519, 38.02957)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6m0xv"]
+atlas = ExtResource("10_usnea")
+region = Rect2(40.987278, 439.00848, 102.1519, 38.02957)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u21ho"]
+atlas = ExtResource("11_mkf0m")
+region = Rect2(40.987278, 439.00848, 102.1519, 38.02957)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a46w6"]
+atlas = ExtResource("12_a46w6")
+region = Rect2(379.05954, 440.90247, 101.98099, 35.120728)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rf3qt"]
+atlas = ExtResource("13_rf3qt")
+region = Rect2(379.05954, 440.90247, 101.98099, 35.120728)
 
 [node name="ChooseMedicineView" type="Node2D" unique_id=1201031482]
 script = ExtResource("1_2j03m")
@@ -89,11 +111,21 @@ position = Vector2(311, 227)
 position = Vector2(406, 227)
 
 [node name="EyeButton" type="TextureButton" parent="." unique_id=1710012929]
-offset_right = 524.0
-offset_bottom = 524.0
-texture_normal = ExtResource("9_mkf0m")
-texture_pressed = ExtResource("10_usnea")
-texture_disabled = ExtResource("11_mkf0m")
+offset_left = 40.0
+offset_top = 438.0
+offset_right = 142.0
+offset_bottom = 476.0
+texture_normal = SubResource("AtlasTexture_wxf2y")
+texture_pressed = SubResource("AtlasTexture_6m0xv")
+texture_disabled = SubResource("AtlasTexture_u21ho")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1307764515]
+offset_left = 379.0
+offset_top = 438.0
+offset_right = 480.0
+offset_bottom = 473.0
+texture_normal = SubResource("AtlasTexture_a46w6")
+texture_pressed = SubResource("AtlasTexture_rf3qt")
 
 [connection signal="body_entered" from="AddMedicineArea" to="." method="_on_add_medicine_area_body_entered"]
 [connection signal="body_entered" from="AddMedicineArea" to="AddMedicineArea" method="_on_body_entered"]
