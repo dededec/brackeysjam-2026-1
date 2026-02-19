@@ -1,5 +1,7 @@
 extends Node
 
+var chosen_symptoms_keys: Array[String] = []
+
 const symptoms = {
 	"s1": ["s1-1", "s1-2", "s1-3"],
 	"s2": ["s2-2", "s2-2", "s2-3"],
@@ -16,8 +18,10 @@ func _get_random_sentence(key: String) -> String:
 
 func randomise_symptoms() -> Dictionary[String, String]:
 	var random_symptoms: Dictionary[String, String] = {}
+	chosen_symptoms_keys.clear()
 	for i in range(3):
 		var symptom_key = "s" + str(i+1)
 		var random_key = "s" + str(randi() % symptoms.keys().size())
+		chosen_symptoms_keys.push_back(random_key)
 		random_symptoms[symptom_key] = _get_random_sentence(random_key)
 	return random_symptoms
