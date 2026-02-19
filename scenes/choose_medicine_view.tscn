@@ -119,7 +119,7 @@ texture_normal = SubResource("AtlasTexture_wxf2y")
 texture_pressed = SubResource("AtlasTexture_6m0xv")
 texture_disabled = SubResource("AtlasTexture_u21ho")
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=1307764515]
+[node name="ReadyButton" type="TextureButton" parent="." unique_id=1307764515]
 offset_left = 379.0
 offset_top = 438.0
 offset_right = 480.0
@@ -144,3 +144,4 @@ texture_pressed = SubResource("AtlasTexture_rf3qt")
 [connection signal="medicine_dropped" from="Medicines/Medicine7" to="." method="_on_medicine_dropped"]
 [connection signal="medicine_dropped" from="Medicines/Medicine8" to="." method="_on_medicine_dropped"]
 [connection signal="pressed" from="EyeButton" to="." method="_on_eye_button_pressed"]
+[connection signal="pressed" from="ReadyButton" to="." method="_on_ready_button_pressed"]
