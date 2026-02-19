@@ -20,7 +20,7 @@ script = ExtResource("1_2j03m")
 texture = ExtResource("4_rmdi8")
 centered = false
 
-[node name="Pill2" type="Sprite2D" parent="." unique_id=477547643]
+[node name="PillSprite" type="Sprite2D" parent="." unique_id=477547643]
 texture = ExtResource("4_eliwx")
 centered = false
 
