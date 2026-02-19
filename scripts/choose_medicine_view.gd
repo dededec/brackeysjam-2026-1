@@ -1,5 +1,7 @@
 extends Node2D
 
+signal eye_button_pressed
+
 var is_on_medicine_area: bool = false
 var selected_medicines: Array[String] = []
 @onready var pill: Node2D = $Pill
@@ -25,7 +27,9 @@ func _on_medicine_dropped(medicine_name: String) -> void:
 		find_medicine_by_name(medicine_name).hide()
 		pill.show_medicine(medicine_name, selected_medicines.size())
 
-
 func _on_pill_medicine_erased(index: int) -> void:
 	find_medicine_by_name(selected_medicines[index]).visible = true
 	selected_medicines.remove_at(index)
+
+func _on_eye_button_pressed() -> void:
+	eye_button_pressed.emit()

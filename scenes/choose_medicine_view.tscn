@@ -111,3 +111,4 @@ texture_disabled = ExtResource("11_mkf0m")
 [connection signal="medicine_dropped" from="Medicines/Medicine6" to="." method="_on_medicine_dropped"]
 [connection signal="medicine_dropped" from="Medicines/Medicine7" to="." method="_on_medicine_dropped"]
 [connection signal="medicine_dropped" from="Medicines/Medicine8" to="." method="_on_medicine_dropped"]
+[connection signal="pressed" from="EyeButton" to="." method="_on_eye_button_pressed"]
