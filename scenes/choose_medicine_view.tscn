@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://dpqxotrakrnah" path="res://assets/00 PC_PANTALLA/00 PC_BASE PANTALLA.png" id="4_rmdi8"]
 [ext_resource type="Script" uid="uid://dt60r3etj8g62" path="res://scripts/pill.gd" id="7_q4ddm"]
 [ext_resource type="Script" uid="uid://cjfqcw70rwcp5" path="res://scenes/pill_slot.gd" id="9_4ehqi"]
+[ext_resource type="Texture2D" uid="uid://brnueefoy2h34" path="res://assets/00 PC_PANTALLA/00 PC_BOTON OJO 1.png" id="9_mkf0m"]
+[ext_resource type="Texture2D" uid="uid://dtwjaj5csttn4" path="res://assets/00 PC_PANTALLA/00 PC_BOTON OJO 2.png" id="10_usnea"]
+[ext_resource type="Texture2D" uid="uid://bbfxuorhfsxne" path="res://assets/00 PC_PANTALLA/00 PC_BOTON OJO CERRADO.png" id="11_mkf0m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q4ddm"]
 radius = 44.00824
@@ -84,6 +87,13 @@ position = Vector2(311, 227)
 
 [node name="Medicine8" parent="Medicines" unique_id=227287402 instance=ExtResource("1_d418r")]
 position = Vector2(406, 227)
+
+[node name="EyeButton" type="TextureButton" parent="." unique_id=1710012929]
+offset_right = 524.0
+offset_bottom = 524.0
+texture_normal = ExtResource("9_mkf0m")
+texture_pressed = ExtResource("10_usnea")
+texture_disabled = ExtResource("11_mkf0m")
 
 [connection signal="body_entered" from="AddMedicineArea" to="." method="_on_add_medicine_area_body_entered"]
 [connection signal="body_entered" from="AddMedicineArea" to="AddMedicineArea" method="_on_body_entered"]
