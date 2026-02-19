@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://los6yva0dv34"]
+
+[ext_resource type="Script" uid="uid://dyekaxhxmgf6x" path="res://scripts/consult.gd" id="1_2nhxp"]
+[ext_resource type="Texture2D" uid="uid://2012iggjksfo" path="res://assets/pov_doctor.png" id="1_hftaw"]
+[ext_resource type="Texture2D" uid="uid://cdcbk48hg3hkl" path="res://assets/pov_patient.png" id="2_2nhxp"]
+[ext_resource type="PackedScene" uid="uid://d35j4cqwebkal" path="res://scenes/choose_medicine_view.tscn" id="4_7votl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7votl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hftaw")
+}],
+"loop": true,
+"name": &"idle_doctor",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2nhxp")
+}],
+"loop": true,
+"name": &"idle_patient",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2nhxp"]
+size = Vector2(141, 172)
+
+[node name="Consult" type="Node2D" unique_id=1391024365]
+script = ExtResource("1_2nhxp")
+
+[node name="pov" type="AnimatedSprite2D" parent="." unique_id=1477936567]
+position = Vector2(576, 323.99997)
+scale = Vector2(0.59999996, 0.59999996)
+sprite_frames = SubResource("SpriteFrames_7votl")
+animation = &"idle_doctor"
+autoplay = "idle_patient"
+
+[node name="computer_area" type="Area2D" parent="." unique_id=159649394]
+position = Vector2(317, 366)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="computer_area" unique_id=1305414474]
+scale = Vector2(1.5600002, 1)
+shape = SubResource("RectangleShape2D_2nhxp")
+
+[node name="ChooseMedicineView" parent="." unique_id=1201031482 instance=ExtResource("4_7votl")]
+visible = false
+position = Vector2(1, 1)
+
+[connection signal="mouse_entered" from="computer_area" to="." method="_on_computer_area_mouse_entered"]
+[connection signal="mouse_exited" from="computer_area" to="." method="_on_computer_area_mouse_exited"]
