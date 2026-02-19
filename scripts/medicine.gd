@@ -1,7 +1,7 @@
 #bytemyke source code for https://www.youtube.com/watch?v=neZ9tLVUDk4&feature=youtu.be
 extends AnimatableBody2D
 
-signal medicine_dropped(name: String, sprite: )
+signal medicine_dropped(name: String)
 
 @onready var sprite: Sprite2D = $Sprite
 
@@ -21,7 +21,7 @@ func _physics_process(delta):
 		tween.tween_property(self, "position", final_position, delay * delta)
 
 func _input(event):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+	if self.visible and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
 			if sprite.get_rect().has_point(to_local(event.position)):
 				is_dragging = true

@@ -24,12 +24,6 @@ centered = false
 texture = ExtResource("4_eliwx")
 centered = false
 
-[node name="Medicine2" parent="." unique_id=575474353 instance=ExtResource("1_d418r")]
-position = Vector2(207, 127)
-
-[node name="Medicine" parent="." unique_id=1463226475 instance=ExtResource("1_d418r")]
-position = Vector2(111, 125)
-
 [node name="AddMedicineArea" type="Area2D" parent="." unique_id=664211797]
 script = ExtResource("3_2ly6c")
 
@@ -65,8 +59,32 @@ region_enabled = true
 region_rect = Rect2(250, 330, 64, 64)
 script = ExtResource("9_4ehqi")
 
-[connection signal="medicine_dropped" from="Medicine2" to="." method="_on_medicine_dropped"]
-[connection signal="medicine_dropped" from="Medicine" to="." method="_on_medicine_dropped"]
+[node name="Medicines" type="Node" parent="." unique_id=948588998]
+
+[node name="Medicine" parent="Medicines" unique_id=1463226475 instance=ExtResource("1_d418r")]
+position = Vector2(111, 125)
+
+[node name="Medicine2" parent="Medicines" unique_id=575474353 instance=ExtResource("1_d418r")]
+position = Vector2(207, 127)
+
+[node name="Medicine3" parent="Medicines" unique_id=741994440 instance=ExtResource("1_d418r")]
+position = Vector2(310, 127)
+
+[node name="Medicine4" parent="Medicines" unique_id=2046902172 instance=ExtResource("1_d418r")]
+position = Vector2(405, 128)
+
+[node name="Medicine5" parent="Medicines" unique_id=1337894666 instance=ExtResource("1_d418r")]
+position = Vector2(112, 228)
+
+[node name="Medicine6" parent="Medicines" unique_id=449973348 instance=ExtResource("1_d418r")]
+position = Vector2(207, 227)
+
+[node name="Medicine7" parent="Medicines" unique_id=2146768791 instance=ExtResource("1_d418r")]
+position = Vector2(311, 227)
+
+[node name="Medicine8" parent="Medicines" unique_id=227287402 instance=ExtResource("1_d418r")]
+position = Vector2(406, 227)
+
 [connection signal="body_entered" from="AddMedicineArea" to="." method="_on_add_medicine_area_body_entered"]
 [connection signal="body_entered" from="AddMedicineArea" to="AddMedicineArea" method="_on_body_entered"]
 [connection signal="body_exited" from="AddMedicineArea" to="." method="_on_add_medicine_area_body_exited"]
@@ -75,3 +93,11 @@ script = ExtResource("9_4ehqi")
 [connection signal="slot_clicked" from="Pill/Third" to="Pill" method="_on_third_button_down"]
 [connection signal="slot_clicked" from="Pill/Second" to="Pill" method="_on_second_button_down"]
 [connection signal="slot_clicked" from="Pill/First" to="Pill" method="_on_first_button_down"]
+[connection signal="medicine_dropped" from="Medicines/Medicine" to="." method="_on_medicine_dropped"]
+[connection signal="medicine_dropped" from="Medicines/Medicine2" to="." method="_on_medicine_dropped"]
+[connection signal="medicine_dropped" from="Medicines/Medicine3" to="." method="_on_medicine_dropped"]
+[connection signal="medicine_dropped" from="Medicines/Medicine4" to="." method="_on_medicine_dropped"]
+[connection signal="medicine_dropped" from="Medicines/Medicine5" to="." method="_on_medicine_dropped"]
+[connection signal="medicine_dropped" from="Medicines/Medicine6" to="." method="_on_medicine_dropped"]
+[connection signal="medicine_dropped" from="Medicines/Medicine7" to="." method="_on_medicine_dropped"]
+[connection signal="medicine_dropped" from="Medicines/Medicine8" to="." method="_on_medicine_dropped"]
