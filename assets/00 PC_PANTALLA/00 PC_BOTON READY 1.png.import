@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgyf5h3euems1"
-path="res://.godot/imported/bg_chooseMedicine.png-e509d4e417bc75b07f799e95d51a645f.ctex"
+uid="uid://3u07iudlk1g1"
+path="res://.godot/imported/00 PC_BOTON READY 1.png-9ae577434310eaaa0a3d3f55b30c56ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bg_chooseMedicine.png"
-dest_files=["res://.godot/imported/bg_chooseMedicine.png-e509d4e417bc75b07f799e95d51a645f.ctex"]
+source_file="res://assets/00 PC_PANTALLA/00 PC_BOTON READY 1.png"
+dest_files=["res://.godot/imported/00 PC_BOTON READY 1.png-9ae577434310eaaa0a3d3f55b30c56ef.ctex"]
 
 [params]
 

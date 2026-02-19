@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbti5rars5qu2"
-path="res://.godot/imported/bg_pillonator.jpeg-e29dbc3571816bb2fb9e581fff4613cd.ctex"
+uid="uid://o8iw2ob6mbrc"
+path="res://.godot/imported/00 PC_PILDORITAS FONDO A.png-7758e4c3d372fbd50d0fe15131a54540.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bg_pillonator.jpeg"
-dest_files=["res://.godot/imported/bg_pillonator.jpeg-e29dbc3571816bb2fb9e581fff4613cd.ctex"]
+source_file="res://assets/00 PC_PANTALLA/00 PC_PILDORITAS FONDO A.png"
+dest_files=["res://.godot/imported/00 PC_PILDORITAS FONDO A.png-7758e4c3d372fbd50d0fe15131a54540.ctex"]
 
 [params]
 

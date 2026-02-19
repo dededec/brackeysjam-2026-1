@@ -2,39 +2,41 @@
 
 [ext_resource type="Script" uid="uid://dbyvtms5elayt" path="res://scripts/choose_medicine_view.gd" id="1_2j03m"]
 [ext_resource type="PackedScene" uid="uid://b4tbddb7wjg21" path="res://scenes/medicine.tscn" id="1_d418r"]
-[ext_resource type="Texture2D" uid="uid://cgyf5h3euems1" path="res://assets/bg_chooseMedicine.png" id="1_hp3pr"]
 [ext_resource type="Script" uid="uid://ciuvaw47xpuds" path="res://scripts/add_medicine_area.gd" id="3_2ly6c"]
-[ext_resource type="Texture2D" uid="uid://dbti5rars5qu2" path="res://assets/bg_pillonator.jpeg" id="3_apwfp"]
 [ext_resource type="Texture2D" uid="uid://b3jc7jvnaqllr" path="res://assets/hoverRectangle.png" id="4_53vca"]
+[ext_resource type="Texture2D" uid="uid://bt6p5g60jokcm" path="res://assets/00 PC_PANTALLA/00 PC_PILDORA FONDO.png" id="4_eliwx"]
+[ext_resource type="Texture2D" uid="uid://dpqxotrakrnah" path="res://assets/00 PC_PANTALLA/00 PC_BASE PANTALLA.png" id="4_rmdi8"]
 [ext_resource type="Script" uid="uid://dt60r3etj8g62" path="res://scripts/pill.gd" id="7_q4ddm"]
+[ext_resource type="Script" uid="uid://cjfqcw70rwcp5" path="res://scenes/pill_slot.gd" id="9_4ehqi"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d418r"]
-size = Vector2(290, 242)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q4ddm"]
+radius = 44.00824
+height = 251.4248
 
 [node name="ChooseMedicineView" type="Node2D" unique_id=1201031482]
 script = ExtResource("1_2j03m")
 
-[node name="Background" type="Sprite2D" parent="." unique_id=1649444245]
-texture = ExtResource("1_hp3pr")
+[node name="BgBase" type="Sprite2D" parent="." unique_id=1962408155]
+texture = ExtResource("4_rmdi8")
 centered = false
 
-[node name="BgPillonator" type="Sprite2D" parent="." unique_id=1385252514]
-position = Vector2(562, 327)
-scale = Vector2(1.1908396, 1.1908396)
-texture = ExtResource("3_apwfp")
+[node name="Pill2" type="Sprite2D" parent="." unique_id=477547643]
+texture = ExtResource("4_eliwx")
+centered = false
 
 [node name="Medicine2" parent="." unique_id=575474353 instance=ExtResource("1_d418r")]
-position = Vector2(670, 192)
+position = Vector2(207, 127)
 
 [node name="Medicine" parent="." unique_id=1463226475 instance=ExtResource("1_d418r")]
-position = Vector2(335, 96)
+position = Vector2(111, 125)
 
 [node name="AddMedicineArea" type="Area2D" parent="." unique_id=664211797]
 script = ExtResource("3_2ly6c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AddMedicineArea" unique_id=2113760127]
-position = Vector2(575, 454)
-shape = SubResource("RectangleShape2D_d418r")
+position = Vector2(328, 345)
+rotation = 1.1868238
+shape = SubResource("CapsuleShape2D_q4ddm")
 
 [node name="HoverRectangle" type="Sprite2D" parent="AddMedicineArea" unique_id=1113445500]
 visible = false
@@ -42,43 +44,26 @@ texture = ExtResource("4_53vca")
 centered = false
 
 [node name="Pill" type="Node2D" parent="." unique_id=1476526020]
-position = Vector2(1016, 314)
+position = Vector2(338, 338)
 script = ExtResource("7_q4ddm")
 
-[node name="Third" type="TextureButton" parent="Pill" unique_id=574865172]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -247.0
-offset_right = 64.0
-offset_bottom = -119.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Third" type="Sprite2D" parent="Pill" unique_id=959175101]
+position = Vector2(54, -25)
+region_enabled = true
+region_rect = Rect2(250, 330, 64, 64)
+script = ExtResource("9_4ehqi")
 
-[node name="Second" type="TextureButton" parent="Pill" unique_id=1591121754]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Second" type="Sprite2D" parent="Pill" unique_id=1634220072]
+position = Vector2(-2, -1)
+region_enabled = true
+region_rect = Rect2(250, 330, 64, 64)
+script = ExtResource("9_4ehqi")
 
-[node name="First" type="TextureButton" parent="Pill" unique_id=682152525]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = 127.0
-offset_right = 64.0
-offset_bottom = 255.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="First" type="Sprite2D" parent="Pill" unique_id=1978947895]
+position = Vector2(-57, 25)
+region_enabled = true
+region_rect = Rect2(250, 330, 64, 64)
+script = ExtResource("9_4ehqi")
 
 [connection signal="medicine_dropped" from="Medicine2" to="." method="_on_medicine_dropped"]
 [connection signal="medicine_dropped" from="Medicine" to="." method="_on_medicine_dropped"]
@@ -87,6 +72,6 @@ grow_vertical = 2
 [connection signal="body_exited" from="AddMedicineArea" to="." method="_on_add_medicine_area_body_exited"]
 [connection signal="body_exited" from="AddMedicineArea" to="AddMedicineArea" method="_on_body_exited"]
 [connection signal="medicine_erased" from="Pill" to="." method="_on_pill_medicine_erased"]
-[connection signal="button_down" from="Pill/Third" to="Pill" method="_on_third_button_down"]
-[connection signal="button_down" from="Pill/Second" to="Pill" method="_on_second_button_down"]
-[connection signal="button_down" from="Pill/First" to="Pill" method="_on_first_button_down"]
+[connection signal="slot_clicked" from="Pill/Third" to="Pill" method="_on_third_button_down"]
+[connection signal="slot_clicked" from="Pill/Second" to="Pill" method="_on_second_button_down"]
+[connection signal="slot_clicked" from="Pill/First" to="Pill" method="_on_first_button_down"]
