@@ -25,6 +25,11 @@ Manager="*uid://c00xtjs62s382"
 runtime/balloon_path="uid://dw5fadtbkdksl"
 editor/new_file_template=""
 
+[display]
+
+window/size/viewport_width=524
+window/size/viewport_height=524
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
