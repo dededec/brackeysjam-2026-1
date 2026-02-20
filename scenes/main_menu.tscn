@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bpr7ol0gocjdd"]
 
+[ext_resource type="Script" uid="uid://dd08ihw1smdy4" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://mbnpxh8ocgj7" path="res://assets/titulo.png" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://d115n1xhhrqos" path="res://assets/play_button.png" id="2_ekxnf"]
 
@@ -15,6 +16,7 @@ animations = [{
 }]
 
 [node name="MainMenu" type="Node2D" unique_id=1690231795]
+script = ExtResource("1_bqqt6")
 
 [node name="MainMenuBackground" type="AnimatedSprite2D" parent="." unique_id=1317883806]
 position = Vector2(262, 262)
@@ -26,3 +28,5 @@ offset_top = 274.0
 offset_right = 325.0
 offset_bottom = 410.0
 icon = ExtResource("2_ekxnf")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
