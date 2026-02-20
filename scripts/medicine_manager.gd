@@ -33,7 +33,7 @@ func randomise_symptoms() -> void:
 	for i in range(3):
 		var symptom_key = "s" + str(i+1)
 		var random_key = "s" + str(randi() % symptoms.keys().size() + 1)
-		chosen_symptoms_keys.push_back(temp_random_symptoms)
+		chosen_symptoms_keys.push_back(random_key)
 		temp_random_symptoms[symptom_key] = _get_random_sentence(random_key)
 	random_symptoms = temp_random_symptoms
 	print(random_symptoms)
