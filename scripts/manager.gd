@@ -32,7 +32,6 @@ func _process(delta: float) -> void:
 	var node = get_tree().root.get_node_or_null("Consult/Ballon")
 	if node and ballon == null:
 		ballon = node
-		ballon.hide()
 		extra_canvas = get_tree().root.get_node_or_null("Consult/@CanvasLayer@11")
 		
 	if mouse_on_computer == false and Input.is_action_just_pressed("space"):
@@ -62,7 +61,7 @@ func change_pov_doctor() -> void:
 		patient.show()
 
 func activate_computer() -> void:
-	extra_canvas.hide()
+	ballon.hide()
 	if computer != null:
 		computer.visible = true
 		computer.set_process(true)
@@ -71,7 +70,7 @@ func deactivate_computer() -> void:
 	if computer != null:
 		computer.visible = false
 		computer.set_process(false)
-	extra_canvas.show()
+	ballon.show()
 
 func _on_computer_area_mouse_entered() -> void:
 	mouse_on_computer = true
