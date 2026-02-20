@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 DialogueManager="*uid://c3rodes2l3gxb"
 Manager="*uid://c00xtjs62s382"
 MedicineManager="*uid://begde4hcgcxb0"
+ScoreManager="*uid://c8veqflw2vijk"
 
 [dialogue_manager]
 

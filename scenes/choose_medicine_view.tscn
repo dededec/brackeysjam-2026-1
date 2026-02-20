@@ -2,12 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dbyvtms5elayt" path="res://scripts/choose_medicine_view.gd" id="1_2j03m"]
 [ext_resource type="PackedScene" uid="uid://b4tbddb7wjg21" path="res://scenes/medicine.tscn" id="1_d418r"]
-[ext_resource type="Script" uid="uid://ciuvaw47xpuds" path="res://scripts/add_medicine_area.gd" id="3_2ly6c"]
-[ext_resource type="Texture2D" uid="uid://b3jc7jvnaqllr" path="res://assets/hoverRectangle.png" id="4_53vca"]
 [ext_resource type="Texture2D" uid="uid://bt6p5g60jokcm" path="res://assets/00 PC_PANTALLA/00 PC_PILDORA FONDO.png" id="4_eliwx"]
 [ext_resource type="Texture2D" uid="uid://dpqxotrakrnah" path="res://assets/00 PC_PANTALLA/00 PC_BASE PANTALLA.png" id="4_rmdi8"]
 [ext_resource type="Script" uid="uid://dt60r3etj8g62" path="res://scripts/pill.gd" id="7_q4ddm"]
-[ext_resource type="Script" path="res://scenes/pill_slot.gd" id="9_4ehqi"]
+[ext_resource type="Script" uid="uid://cjfqcw70rwcp5" path="res://scenes/pill_slot.gd" id="9_4ehqi"]
 [ext_resource type="Texture2D" uid="uid://brnueefoy2h34" path="res://assets/00 PC_PANTALLA/00 PC_BOTON OJO 1.png" id="9_mkf0m"]
 [ext_resource type="Texture2D" uid="uid://dtwjaj5csttn4" path="res://assets/00 PC_PANTALLA/00 PC_BOTON OJO 2.png" id="10_usnea"]
 [ext_resource type="Texture2D" uid="uid://bbfxuorhfsxne" path="res://assets/00 PC_PANTALLA/00 PC_BOTON OJO CERRADO.png" id="11_mkf0m"]
@@ -50,17 +48,11 @@ texture = ExtResource("4_eliwx")
 centered = false
 
 [node name="AddMedicineArea" type="Area2D" parent="." unique_id=664211797]
-script = ExtResource("3_2ly6c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AddMedicineArea" unique_id=2113760127]
 position = Vector2(328, 345)
 rotation = 1.1868238
 shape = SubResource("CapsuleShape2D_q4ddm")
-
-[node name="HoverRectangle" type="Sprite2D" parent="AddMedicineArea" unique_id=1113445500]
-visible = false
-texture = ExtResource("4_53vca")
-centered = false
 
 [node name="Pill" type="Node2D" parent="." unique_id=1476526020]
 position = Vector2(338, 338)

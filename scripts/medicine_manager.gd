@@ -12,6 +12,17 @@ const symptoms = {
 	"s7": ["s7-1", "s7-2", "s7-3"],
 	"s8": ["s8-1", "s8-2", "s8-3"],
 	}
+
+const medicine_symptoms = {
+	"m1": ["s1", "s2", "s3"],
+	"m2": ["s1", "s2", "s3"],
+	"m3": ["s1", "s2", "s3"],
+	"m4": ["s1", "s2", "s3"],
+	"m5": ["s1", "s2", "s3"],
+	"m6": ["s1", "s2", "s3"],
+	"m7": ["s1", "s2", "s3"],
+	"m8": ["s1", "s2", "s3"],
+}
 	
 func _get_random_sentence(key: String) -> String:
 	return symptoms[key][randi() % 3]
@@ -26,3 +37,13 @@ func randomise_symptoms() -> void:
 		temp_random_symptoms[symptom_key] = _get_random_sentence(random_key)
 	random_symptoms = temp_random_symptoms
 	print(random_symptoms)
+
+func has_healed_patient(medicines: Array[String]) -> bool:
+	var healed_symptoms = []
+	for medicine in medicines:
+		healed_symptoms.append(medicine_symptoms[medicine])
+	
+	for symptom in random_symptoms:
+		if not healed_symptoms.has(symptom):
+			return false 
+	return true
