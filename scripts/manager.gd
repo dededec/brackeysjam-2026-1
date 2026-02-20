@@ -24,7 +24,6 @@ func register_computer(node: Node2D) -> void:
 	computer.set_process(false)
 
 func _process(delta: float) -> void:
-	# Ignore dialogue input while computer is active
 	if computer and computer.visible:
 		return
 	var node = get_tree().root.get_node_or_null("Consult/Ballon")
@@ -33,15 +32,8 @@ func _process(delta: float) -> void:
 		ballon.hide()
 		extra_canvas = get_tree().root.get_node_or_null("Consult/@CanvasLayer@11")
 		
-	# Start dialogue when space is pressed
 	if mouse_on_computer == false and Input.is_action_just_pressed("space"):
 		start_dialog()
-
-	# Debug: print current POV and mouse state
-	if Input.is_action_just_pressed("left_clic"):
-		print("Current POV:", current_pov, "Mouse on computer:", mouse_on_computer)
-
-	# Activate computer when clicking on it with doctor POV
 	if mouse_on_computer and Input.is_action_just_pressed("left_clic") and current_pov == "doctor":
 		activate_computer()
 
@@ -68,16 +60,12 @@ func change_pov_doctor() -> void:
 
 func activate_computer() -> void:
 	extra_canvas.hide()
-	print("BALLOOON", ballon.visible)
-
-	# Show computer UI
 	if computer != null:
 		computer.visible = true
 		computer.set_process(true)
 
 
 func deactivate_computer() -> void:
-	# Hide computer UI
 	if computer != null:
 		computer.visible = false
 		computer.set_process(false)

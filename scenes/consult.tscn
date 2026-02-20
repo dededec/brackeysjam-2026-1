@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d35j4cqwebkal" path="res://scenes/choose_medicine_view.tscn" id="4_7votl"]
 [ext_resource type="Texture2D" uid="uid://hm58viya07gc" path="res://assets/Doctor/00 DOCTOR 1_BASE.png" id="5_x7qaf"]
 [ext_resource type="Texture2D" uid="uid://bxuakrsokrlyu" path="res://assets/Doctor/00 DOCTOR 1_FONDO.png" id="6_3fpf8"]
+[ext_resource type="Script" uid="uid://bhwhnosk8rcbu" path="res://scripts/doctor_pov.gd" id="6_ax250"]
 [ext_resource type="Texture2D" uid="uid://cwjmpsxryymfy" path="res://assets/Doctor/00 DOCTOR 1_MESA BASE.png" id="7_ax250"]
 [ext_resource type="Texture2D" uid="uid://rtykg7m0rujb" path="res://assets/Doctor/00 DOCTOR 1_ORDENADOR.png" id="8_jm02e"]
 [ext_resource type="Texture2D" uid="uid://qig5u45rpccp" path="res://assets/Doctor/00 DOCTOR 1_MANOS A.png" id="9_6bh7u"]
@@ -92,6 +93,7 @@ texture = ExtResource("5_x7qaf")
 
 [node name="doctor_pov" type="Node2D" parent="." unique_id=1042157935]
 position = Vector2(262, 262)
+script = ExtResource("6_ax250")
 
 [node name="base" type="Sprite2D" parent="doctor_pov" unique_id=841978618]
 texture = ExtResource("5_x7qaf")
@@ -109,7 +111,10 @@ texture = ExtResource("8_jm02e")
 sprite_frames = SubResource("SpriteFrames_pnvlt")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.18480738
+frame_progress = 0.91583246
+
+[node name="anim_timer" type="Timer" parent="doctor_pov" unique_id=861157575]
 
 [connection signal="mouse_entered" from="computer_area" to="." method="_on_computer_area_mouse_entered"]
 [connection signal="mouse_exited" from="computer_area" to="." method="_on_computer_area_mouse_exited"]
+[connection signal="timeout" from="doctor_pov/anim_timer" to="doctor_pov" method="_on_anim_timer_timeout"]
