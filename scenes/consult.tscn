@@ -4,15 +4,28 @@
 [ext_resource type="Texture2D" uid="uid://2012iggjksfo" path="res://assets/pov_doctor.png" id="1_hftaw"]
 [ext_resource type="Texture2D" uid="uid://cdcbk48hg3hkl" path="res://assets/pov_patient.png" id="2_2nhxp"]
 [ext_resource type="PackedScene" uid="uid://d35j4cqwebkal" path="res://scenes/choose_medicine_view.tscn" id="4_7votl"]
+[ext_resource type="Texture2D" uid="uid://i1hbfvmf2vcs" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_FONDO.png" id="5_6bh7u"]
 [ext_resource type="Texture2D" uid="uid://hm58viya07gc" path="res://assets/Doctor/00 DOCTOR 1_BASE.png" id="5_x7qaf"]
 [ext_resource type="Texture2D" uid="uid://bxuakrsokrlyu" path="res://assets/Doctor/00 DOCTOR 1_FONDO.png" id="6_3fpf8"]
 [ext_resource type="Script" uid="uid://bhwhnosk8rcbu" path="res://scripts/doctor_pov.gd" id="6_ax250"]
+[ext_resource type="Texture2D" uid="uid://d2nu8xu7kg6kn" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_MESA.png" id="6_ymgu4"]
 [ext_resource type="Texture2D" uid="uid://cwjmpsxryymfy" path="res://assets/Doctor/00 DOCTOR 1_MESA BASE.png" id="7_ax250"]
+[ext_resource type="Texture2D" uid="uid://bsegdfqnboh4l" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_PC.png" id="7_ywfih"]
 [ext_resource type="Texture2D" uid="uid://rtykg7m0rujb" path="res://assets/Doctor/00 DOCTOR 1_ORDENADOR.png" id="8_jm02e"]
+[ext_resource type="Texture2D" uid="uid://co0wpd6ab3rdp" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_DOCTOR FONDO.png" id="8_xrrwh"]
 [ext_resource type="Texture2D" uid="uid://qig5u45rpccp" path="res://assets/Doctor/00 DOCTOR 1_MANOS A.png" id="9_6bh7u"]
+[ext_resource type="Texture2D" uid="uid://bxskjjwb8l5qe" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_DOCTOR BOCA 1.png" id="9_bsnwx"]
+[ext_resource type="Texture2D" uid="uid://c3bcti4odaxam" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_DOCTOR BOCA SIGUIENTE.png" id="10_tcqct"]
 [ext_resource type="Texture2D" uid="uid://dqmljnewdxaxf" path="res://assets/Doctor/00 DOCTOR 1_MANOS B.png" id="10_ymgu4"]
+[ext_resource type="Texture2D" uid="uid://bredgs30qyaf7" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_DOCTOR BOCA 2.png" id="11_f5tiu"]
 [ext_resource type="Texture2D" uid="uid://dce7ecwkbydlb" path="res://assets/Doctor/00 DOCTOR 1_MANOS TECLADO A.png" id="11_ywfih"]
+[ext_resource type="Texture2D" uid="uid://bqge8alte8r8m" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_DOCTOR BRAZOS.png" id="12_ita8y"]
 [ext_resource type="Texture2D" uid="uid://cb7m0syt6pc0e" path="res://assets/Doctor/00 DOCTOR 1_MANOS TECLADO B.png" id="12_nhjwn"]
+[ext_resource type="Texture2D" uid="uid://bs3u7awf7k7xy" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE A.png" id="15_ita8y"]
+[ext_resource type="Texture2D" uid="uid://dlhrqhb3n610t" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE B.png" id="16_qrh6a"]
+[ext_resource type="Texture2D" uid="uid://vfhu23gi0hsp" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE A 1.png" id="17_600jw"]
+[ext_resource type="Texture2D" uid="uid://dvlarns1kwnoh" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE B 2.png" id="18_fmo2r"]
+[ext_resource type="PackedScene" uid="uid://dpsxqi3utda36" path="res://scenes/transition.tscn" id="26_qrh6a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7votl"]
 animations = [{
@@ -31,6 +44,73 @@ animations = [{
 "loop": true,
 "name": &"idle_patient",
 "speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qrh6a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_xrrwh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_bsnwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tcqct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tcqct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tcqct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bsnwx")
+}],
+"loop": true,
+"name": &"next",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_bsnwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_f5tiu")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vg3nb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_ita8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qrh6a")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_600jw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_fmo2r")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 3.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pnvlt"]
@@ -59,10 +139,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2nhxp"]
-size = Vector2(88.46153, 148.99997)
+size = Vector2(67.30768, 113.999985)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qrh6a"]
+radius = 18.0
 
 [node name="Consult" type="Node2D" unique_id=1391024365]
 script = ExtResource("1_2nhxp")
+
+[node name="transition" parent="." unique_id=193184028 instance=ExtResource("26_qrh6a")]
 
 [node name="pov" type="AnimatedSprite2D" parent="." unique_id=1477936567]
 visible = false
@@ -72,18 +157,34 @@ sprite_frames = SubResource("SpriteFrames_7votl")
 animation = &"idle_doctor"
 autoplay = "idle_patient"
 
-[node name="ChooseMedicineView" parent="." unique_id=1201031482 instance=ExtResource("4_7votl")]
-visible = false
-position = Vector2(1, 1)
-
 [node name="patient_pov" type="Node2D" parent="." unique_id=1858391808]
+visible = false
 position = Vector2(262, 262)
 
 [node name="base" type="Sprite2D" parent="patient_pov" unique_id=1926059439]
 texture = ExtResource("5_x7qaf")
 
+[node name="doctor_anim" type="AnimatedSprite2D" parent="patient_pov" unique_id=1937593774]
+position = Vector2(-3, -185)
+sprite_frames = SubResource("SpriteFrames_qrh6a")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.48718563
+
+[node name="00DoctorFondo" type="Sprite2D" parent="patient_pov" unique_id=1420721010]
+position = Vector2(0, 1)
+texture = ExtResource("5_6bh7u")
+
+[node name="00DoctorMesa" type="Sprite2D" parent="patient_pov" unique_id=292371229]
+texture = ExtResource("6_ymgu4")
+
+[node name="00DoctorPc" type="Sprite2D" parent="patient_pov" unique_id=485858736]
+texture = ExtResource("7_ywfih")
+
+[node name="00DoctorDoctorBrazos" type="Sprite2D" parent="patient_pov" unique_id=1371154599]
+texture = ExtResource("12_ita8y")
+
 [node name="doctor_pov" type="Node2D" parent="." unique_id=1042157935]
-visible = false
 position = Vector2(262, 262)
 script = ExtResource("6_ax250")
 
@@ -92,6 +193,14 @@ texture = ExtResource("5_x7qaf")
 
 [node name="background" type="Sprite2D" parent="doctor_pov" unique_id=2055546398]
 texture = ExtResource("6_3fpf8")
+
+[node name="patient_anim" type="AnimatedSprite2D" parent="doctor_pov" unique_id=1161598085]
+position = Vector2(-19, -9)
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_vg3nb")
+animation = &"talk"
+autoplay = "idle"
+frame_progress = 0.9761649
 
 [node name="table" type="Sprite2D" parent="doctor_pov" unique_id=1212338912]
 texture = ExtResource("7_ax250")
@@ -111,10 +220,26 @@ frame_progress = 0.6787956
 position = Vector2(317, 366)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="computer_area" unique_id=1305414474]
-position = Vector2(-191, -106.5)
+position = Vector2(-199.5, -133)
 scale = Vector2(1.5600002, 1)
 shape = SubResource("RectangleShape2D_2nhxp")
 
+[node name="ChooseMedicineView" parent="." unique_id=1201031482 instance=ExtResource("4_7votl")]
+visible = false
+position = Vector2(1, 1)
+
+[node name="red_button" type="Area2D" parent="." unique_id=2124783128]
+position = Vector2(191, 317)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="red_button" unique_id=144011879]
+shape = SubResource("CircleShape2D_qrh6a")
+
+[connection signal="animation_finished" from="transition/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="doctor_pov/anim_timer" to="doctor_pov" method="_on_anim_timer_timeout"]
 [connection signal="mouse_entered" from="computer_area" to="." method="_on_computer_area_mouse_entered"]
 [connection signal="mouse_exited" from="computer_area" to="." method="_on_computer_area_mouse_exited"]
+[connection signal="input_event" from="red_button" to="." method="_on_red_button_input_event"]
+[connection signal="mouse_entered" from="red_button" to="." method="_on_red_button_mouse_entered"]
+[connection signal="mouse_exited" from="red_button" to="." method="_on_red_button_mouse_exited"]
+
+[editable path="transition"]

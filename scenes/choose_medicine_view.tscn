@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bt6p5g60jokcm" path="res://assets/00 PC_PANTALLA/00 PC_PILDORA FONDO.png" id="4_eliwx"]
 [ext_resource type="Texture2D" uid="uid://dpqxotrakrnah" path="res://assets/00 PC_PANTALLA/00 PC_BASE PANTALLA.png" id="4_rmdi8"]
 [ext_resource type="Script" uid="uid://dt60r3etj8g62" path="res://scripts/pill.gd" id="7_q4ddm"]
-[ext_resource type="Script" uid="uid://cjfqcw70rwcp5" path="res://scenes/pill_slot.gd" id="9_4ehqi"]
+[ext_resource type="Script" path="res://scenes/pill_slot.gd" id="9_4ehqi"]
 [ext_resource type="Texture2D" uid="uid://brnueefoy2h34" path="res://assets/00 PC_PANTALLA/00 PC_BOTON OJO 1.png" id="9_mkf0m"]
 [ext_resource type="Texture2D" uid="uid://dtwjaj5csttn4" path="res://assets/00 PC_PANTALLA/00 PC_BOTON OJO 2.png" id="10_usnea"]
 [ext_resource type="Texture2D" uid="uid://3u07iudlk1g1" path="res://assets/00 PC_PANTALLA/00 PC_BOTON READY 1.png" id="12_a46w6"]
@@ -106,6 +106,7 @@ texture_normal = SubResource("AtlasTexture_wxf2y")
 texture_pressed = SubResource("AtlasTexture_6m0xv")
 
 [node name="ReadyButton" type="TextureButton" parent="." unique_id=1307764515]
+visible = false
 offset_left = 379.0
 offset_top = 438.0
 offset_right = 480.0

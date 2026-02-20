@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dd08ihw1smdy4" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://mbnpxh8ocgj7" path="res://assets/titulo.png" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://d115n1xhhrqos" path="res://assets/play_button.png" id="2_ekxnf"]
+[ext_resource type="PackedScene" uid="uid://dpsxqi3utda36" path="res://scenes/transition.tscn" id="4_wu84c"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ekxnf"]
 animations = [{
@@ -22,6 +23,8 @@ script = ExtResource("1_bqqt6")
 position = Vector2(262, 262)
 sprite_frames = SubResource("SpriteFrames_ekxnf")
 
+[node name="transition" parent="." unique_id=193184028 instance=ExtResource("4_wu84c")]
+
 [node name="Button" type="Button" parent="." unique_id=465684483]
 offset_left = 189.0
 offset_top = 274.0
@@ -29,4 +32,7 @@ offset_right = 325.0
 offset_bottom = 410.0
 icon = ExtResource("2_ekxnf")
 
+[connection signal="animation_finished" from="transition/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+
+[editable path="transition"]

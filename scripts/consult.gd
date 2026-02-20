@@ -4,12 +4,27 @@ extends Node2D
 @onready var computer_area: Area2D = $computer_area
 @onready var choose_medicine_view: Node2D = $ChooseMedicineView
 @onready var doctor_pov: Node2D = $doctor_pov
+@onready var doctor_anim: AnimatedSprite2D = $patient_pov/doctor_anim
 @onready var patient_pov: Node2D = $patient_pov
+@onready var patient_anim: AnimatedSprite2D = $doctor_pov/patient_anim
+@onready var animation_player: AnimationPlayer = $transition/AnimationPlayer
+@onready var red_button: Area2D = $red_button
 
 func _ready() -> void: 
+	animation_player.play_backwards("close")
 	randomize()
-	Manager.register_doctor(doctor_pov)
-	Manager.register_patient(patient_pov)
+	MedicineManager.randomise_encounters()
+	Manager.register_doctor(doctor_pov,doctor_anim)
+	Manager.register_patient(patient_pov,patient_anim)
 	Manager.register_computer(choose_medicine_view)
 	computer_area.mouse_entered.connect(Manager._on_computer_area_mouse_entered)
 	computer_area.mouse_exited.connect(Manager._on_computer_area_mouse_exited)
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	Manager.start_dialog_1(MedicineManager.randomised_patients[MedicineManager.current_patient])
+
+func _on_red_button_mouse_entered() -> void:
+	Manager.red_button_flag = true
+
+func _on_red_button_mouse_exited() -> void:
+	Manager.red_button_flag = false

@@ -2,6 +2,7 @@ extends Node
 
 var chosen_symptoms_keys: Array[String] = []
 var random_symptoms = []
+var pill_ready = false
 const symptoms = {
 	"s1": ["s1-1", "s1-2", "s1-3"],
 	"s2": ["s2-2", "s2-2", "s2-3"],
@@ -23,7 +24,10 @@ const medicine_symptoms = {
 	"m7": ["s1", "s2", "s3"],
 	"m8": ["s1", "s2", "s3"],
 }
-	
+var patients = ["patient_1", "patient_2", "patient_3"]
+var randomised_patients = []
+var current_patient = 0
+
 func _get_random_sentence(key: String) -> String:
 	return symptoms[key][randi() % 3]
 
@@ -37,7 +41,11 @@ func randomise_symptoms() -> void:
 		temp_random_symptoms[symptom_key] = _get_random_sentence(random_key)
 	random_symptoms = temp_random_symptoms
 	print(random_symptoms)
-
+	
+func randomise_encounters() -> void:
+	randomised_patients = patients.duplicate()
+	randomised_patients.shuffle()
+	
 func has_healed_patient(medicines: Array[String]) -> bool:
 	var healed_symptoms = []
 	for medicine in medicines:

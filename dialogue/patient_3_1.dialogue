@@ -1,0 +1,23 @@
+~ start
+do MedicineManager.randomise_symptoms()
+Doctor: PACIENTE 3
+
+do Manager.change_pov_patient()
+Antonio: Hola Doctor, que tal la familia?
+Antonio: Venia porque me esta doliendo mucho el pie derecho
+Antonio: Y además me molesta cuando respiro
+
+do Manager.change_pov_doctor()
+Doctor: No puedes seguir asi Paco
+Doctor: Se para lo que utilizas las recetas que te mando
+Doctor: Vamos a ver que te pasa
+
+do Manager.change_pov_patient()
+Antonio: {{MedicineManager.random_symptoms["s1"]}}
+Antonio: {{MedicineManager.random_symptoms["s2"]}}
+Antonio: {{MedicineManager.random_symptoms["s3"]}}
+do Manager.dialog_finished_1()
+
+#TODO
+
+=> END

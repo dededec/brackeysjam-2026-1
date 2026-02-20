@@ -51,7 +51,7 @@ space={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/test_dialog.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/test_dialog.dialogue", "res://dialogue/patient_1_1.dialogue", "res://dialogue/patient_1_2.dialogue", "res://dialogue/patient_2_1.dialogue", "res://dialogue/patient_2_2.dialogue", "res://dialogue/patient_3_1.dialogue", "res://dialogue/patient_3_2.dialogue")
 
 [physics]
 
@@ -59,4 +59,5 @@ locale/translations_pot_files=PackedStringArray("res://dialogue/test_dialog.dial
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

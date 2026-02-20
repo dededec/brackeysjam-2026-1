@@ -1,7 +1,6 @@
 ~ start
 do MedicineManager.randomise_symptoms()
-Doctor: Otra jornada más
-Doctor: SIGUIENTE!
+Doctor: PACIENTE 1
 
 do Manager.change_pov_patient()
 Paco: Hola Doctor, que tal la familia?
@@ -17,7 +16,7 @@ do Manager.change_pov_patient()
 Paco: {{MedicineManager.random_symptoms["s1"]}}
 Paco: {{MedicineManager.random_symptoms["s2"]}}
 Paco: {{MedicineManager.random_symptoms["s3"]}}
-do Manager.dialog_finished()
+do Manager.dialog_finished_1()
 
 #TODO
 
