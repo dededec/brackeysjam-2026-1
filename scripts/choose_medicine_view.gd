@@ -33,7 +33,9 @@ func _on_pill_medicine_erased(index: int) -> void:
 	selected_medicines.remove_at(index)
 
 func _on_eye_button_pressed() -> void:
+	Manager.deactivate_computer()
 	eye_button_pressed.emit()
 
 func _on_ready_button_pressed() -> void:
+	Manager.deactivate_computer()
 	ready_button_pressed.emit()

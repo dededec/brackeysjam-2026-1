@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bt6p5g60jokcm" path="res://assets/00 PC_PANTALLA/00 PC_PILDORA FONDO.png" id="4_eliwx"]
 [ext_resource type="Texture2D" uid="uid://dpqxotrakrnah" path="res://assets/00 PC_PANTALLA/00 PC_BASE PANTALLA.png" id="4_rmdi8"]
 [ext_resource type="Script" uid="uid://dt60r3etj8g62" path="res://scripts/pill.gd" id="7_q4ddm"]
-[ext_resource type="Script" uid="uid://cjfqcw70rwcp5" path="res://scenes/pill_slot.gd" id="9_4ehqi"]
+[ext_resource type="Script" path="res://scenes/pill_slot.gd" id="9_4ehqi"]
 [ext_resource type="Texture2D" uid="uid://brnueefoy2h34" path="res://assets/00 PC_PANTALLA/00 PC_BOTON OJO 1.png" id="9_mkf0m"]
 [ext_resource type="Texture2D" uid="uid://dtwjaj5csttn4" path="res://assets/00 PC_PANTALLA/00 PC_BOTON OJO 2.png" id="10_usnea"]
 [ext_resource type="Texture2D" uid="uid://bbfxuorhfsxne" path="res://assets/00 PC_PANTALLA/00 PC_BOTON OJO CERRADO.png" id="11_mkf0m"]
@@ -84,7 +84,7 @@ region_enabled = true
 region_rect = Rect2(250, 330, 64, 64)
 script = ExtResource("9_4ehqi")
 
-[node name="Medicines" type="Node" parent="." unique_id=948588998]
+[node name="Medicines" type="Node2D" parent="." unique_id=795343437]
 
 [node name="Medicine" parent="Medicines" unique_id=1463226475 instance=ExtResource("1_d418r")]
 position = Vector2(111, 125)

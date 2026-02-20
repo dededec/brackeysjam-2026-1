@@ -4,6 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://2012iggjksfo" path="res://assets/pov_doctor.png" id="1_hftaw"]
 [ext_resource type="Texture2D" uid="uid://cdcbk48hg3hkl" path="res://assets/pov_patient.png" id="2_2nhxp"]
 [ext_resource type="PackedScene" uid="uid://d35j4cqwebkal" path="res://scenes/choose_medicine_view.tscn" id="4_7votl"]
+[ext_resource type="Texture2D" uid="uid://hm58viya07gc" path="res://assets/Doctor/00 DOCTOR 1_BASE.png" id="5_x7qaf"]
+[ext_resource type="Texture2D" uid="uid://bxuakrsokrlyu" path="res://assets/Doctor/00 DOCTOR 1_FONDO.png" id="6_3fpf8"]
+[ext_resource type="Texture2D" uid="uid://cwjmpsxryymfy" path="res://assets/Doctor/00 DOCTOR 1_MESA BASE.png" id="7_ax250"]
+[ext_resource type="Texture2D" uid="uid://rtykg7m0rujb" path="res://assets/Doctor/00 DOCTOR 1_ORDENADOR.png" id="8_jm02e"]
+[ext_resource type="Texture2D" uid="uid://qig5u45rpccp" path="res://assets/Doctor/00 DOCTOR 1_MANOS A.png" id="9_6bh7u"]
+[ext_resource type="Texture2D" uid="uid://dqmljnewdxaxf" path="res://assets/Doctor/00 DOCTOR 1_MANOS B.png" id="10_ymgu4"]
+[ext_resource type="Texture2D" uid="uid://dce7ecwkbydlb" path="res://assets/Doctor/00 DOCTOR 1_MANOS TECLADO A.png" id="11_ywfih"]
+[ext_resource type="Texture2D" uid="uid://cb7m0syt6pc0e" path="res://assets/Doctor/00 DOCTOR 1_MANOS TECLADO B.png" id="12_nhjwn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7votl"]
 animations = [{
@@ -25,14 +33,40 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2nhxp"]
-size = Vector2(141, 172)
+size = Vector2(76.92306, 148.99997)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pnvlt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_6bh7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ymgu4")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_ywfih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nhjwn")
+}],
+"loop": true,
+"name": &"writing",
+"speed": 5.0
+}]
 
 [node name="Consult" type="Node2D" unique_id=1391024365]
 script = ExtResource("1_2nhxp")
 
 [node name="pov" type="AnimatedSprite2D" parent="." unique_id=1477936567]
-position = Vector2(576, 323.99997)
-scale = Vector2(0.59999996, 0.59999996)
+visible = false
+position = Vector2(261.00003, 202.00002)
+scale = Vector2(0.271875, 0.37407413)
 sprite_frames = SubResource("SpriteFrames_7votl")
 animation = &"idle_doctor"
 autoplay = "idle_patient"
@@ -41,12 +75,41 @@ autoplay = "idle_patient"
 position = Vector2(317, 366)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="computer_area" unique_id=1305414474]
+position = Vector2(-175, -145.5)
 scale = Vector2(1.5600002, 1)
 shape = SubResource("RectangleShape2D_2nhxp")
 
 [node name="ChooseMedicineView" parent="." unique_id=1201031482 instance=ExtResource("4_7votl")]
 visible = false
 position = Vector2(1, 1)
+
+[node name="patient_pov" type="Node2D" parent="." unique_id=1858391808]
+visible = false
+position = Vector2(262, 262)
+
+[node name="base" type="Sprite2D" parent="patient_pov" unique_id=1926059439]
+texture = ExtResource("5_x7qaf")
+
+[node name="doctor_pov" type="Node2D" parent="." unique_id=1042157935]
+position = Vector2(262, 262)
+
+[node name="base" type="Sprite2D" parent="doctor_pov" unique_id=841978618]
+texture = ExtResource("5_x7qaf")
+
+[node name="background" type="Sprite2D" parent="doctor_pov" unique_id=2055546398]
+texture = ExtResource("6_3fpf8")
+
+[node name="table" type="Sprite2D" parent="doctor_pov" unique_id=1212338912]
+texture = ExtResource("7_ax250")
+
+[node name="pc" type="Sprite2D" parent="doctor_pov" unique_id=1882604153]
+texture = ExtResource("8_jm02e")
+
+[node name="doctor_hands" type="AnimatedSprite2D" parent="doctor_pov" unique_id=948277116]
+sprite_frames = SubResource("SpriteFrames_pnvlt")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.18480738
 
 [connection signal="mouse_entered" from="computer_area" to="." method="_on_computer_area_mouse_entered"]
 [connection signal="mouse_exited" from="computer_area" to="." method="_on_computer_area_mouse_exited"]
