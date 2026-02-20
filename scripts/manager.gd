@@ -23,6 +23,9 @@ func register_computer(node: Node2D) -> void:
 	computer.visible = false
 	computer.set_process(false)
 
+func _ready() -> void:
+	change_pov_patient()
+
 func _process(delta: float) -> void:
 	if computer and computer.visible:
 		return
@@ -63,7 +66,6 @@ func activate_computer() -> void:
 	if computer != null:
 		computer.visible = true
 		computer.set_process(true)
-
 
 func deactivate_computer() -> void:
 	if computer != null:

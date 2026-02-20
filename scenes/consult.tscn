@@ -33,9 +33,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2nhxp"]
-size = Vector2(76.92306, 148.99997)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_pnvlt"]
 animations = [{
 "frames": [{
@@ -61,6 +58,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2nhxp"]
+size = Vector2(88.46153, 148.99997)
+
 [node name="Consult" type="Node2D" unique_id=1391024365]
 script = ExtResource("1_2nhxp")
 
@@ -72,26 +72,18 @@ sprite_frames = SubResource("SpriteFrames_7votl")
 animation = &"idle_doctor"
 autoplay = "idle_patient"
 
-[node name="computer_area" type="Area2D" parent="." unique_id=159649394]
-position = Vector2(317, 366)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="computer_area" unique_id=1305414474]
-position = Vector2(-175, -145.5)
-scale = Vector2(1.5600002, 1)
-shape = SubResource("RectangleShape2D_2nhxp")
-
 [node name="ChooseMedicineView" parent="." unique_id=1201031482 instance=ExtResource("4_7votl")]
 visible = false
 position = Vector2(1, 1)
 
 [node name="patient_pov" type="Node2D" parent="." unique_id=1858391808]
-visible = false
 position = Vector2(262, 262)
 
 [node name="base" type="Sprite2D" parent="patient_pov" unique_id=1926059439]
 texture = ExtResource("5_x7qaf")
 
 [node name="doctor_pov" type="Node2D" parent="." unique_id=1042157935]
+visible = false
 position = Vector2(262, 262)
 script = ExtResource("6_ax250")
 
@@ -111,10 +103,18 @@ texture = ExtResource("8_jm02e")
 sprite_frames = SubResource("SpriteFrames_pnvlt")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.91583246
+frame_progress = 0.6787956
 
 [node name="anim_timer" type="Timer" parent="doctor_pov" unique_id=861157575]
 
+[node name="computer_area" type="Area2D" parent="." unique_id=159649394]
+position = Vector2(317, 366)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="computer_area" unique_id=1305414474]
+position = Vector2(-191, -106.5)
+scale = Vector2(1.5600002, 1)
+shape = SubResource("RectangleShape2D_2nhxp")
+
+[connection signal="timeout" from="doctor_pov/anim_timer" to="doctor_pov" method="_on_anim_timer_timeout"]
 [connection signal="mouse_entered" from="computer_area" to="." method="_on_computer_area_mouse_entered"]
 [connection signal="mouse_exited" from="computer_area" to="." method="_on_computer_area_mouse_exited"]
-[connection signal="timeout" from="doctor_pov/anim_timer" to="doctor_pov" method="_on_anim_timer_timeout"]
