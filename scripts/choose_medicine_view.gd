@@ -1,8 +1,5 @@
 extends Node2D
 
-signal eye_button_pressed
-signal ready_button_pressed
-
 var is_on_medicine_area: bool = false
 var selected_medicines: Array[String] = []
 @onready var pill: Node2D = $Pill
@@ -34,8 +31,7 @@ func _on_pill_medicine_erased(index: int) -> void:
 
 func _on_eye_button_pressed() -> void:
 	Manager.deactivate_computer()
-	eye_button_pressed.emit()
 
 func _on_ready_button_pressed() -> void:
+	ScoreManager.heal_patient(selected_medicines)
 	Manager.deactivate_computer()
-	ready_button_pressed.emit()
