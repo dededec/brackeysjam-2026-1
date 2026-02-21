@@ -10,6 +10,7 @@ extends Node2D
 @onready var animation_player: AnimationPlayer = $transition/AnimationPlayer
 @onready var red_button: Area2D = $red_button
 @onready var door_button: Button = $"doctor_pov/Door Button"
+@onready var door_knock: AnimatedSprite2D = $doctor_pov/DoorKnock
 
 var hasCanvasLayer = false
 
@@ -39,8 +40,10 @@ func _on_patient_anim_animation_finished() -> void:
 			get_tree().change_scene_to_file("res://scenes/results_screen.tscn")
 		else:
 			door_button.disabled = false
+			door_knock.show()
 		patient_anim.scale.x = -1
 
 func _on_door_button_pressed() -> void:
+	door_knock.hide()
 	MedicineManager.current_patient+=1
 	Manager.start_dialog_1(MedicineManager.get_current_patient_label())

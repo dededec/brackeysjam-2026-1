@@ -38,7 +38,17 @@
 [ext_resource type="Texture2D" uid="uid://c7pq77hc28sbr" path="res://assets/02 SAXOFONISTA/02 SAXOFONISTA 2.png" id="25_v27yp"]
 [ext_resource type="Texture2D" uid="uid://b8nku4spymqjb" path="res://assets/03 MOSQUITA/03 MOSQUITA IDDLE 2.png" id="26_d5wvc"]
 [ext_resource type="PackedScene" path="res://scenes/transition.tscn" id="26_qrh6a"]
+[ext_resource type="Texture2D" uid="uid://b02hfegkcv4st" path="res://assets/04 FLORES/04 FLORES IDDLE 1.png" id="32_aht2x"]
+[ext_resource type="Texture2D" uid="uid://bbtnjp8kvim67" path="res://assets/04 FLORES/04 FLORES IDDLE 2.png" id="33_krpwa"]
+[ext_resource type="Texture2D" uid="uid://cxt47jqrp8mal" path="res://assets/04 FLORES/04 FLORES HABLAR 1.png" id="34_1jdnx"]
+[ext_resource type="Texture2D" uid="uid://dpfgp750k3ary" path="res://assets/04 FLORES/04 FLORES HABLAR 2.png" id="35_2ym2e"]
+[ext_resource type="Texture2D" uid="uid://nli8gik430oc" path="res://assets/05 PAJARITO/05 PAAJRITO IDDLE A.png" id="36_5datv"]
+[ext_resource type="Texture2D" uid="uid://j5mmc8xsvgpg" path="res://assets/05 PAJARITO/05 PAAJRITO IDDLE B.png" id="37_uxwfe"]
+[ext_resource type="Texture2D" uid="uid://cgxpurhn8xkc7" path="res://assets/05 PAJARITO/05 PAAJRITO HABLAR 1.png" id="38_0crgj"]
 [ext_resource type="Script" uid="uid://5lpsm48e46o6" path="res://scripts/balloons.gd" id="39_jt4yy"]
+[ext_resource type="Texture2D" uid="uid://b34cdeknfq0ov" path="res://assets/05 PAJARITO/05 PAAJRITO HABLAR 2.png" id="39_t6spj"]
+[ext_resource type="Texture2D" uid="uid://bcuc4pogvnu4p" path="res://assets/door_knock/00 EFECTO PUERTA A.png" id="46_0crgj"]
+[ext_resource type="Texture2D" uid="uid://bxw3u65joxj8k" path="res://assets/door_knock/00 EFECTO PUERTA B.png" id="47_t6spj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7votl"]
 animations = [{
@@ -206,6 +216,72 @@ animations = [{
 "loop": true,
 "name": &"patient_3_talk",
 "speed": 3.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("22_7t66q")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"patient_4_exit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_aht2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_krpwa")
+}],
+"loop": true,
+"name": &"patient_4_idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_1jdnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_2ym2e")
+}],
+"loop": true,
+"name": &"patient_4_talk",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("22_7t66q")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"patient_5_exit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_5datv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_uxwfe")
+}],
+"loop": true,
+"name": &"patient_5_idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_0crgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_t6spj")
+}],
+"loop": true,
+"name": &"patient_5_talk",
+"speed": 3.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pnvlt"]
@@ -242,6 +318,20 @@ animations = [{
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vg3nb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7t66q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k1tg0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("46_0crgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_t6spj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2nhxp"]
 size = Vector2(67.30768, 113.999985)
@@ -306,6 +396,7 @@ texture = ExtResource("6_3fpf8")
 [node name="patient_anim" type="AnimatedSprite2D" parent="doctor_pov" unique_id=1161598085]
 scale = Vector2(-1, 1)
 sprite_frames = SubResource("SpriteFrames_vg3nb")
+autoplay = "default"
 
 [node name="table" type="Sprite2D" parent="doctor_pov" unique_id=1212338912]
 texture = ExtResource("7_ax250")
@@ -332,6 +423,12 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_fmo2r")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_vg3nb")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_7t66q")
 disabled = true
+
+[node name="DoorKnock" type="AnimatedSprite2D" parent="doctor_pov" unique_id=758571252]
+visible = false
+sprite_frames = SubResource("SpriteFrames_k1tg0")
+autoplay = "default"
+frame_progress = 0.47338513
 
 [node name="computer_area" type="Area2D" parent="." unique_id=159649394]
 position = Vector2(317, 366)

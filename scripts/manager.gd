@@ -10,6 +10,7 @@ var patient: Node2D = null
 var patient_anim: AnimatedSprite2D = null
 var ballon: Node2D = null
 var extra_canvas = null
+var first_dialog_ended: bool = false
 
 var pre_pill = null
 var pill_ready = false
@@ -38,13 +39,15 @@ func _process(_delta: float) -> void:
 		ballon = node
 	if pill_ready == false and mouse_on_computer and Input.is_action_just_pressed("left_clic") and doctor.visible:
 		activate_computer()
-	if  pre_pill and red_button_flag and Input.is_action_just_pressed("left_clic"):
+	if  pre_pill and red_button_flag and first_dialog_ended and Input.is_action_just_pressed("left_clic"):
 		pill_ready = true
 		start_dialog_2(MedicineManager.randomised_patients[MedicineManager.current_patient])
 		#TODO SHOULD BE SET WHEN FINISHED ANIMATION OF CREATION OF PILL
 
 func reset() -> void:
 	pill_ready = false
+	pre_pill = []
+	first_dialog_ended = false
 	computer.reset()
 
 func start_dialog_1(patient: String) -> void:
@@ -53,11 +56,14 @@ func start_dialog_1(patient: String) -> void:
 	ballon.start_dialog("res://dialogue/" + patient + "_1.dialogue")
 
 func start_dialog_2(patient: String) -> void:
+	first_dialog_ended = false
 	ScoreManager.heal_patient(pre_pill)
 	ballon.start_dialog("res://dialogue/" + patient + "_2.dialogue")
 	
 func dialog_finished_1() -> void:
 	current_dialog = ""
+	first_dialog_ended = true
+	
 func dialog_finished_2() -> void:
 	current_dialog = ""
 	play_patient_anim("exit")
