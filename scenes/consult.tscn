@@ -22,9 +22,12 @@
 [ext_resource type="Texture2D" uid="uid://bqge8alte8r8m" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_DOCTOR BRAZOS.png" id="12_ita8y"]
 [ext_resource type="Texture2D" uid="uid://cb7m0syt6pc0e" path="res://assets/Doctor/00 DOCTOR 1_MANOS TECLADO B.png" id="12_nhjwn"]
 [ext_resource type="Texture2D" uid="uid://bs3u7awf7k7xy" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE A.png" id="15_ita8y"]
+[ext_resource type="Texture2D" uid="uid://cuiau6xsp1y7p" path="res://assets/exit/patient_1_exit.png" id="16_600jw"]
 [ext_resource type="Texture2D" uid="uid://dlhrqhb3n610t" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE B.png" id="16_qrh6a"]
 [ext_resource type="Texture2D" uid="uid://vfhu23gi0hsp" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE A 1.png" id="17_600jw"]
 [ext_resource type="Texture2D" uid="uid://dvlarns1kwnoh" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE B 2.png" id="18_fmo2r"]
+[ext_resource type="Texture2D" uid="uid://b5hp3akq0fa8l" path="res://assets/exit/patient_2_exit.png" id="21_vg3nb"]
+[ext_resource type="Texture2D" uid="uid://deotmqunn3bj3" path="res://assets/exit/patient_3_exit.png" id="22_7t66q"]
 [ext_resource type="PackedScene" path="res://scenes/transition.tscn" id="26_qrh6a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7votl"]
@@ -91,8 +94,11 @@ animations = [{
 [sub_resource type="SpriteFrames" id="SpriteFrames_vg3nb"]
 animations = [{
 "frames": [{
+"duration": 5.0,
+"texture": ExtResource("16_600jw")
+}, {
 "duration": 1.0,
-"texture": ExtResource("15_ita8y")
+"texture": null
 }],
 "loop": false,
 "name": &"patient_1_exit",
@@ -121,8 +127,11 @@ animations = [{
 "speed": 3.0
 }, {
 "frames": [{
+"duration": 5.0,
+"texture": ExtResource("21_vg3nb")
+}, {
 "duration": 1.0,
-"texture": ExtResource("15_ita8y")
+"texture": null
 }],
 "loop": false,
 "name": &"patient_2_exit",
@@ -151,8 +160,11 @@ animations = [{
 "speed": 3.0
 }, {
 "frames": [{
+"duration": 5.0,
+"texture": ExtResource("22_7t66q")
+}, {
 "duration": 1.0,
-"texture": ExtResource("15_ita8y")
+"texture": null
 }],
 "loop": false,
 "name": &"patient_3_exit",
@@ -275,7 +287,7 @@ texture = ExtResource("6_3fpf8")
 [node name="patient_anim" type="AnimatedSprite2D" parent="doctor_pov" unique_id=1161598085]
 scale = Vector2(-1, 1)
 sprite_frames = SubResource("SpriteFrames_vg3nb")
-animation = &"patient_3_exit"
+animation = &"patient_2_exit"
 autoplay = "patient_1_idle"
 
 [node name="table" type="Sprite2D" parent="doctor_pov" unique_id=1212338912]

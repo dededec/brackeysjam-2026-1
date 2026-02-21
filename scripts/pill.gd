@@ -4,6 +4,10 @@ signal medicine_erased(index: int)
 
 @onready var medicine_slots: Array[Sprite2D] = [$First, $Second, $Third]
 
+func reset() -> void:
+	for slot in medicine_slots:
+		slot.texture = null
+
 func show_medicine(medicine_name: String, index: int) -> void:
 	medicine_slots[index -1].texture = load("res://assets/00 PC_PANTALLA/00 PC_OBJETO PEQUEÑO.png")
 	medicine_slots[index -1].region_rect.position.x = 250

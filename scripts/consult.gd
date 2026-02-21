@@ -22,7 +22,7 @@ func _ready() -> void:
 	computer_area.mouse_exited.connect(Manager._on_computer_area_mouse_exited)
 
 func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
-	Manager.start_dialog_1(MedicineManager.randomised_patients[MedicineManager.current_patient])
+	Manager.start_dialog_1(MedicineManager.get_current_patient_label())
 
 func _on_red_button_mouse_entered() -> void:
 	Manager.red_button_flag = true
@@ -33,8 +33,9 @@ func _on_red_button_mouse_exited() -> void:
 
 func _on_patient_anim_animation_finished() -> void:
 	if patient_anim.animation.ends_with("exit"):
-		print("EL COLEGA HA SALIDO")
 		door_button.disabled = false
+		patient_anim.scale.x = -1
 
 func _on_door_button_pressed() -> void:
-	print("DOOR PRESSED")
+	MedicineManager.current_patient+=1
+	Manager.start_dialog_1(MedicineManager.get_current_patient_label())

@@ -16,9 +16,6 @@ var pre_pill = null
 var pill_ready = false
 var red_button_flag = false
 
-var choose_medicine_view: Node2D = null
-
-
 func register_doctor(node: Node2D, doctor_anim_node: AnimatedSprite2D) -> void:
 	doctor = node
 	doctor_anim = doctor_anim_node
@@ -47,7 +44,12 @@ func _process(_delta: float) -> void:
 		start_dialog_2(MedicineManager.randomised_patients[MedicineManager.current_patient])
 		#TODO SHOULD BE SET WHEN FINISHED ANIMATION OF CREATION OF PILL
 
+func reset() -> void:
+	pill_ready = false
+	computer.reset()
+
 func start_dialog_1(patient: String) -> void:
+	reset()
 	current_dialog = patient
 	current_dialogue_resource = load("res://dialogue/" + patient + "_1.dialogue")
 	DialogueManager.show_dialogue_balloon(current_dialogue_resource)
@@ -61,6 +63,7 @@ func dialog_finished_1() -> void:
 func dialog_finished_2() -> void:
 	current_dialog = ""
 	play_patient_anim("exit")
+	patient_anim.scale.x = 1
 	
 func change_pov_patient() -> void:
 	current_pov = "patient"

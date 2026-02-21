@@ -9,6 +9,13 @@ $Medicines/Medicine5, $Medicines/Medicine6, $Medicines/Medicine7, $Medicines/Med
 @onready var first: Sprite2D = $Pill/First
 @onready var ready_button: TextureButton = $ReadyButton
 
+func reset() -> void:
+	selected_medicines = []
+	is_on_medicine_area = false
+	for medicine in medicines:
+		medicine.visible = true
+	pill.reset()
+
 func _process(_delta: float) -> void:
 	if first.texture:
 		ready_button.visible = true
