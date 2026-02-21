@@ -9,6 +9,7 @@ extends Node2D
 @onready var patient_anim: AnimatedSprite2D = $doctor_pov/patient_anim
 @onready var animation_player: AnimationPlayer = $transition/AnimationPlayer
 @onready var red_button: Area2D = $red_button
+@onready var door_button: Button = $"doctor_pov/Door Button"
 
 func _ready() -> void: 
 	animation_player.play_backwards("close")
@@ -20,7 +21,7 @@ func _ready() -> void:
 	computer_area.mouse_entered.connect(Manager._on_computer_area_mouse_entered)
 	computer_area.mouse_exited.connect(Manager._on_computer_area_mouse_exited)
 
-func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
 	Manager.start_dialog_1(MedicineManager.randomised_patients[MedicineManager.current_patient])
 
 func _on_red_button_mouse_entered() -> void:
@@ -28,3 +29,12 @@ func _on_red_button_mouse_entered() -> void:
 
 func _on_red_button_mouse_exited() -> void:
 	Manager.red_button_flag = false
+
+
+func _on_patient_anim_animation_finished() -> void:
+	if patient_anim.animation.ends_with("exit"):
+		print("EL COLEGA HA SALIDO")
+		door_button.disabled = false
+
+func _on_door_button_pressed() -> void:
+	print("DOOR PRESSED")

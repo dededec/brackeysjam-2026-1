@@ -41,6 +41,9 @@ func randomise_symptoms() -> void:
 		temp_random_symptoms[symptom_key] = _get_random_sentence(random_key)
 	random_symptoms = temp_random_symptoms
 	print(random_symptoms)
+
+func get_current_patient_label() -> String:
+	return randomised_patients[current_patient]
 	
 func randomise_encounters() -> void:
 	randomised_patients = patients.duplicate()

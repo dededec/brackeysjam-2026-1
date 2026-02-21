@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://i1hbfvmf2vcs" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_FONDO.png" id="5_6bh7u"]
 [ext_resource type="Texture2D" uid="uid://hm58viya07gc" path="res://assets/Doctor/00 DOCTOR 1_BASE.png" id="5_x7qaf"]
 [ext_resource type="Texture2D" uid="uid://bxuakrsokrlyu" path="res://assets/Doctor/00 DOCTOR 1_FONDO.png" id="6_3fpf8"]
-[ext_resource type="Script" uid="uid://bhwhnosk8rcbu" path="res://scripts/doctor_pov.gd" id="6_ax250"]
+[ext_resource type="Script" path="res://scripts/doctor_pov.gd" id="6_ax250"]
 [ext_resource type="Texture2D" uid="uid://d2nu8xu7kg6kn" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_MESA.png" id="6_ymgu4"]
 [ext_resource type="Texture2D" uid="uid://cwjmpsxryymfy" path="res://assets/Doctor/00 DOCTOR 1_MESA BASE.png" id="7_ax250"]
 [ext_resource type="Texture2D" uid="uid://bsegdfqnboh4l" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_PC.png" id="7_ywfih"]
@@ -25,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://dlhrqhb3n610t" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE B.png" id="16_qrh6a"]
 [ext_resource type="Texture2D" uid="uid://vfhu23gi0hsp" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE A 1.png" id="17_600jw"]
 [ext_resource type="Texture2D" uid="uid://dvlarns1kwnoh" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE B 2.png" id="18_fmo2r"]
-[ext_resource type="PackedScene" uid="uid://dpsxqi3utda36" path="res://scenes/transition.tscn" id="26_qrh6a"]
+[ext_resource type="PackedScene" path="res://scenes/transition.tscn" id="26_qrh6a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7votl"]
 animations = [{
@@ -93,12 +93,20 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("15_ita8y")
+}],
+"loop": false,
+"name": &"patient_1_exit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_ita8y")
 }, {
 "duration": 1.0,
 "texture": ExtResource("16_qrh6a")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"patient_1_idle",
 "speed": 3.0
 }, {
 "frames": [{
@@ -109,7 +117,67 @@ animations = [{
 "texture": ExtResource("18_fmo2r")
 }],
 "loop": true,
-"name": &"talk",
+"name": &"patient_1_talk",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_ita8y")
+}],
+"loop": false,
+"name": &"patient_2_exit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_ita8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qrh6a")
+}],
+"loop": true,
+"name": &"patient_2_idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_600jw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_fmo2r")
+}],
+"loop": true,
+"name": &"patient_2_talk",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_ita8y")
+}],
+"loop": false,
+"name": &"patient_3_exit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_ita8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qrh6a")
+}],
+"loop": true,
+"name": &"patient_3_idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_600jw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_fmo2r")
+}],
+"loop": true,
+"name": &"patient_3_talk",
 "speed": 3.0
 }]
 
@@ -137,6 +205,16 @@ animations = [{
 "name": &"writing",
 "speed": 5.0
 }]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qrh6a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_600jw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fmo2r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vg3nb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7t66q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2nhxp"]
 size = Vector2(67.30768, 113.999985)
@@ -195,12 +273,10 @@ texture = ExtResource("5_x7qaf")
 texture = ExtResource("6_3fpf8")
 
 [node name="patient_anim" type="AnimatedSprite2D" parent="doctor_pov" unique_id=1161598085]
-position = Vector2(-19, -9)
 scale = Vector2(-1, 1)
 sprite_frames = SubResource("SpriteFrames_vg3nb")
-animation = &"talk"
-autoplay = "idle"
-frame_progress = 0.9761649
+animation = &"patient_3_exit"
+autoplay = "patient_1_idle"
 
 [node name="table" type="Sprite2D" parent="doctor_pov" unique_id=1212338912]
 texture = ExtResource("7_ax250")
@@ -215,6 +291,18 @@ autoplay = "idle"
 frame_progress = 0.6787956
 
 [node name="anim_timer" type="Timer" parent="doctor_pov" unique_id=861157575]
+
+[node name="Door Button" type="Button" parent="doctor_pov" unique_id=728092003]
+offset_left = 90.0
+offset_top = -243.0
+offset_right = 208.0
+offset_bottom = -49.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qrh6a")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_600jw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fmo2r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vg3nb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7t66q")
+disabled = true
 
 [node name="computer_area" type="Area2D" parent="." unique_id=159649394]
 position = Vector2(317, 366)
@@ -235,7 +323,9 @@ position = Vector2(191, 317)
 shape = SubResource("CircleShape2D_qrh6a")
 
 [connection signal="animation_finished" from="transition/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="doctor_pov/patient_anim" to="." method="_on_patient_anim_animation_finished"]
 [connection signal="timeout" from="doctor_pov/anim_timer" to="doctor_pov" method="_on_anim_timer_timeout"]
+[connection signal="pressed" from="doctor_pov/Door Button" to="." method="_on_door_button_pressed"]
 [connection signal="mouse_entered" from="computer_area" to="." method="_on_computer_area_mouse_entered"]
 [connection signal="mouse_exited" from="computer_area" to="." method="_on_computer_area_mouse_exited"]
 [connection signal="input_event" from="red_button" to="." method="_on_red_button_input_event"]

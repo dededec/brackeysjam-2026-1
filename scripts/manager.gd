@@ -18,6 +18,7 @@ var red_button_flag = false
 
 var choose_medicine_view: Node2D = null
 
+
 func register_doctor(node: Node2D, doctor_anim_node: AnimatedSprite2D) -> void:
 	doctor = node
 	doctor_anim = doctor_anim_node
@@ -33,7 +34,7 @@ func register_computer(node: Node2D) -> void:
 func _ready() -> void:
 	change_pov_patient()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if computer and computer.visible:
 		return
 	var node = get_tree().root.get_node_or_null("Consult/Ballon")
@@ -41,7 +42,6 @@ func _process(delta: float) -> void:
 		ballon = node
 	if pill_ready == false and mouse_on_computer and Input.is_action_just_pressed("left_clic") and doctor.visible:
 		activate_computer()
-	print(pre_pill, red_button_flag, pill_ready)
 	if  pre_pill and red_button_flag and Input.is_action_just_pressed("left_clic"):
 		pill_ready = true
 		start_dialog_2(MedicineManager.randomised_patients[MedicineManager.current_patient])
@@ -59,9 +59,9 @@ func start_dialog_2(patient: String) -> void:
 func dialog_finished_1() -> void:
 	current_dialog = ""
 func dialog_finished_2() -> void:
-	print("SE ACABO")
 	current_dialog = ""
-
+	play_patient_anim("exit")
+	
 func change_pov_patient() -> void:
 	current_pov = "patient"
 	if doctor != null:
@@ -96,16 +96,16 @@ func _on_computer_area_mouse_exited() -> void:
 
 func talking(character: String):
 	if character == "Doctor":
-		patient_anim.play("idle")
+		play_patient_anim("idle")
 		doctor_anim.play("talk")
 	else:
-		patient_anim.play("talk")
+		play_patient_anim("talk")
 		doctor_anim.play("idle")
 
-func stop_talking(character: String):
-	if character == "Doctor":
-		patient_anim.play("idle")
-		doctor_anim.play("idle")
-	else:
-		patient_anim.play("idle")
-		doctor_anim.play("idle")
+func stop_talking():
+	play_patient_anim("idle")
+	doctor_anim.play("idle")
+
+func play_patient_anim(animation: String) -> void:
+	var current_patient = MedicineManager.get_current_patient_label()
+	patient_anim.play(current_patient + "_" + animation)
