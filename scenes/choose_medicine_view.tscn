@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bt6p5g60jokcm" path="res://assets/00 PC_PANTALLA/00 PC_PILDORA FONDO.png" id="4_eliwx"]
 [ext_resource type="Texture2D" uid="uid://dpqxotrakrnah" path="res://assets/00 PC_PANTALLA/00 PC_BASE PANTALLA.png" id="4_rmdi8"]
 [ext_resource type="Script" uid="uid://dt60r3etj8g62" path="res://scripts/pill.gd" id="7_q4ddm"]
-[ext_resource type="Script" path="res://scenes/pill_slot.gd" id="9_4ehqi"]
+[ext_resource type="Script" uid="uid://cjfqcw70rwcp5" path="res://scenes/pill_slot.gd" id="9_4ehqi"]
 [ext_resource type="Texture2D" uid="uid://brnueefoy2h34" path="res://assets/00 PC_PANTALLA/00 PC_BOTON OJO 1.png" id="9_mkf0m"]
 [ext_resource type="Texture2D" uid="uid://dtwjaj5csttn4" path="res://assets/00 PC_PANTALLA/00 PC_BOTON OJO 2.png" id="10_usnea"]
 [ext_resource type="Texture2D" uid="uid://3u07iudlk1g1" path="res://assets/00 PC_PANTALLA/00 PC_BOTON READY 1.png" id="12_a46w6"]
@@ -73,28 +73,28 @@ script = ExtResource("9_4ehqi")
 
 [node name="Medicines" type="Node2D" parent="." unique_id=795343437]
 
-[node name="Medicine" parent="Medicines" unique_id=1463226475 instance=ExtResource("1_d418r")]
+[node name="cafetera" parent="Medicines" unique_id=1463226475 instance=ExtResource("1_d418r")]
 position = Vector2(111, 125)
 
-[node name="Medicine2" parent="Medicines" unique_id=575474353 instance=ExtResource("1_d418r")]
+[node name="yano" parent="Medicines" unique_id=575474353 instance=ExtResource("1_d418r")]
 position = Vector2(207, 127)
 
-[node name="Medicine3" parent="Medicines" unique_id=741994440 instance=ExtResource("1_d418r")]
+[node name="maligno" parent="Medicines" unique_id=741994440 instance=ExtResource("1_d418r")]
 position = Vector2(310, 127)
 
-[node name="Medicine4" parent="Medicines" unique_id=2046902172 instance=ExtResource("1_d418r")]
+[node name="cebollo" parent="Medicines" unique_id=2046902172 instance=ExtResource("1_d418r")]
 position = Vector2(405, 128)
 
-[node name="Medicine5" parent="Medicines" unique_id=1337894666 instance=ExtResource("1_d418r")]
+[node name="cajagalletas" parent="Medicines" unique_id=1337894666 instance=ExtResource("1_d418r")]
 position = Vector2(112, 228)
 
-[node name="Medicine6" parent="Medicines" unique_id=449973348 instance=ExtResource("1_d418r")]
+[node name="platano" parent="Medicines" unique_id=449973348 instance=ExtResource("1_d418r")]
 position = Vector2(207, 227)
 
-[node name="Medicine7" parent="Medicines" unique_id=2146768791 instance=ExtResource("1_d418r")]
+[node name="saxo" parent="Medicines" unique_id=2146768791 instance=ExtResource("1_d418r")]
 position = Vector2(311, 227)
 
-[node name="Medicine8" parent="Medicines" unique_id=227287402 instance=ExtResource("1_d418r")]
+[node name="ambientador" parent="Medicines" unique_id=227287402 instance=ExtResource("1_d418r")]
 position = Vector2(406, 227)
 
 [node name="EyeButton" type="TextureButton" parent="." unique_id=1710012929]
@@ -122,13 +122,13 @@ texture_pressed = SubResource("AtlasTexture_rf3qt")
 [connection signal="slot_clicked" from="Pill/Third" to="Pill" method="_on_third_button_down"]
 [connection signal="slot_clicked" from="Pill/Second" to="Pill" method="_on_second_button_down"]
 [connection signal="slot_clicked" from="Pill/First" to="Pill" method="_on_first_button_down"]
-[connection signal="medicine_dropped" from="Medicines/Medicine" to="." method="_on_medicine_dropped"]
-[connection signal="medicine_dropped" from="Medicines/Medicine2" to="." method="_on_medicine_dropped"]
-[connection signal="medicine_dropped" from="Medicines/Medicine3" to="." method="_on_medicine_dropped"]
-[connection signal="medicine_dropped" from="Medicines/Medicine4" to="." method="_on_medicine_dropped"]
-[connection signal="medicine_dropped" from="Medicines/Medicine5" to="." method="_on_medicine_dropped"]
-[connection signal="medicine_dropped" from="Medicines/Medicine6" to="." method="_on_medicine_dropped"]
-[connection signal="medicine_dropped" from="Medicines/Medicine7" to="." method="_on_medicine_dropped"]
-[connection signal="medicine_dropped" from="Medicines/Medicine8" to="." method="_on_medicine_dropped"]
+[connection signal="medicine_dropped" from="Medicines/cafetera" to="." method="_on_medicine_dropped"]
+[connection signal="medicine_dropped" from="Medicines/yano" to="." method="_on_medicine_dropped"]
+[connection signal="medicine_dropped" from="Medicines/maligno" to="." method="_on_medicine_dropped"]
+[connection signal="medicine_dropped" from="Medicines/cebollo" to="." method="_on_medicine_dropped"]
+[connection signal="medicine_dropped" from="Medicines/cajagalletas" to="." method="_on_medicine_dropped"]
+[connection signal="medicine_dropped" from="Medicines/platano" to="." method="_on_medicine_dropped"]
+[connection signal="medicine_dropped" from="Medicines/saxo" to="." method="_on_medicine_dropped"]
+[connection signal="medicine_dropped" from="Medicines/ambientador" to="." method="_on_medicine_dropped"]
 [connection signal="pressed" from="EyeButton" to="." method="_on_eye_button_pressed"]
 [connection signal="pressed" from="ReadyButton" to="." method="_on_ready_button_pressed"]

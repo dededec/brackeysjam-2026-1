@@ -3,9 +3,10 @@ extends Node2D
 var is_on_medicine_area: bool = false
 var selected_medicines: Array[String] = []
 @onready var pill: Node2D = $Pill
-@onready var medicines: Array[AnimatableBody2D] = [$Medicines/Medicine, 
-$Medicines/Medicine2, $Medicines/Medicine3, $Medicines/Medicine4, 
-$Medicines/Medicine5, $Medicines/Medicine6, $Medicines/Medicine7, $Medicines/Medicine8]
+@onready var medicines: Array[AnimatableBody2D] = [
+	$Medicines/cafetera, $Medicines/yano, $Medicines/maligno, 
+	$Medicines/cebollo, $Medicines/cajagalletas, $Medicines/platano, 
+	$Medicines/saxo, $Medicines/ambientador]
 @onready var first: Sprite2D = $Pill/First
 @onready var ready_button: TextureButton = $ReadyButton
 
@@ -48,6 +49,6 @@ func _on_eye_button_pressed() -> void:
 	Manager.deactivate_computer()
 
 func _on_ready_button_pressed() -> void:
-	#ScoreManager.heal_patient(selected_medicines)
+	ScoreManager.heal_patient(selected_medicines)
 	Manager.pre_pill = selected_medicines
 	Manager.deactivate_computer()

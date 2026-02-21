@@ -15,14 +15,14 @@ const symptoms = {
 	}
 
 const medicine_symptoms = {
-	"m1": ["s1", "s2", "s3"],
-	"m2": ["s1", "s2", "s3"],
-	"m3": ["s1", "s2", "s3"],
-	"m4": ["s1", "s2", "s3"],
-	"m5": ["s1", "s2", "s3"],
-	"m6": ["s1", "s2", "s3"],
-	"m7": ["s1", "s2", "s3"],
-	"m8": ["s1", "s2", "s3"],
+	"cafetera": ["s1", "s2", "s3"],
+	"yano": ["s1", "s2", "s3"],
+	"maligno": ["s1", "s2", "s3"],
+	"cebollo": ["s1", "s2", "s3"],
+	"cajagalletas": ["s1", "s2", "s3"],
+	"platano": ["s1", "s2", "s3"],
+	"saxo": ["s1", "s2", "s3"],
+	"ambientador": ["s1", "s2", "s3"],
 }
 var patients = ["patient_1", "patient_2", "patient_3"]
 var randomised_patients = []
