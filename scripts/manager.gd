@@ -1,6 +1,5 @@
 extends Node
 
-var current_dialogue_resource = null
 var current_dialog: String = ""
 var mouse_on_computer: bool = false
 var computer: Node2D = null
@@ -9,7 +8,7 @@ var doctor: Node2D = null
 var doctor_anim: AnimatedSprite2D = null
 var patient: Node2D = null
 var patient_anim: AnimatedSprite2D = null
-var ballon: CanvasLayer = null
+var ballon: Node2D = null
 var extra_canvas = null
 
 var pre_pill = null
@@ -34,7 +33,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if computer and computer.visible:
 		return
-	var node = get_tree().root.get_node_or_null("Consult/Ballon")
+	var node = get_tree().root.get_node_or_null("Consult/Balloons")
 	if node and ballon == null:
 		ballon = node
 	if pill_ready == false and mouse_on_computer and Input.is_action_just_pressed("left_clic") and doctor.visible:
@@ -51,12 +50,10 @@ func reset() -> void:
 func start_dialog_1(patient: String) -> void:
 	reset()
 	current_dialog = patient
-	current_dialogue_resource = load("res://dialogue/" + patient + "_1.dialogue")
-	DialogueManager.show_dialogue_balloon(current_dialogue_resource)
+	ballon.start_dialog("res://dialogue/" + patient + "_1.dialogue")
 
 func start_dialog_2(patient: String) -> void:
-	current_dialogue_resource = load("res://dialogue/" + patient + "_2.dialogue")
-	DialogueManager.show_dialogue_balloon(current_dialogue_resource)
+	ballon.start_dialog("res://dialogue/" + patient + "_2.dialogue")
 	
 func dialog_finished_1() -> void:
 	current_dialog = ""
@@ -79,7 +76,7 @@ func change_pov_doctor() -> void:
 
 func activate_computer() -> void:
 	if ballon:
-		ballon.hide()
+		ballon.hide_all()
 	if computer != null:
 		computer.visible = true
 		computer.set_process(true)
@@ -89,7 +86,7 @@ func deactivate_computer() -> void:
 		computer.visible = false
 		computer.set_process(false)
 	if ballon:
-		ballon.show()
+		ballon.show_all()
 
 func _on_computer_area_mouse_entered() -> void:
 	mouse_on_computer = true

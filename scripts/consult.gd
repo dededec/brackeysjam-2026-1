@@ -11,6 +11,8 @@ extends Node2D
 @onready var red_button: Area2D = $red_button
 @onready var door_button: Button = $"doctor_pov/Door Button"
 
+var hasCanvasLayer = false
+
 func _ready() -> void: 
 	animation_player.play_backwards("close")
 	randomize()
@@ -39,3 +41,7 @@ func _on_patient_anim_animation_finished() -> void:
 func _on_door_button_pressed() -> void:
 	MedicineManager.current_patient+=1
 	Manager.start_dialog_1(MedicineManager.get_current_patient_label())
+
+
+func _on_child_entered_tree(node: Node) -> void:
+	pass
