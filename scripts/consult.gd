@@ -40,6 +40,8 @@ func _on_patient_anim_animation_finished() -> void:
 		else:
 			door_button.disabled = false
 			door_knock.show()
+			talking_sound_player.stream = load("res://assets/sounds/knock.wav")
+			talking_sound_player.play()
 		patient_anim.scale.x = -1
 
 func _on_door_button_pressed() -> void:

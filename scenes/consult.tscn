@@ -51,7 +51,6 @@
 [ext_resource type="Texture2D" uid="uid://b34cdeknfq0ov" path="res://assets/05 PAJARITO/05 PAAJRITO HABLAR 2.png" id="39_t6spj"]
 [ext_resource type="Texture2D" uid="uid://bcuc4pogvnu4p" path="res://assets/door_knock/00 EFECTO PUERTA A.png" id="46_0crgj"]
 [ext_resource type="Texture2D" uid="uid://bxw3u65joxj8k" path="res://assets/door_knock/00 EFECTO PUERTA B.png" id="47_t6spj"]
-[ext_resource type="AudioStream" uid="uid://cfdr8ff8bjwob" path="res://assets/sounds/bg_music.wav" id="52_s1p5x"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7votl"]
 animations = [{
@@ -399,7 +398,6 @@ texture = ExtResource("6_3fpf8")
 [node name="patient_anim" type="AnimatedSprite2D" parent="doctor_pov" unique_id=1161598085]
 scale = Vector2(-1, 1)
 sprite_frames = SubResource("SpriteFrames_vg3nb")
-animation = &"patient_4_talk"
 autoplay = "default"
 
 [node name="table" type="Sprite2D" parent="doctor_pov" unique_id=1212338912]
@@ -432,7 +430,7 @@ disabled = true
 visible = false
 sprite_frames = SubResource("SpriteFrames_k1tg0")
 autoplay = "default"
-frame_progress = 0.09765057
+frame_progress = 0.7257049
 
 [node name="computer_area" type="Area2D" parent="." unique_id=159649394]
 position = Vector2(317, 366)
@@ -456,11 +454,8 @@ shape = SubResource("CircleShape2D_qrh6a")
 [node name="Balloons" type="Node2D" parent="." unique_id=588299734]
 script = ExtResource("39_jt4yy")
 
-[node name="BGMusicPlayer" type="AudioStreamPlayer2D" parent="." unique_id=890206285]
-stream = ExtResource("52_s1p5x")
-autoplay = true
-
 [node name="TalkingSoundPlayer" type="AudioStreamPlayer2D" parent="." unique_id=145168761]
+bus = &"Talking"
 
 [connection signal="animation_finished" from="transition/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="doctor_pov/patient_anim" to="." method="_on_patient_anim_animation_finished"]
