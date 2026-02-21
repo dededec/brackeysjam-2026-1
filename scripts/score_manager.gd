@@ -1,6 +1,6 @@
 extends Node
 
-const NUM_OF_PATIENTS: int = 5
+const NUM_OF_PATIENTS: int = 6
 var seen_patients: int = 0
 var healed_patients: int = 0
 

@@ -49,6 +49,10 @@
 [ext_resource type="Texture2D" uid="uid://cgxpurhn8xkc7" path="res://assets/05 PAJARITO/05 PAAJRITO HABLAR 1.png" id="38_0crgj"]
 [ext_resource type="Script" uid="uid://5lpsm48e46o6" path="res://scripts/balloons.gd" id="39_jt4yy"]
 [ext_resource type="Texture2D" uid="uid://b34cdeknfq0ov" path="res://assets/05 PAJARITO/05 PAAJRITO HABLAR 2.png" id="39_t6spj"]
+[ext_resource type="Texture2D" uid="uid://c7sbn2hnrgd13" path="res://assets/06 CAMISILLA/06 CAMISILLA IDDLE 1.png" id="42_15ubs"]
+[ext_resource type="Texture2D" uid="uid://dx6o3gy0ecyci" path="res://assets/06 CAMISILLA/06 CAMISILLA IDDLE 2.png" id="43_l3v13"]
+[ext_resource type="Texture2D" uid="uid://bbvgo6n4t07fb" path="res://assets/06 CAMISILLA/06 CAMISILLA HABLAR 1.png" id="44_ufslw"]
+[ext_resource type="Texture2D" uid="uid://j5fyhnn8jt5x" path="res://assets/06 CAMISILLA/06 CAMISILLA HABLAR 2.png" id="45_8b8fh"]
 [ext_resource type="Texture2D" uid="uid://bcuc4pogvnu4p" path="res://assets/door_knock/00 EFECTO PUERTA A.png" id="46_0crgj"]
 [ext_resource type="Texture2D" uid="uid://bxw3u65joxj8k" path="res://assets/door_knock/00 EFECTO PUERTA B.png" id="47_t6spj"]
 
@@ -115,7 +119,10 @@ animations = [{
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vg3nb"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
 "loop": true,
 "name": &"default",
 "speed": 5.0
@@ -284,6 +291,39 @@ animations = [{
 "loop": true,
 "name": &"patient_5_talk",
 "speed": 3.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("37_s1p5x")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"patient_6_exit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_15ubs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_l3v13")
+}],
+"loop": true,
+"name": &"patient_6_idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_ufslw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_8b8fh")
+}],
+"loop": true,
+"name": &"patient_6_talk",
+"speed": 3.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pnvlt"]
@@ -430,7 +470,7 @@ disabled = true
 visible = false
 sprite_frames = SubResource("SpriteFrames_k1tg0")
 autoplay = "default"
-frame_progress = 0.004422347
+frame_progress = 0.5233841
 
 [node name="computer_area" type="Area2D" parent="." unique_id=159649394]
 position = Vector2(317, 366)

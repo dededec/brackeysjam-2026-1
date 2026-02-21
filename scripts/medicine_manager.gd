@@ -24,7 +24,8 @@ const medicine_symptoms = {
 	"saxo": ["s1", "s2", "s3"],
 	"ambientador": ["s1", "s2", "s3"],
 }
-const patients = ["patient_1", "patient_2", "patient_3", "patient_4", "patient_5"]
+const patients = ["patient_1", "patient_2", "patient_3", 
+"patient_4", "patient_5", "patient_6"]
 var randomised_patients = []
 var current_patient = 0
 
