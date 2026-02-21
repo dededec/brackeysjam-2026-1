@@ -22,12 +22,21 @@
 [ext_resource type="Texture2D" uid="uid://bqge8alte8r8m" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_DOCTOR BRAZOS.png" id="12_ita8y"]
 [ext_resource type="Texture2D" uid="uid://cb7m0syt6pc0e" path="res://assets/Doctor/00 DOCTOR 1_MANOS TECLADO B.png" id="12_nhjwn"]
 [ext_resource type="Texture2D" uid="uid://bs3u7awf7k7xy" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE A.png" id="15_ita8y"]
+[ext_resource type="Texture2D" uid="uid://cuglyctgbm6tu" path="res://assets/CUADRO DE TEXTO MARCO.png" id="15_ytvhx"]
 [ext_resource type="Texture2D" uid="uid://cuiau6xsp1y7p" path="res://assets/exit/patient_1_exit.png" id="16_600jw"]
 [ext_resource type="Texture2D" uid="uid://dlhrqhb3n610t" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE B.png" id="16_qrh6a"]
 [ext_resource type="Texture2D" uid="uid://vfhu23gi0hsp" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE A 1.png" id="17_600jw"]
 [ext_resource type="Texture2D" uid="uid://dvlarns1kwnoh" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE B 2.png" id="18_fmo2r"]
 [ext_resource type="Texture2D" uid="uid://b5hp3akq0fa8l" path="res://assets/exit/patient_2_exit.png" id="21_vg3nb"]
 [ext_resource type="Texture2D" uid="uid://deotmqunn3bj3" path="res://assets/exit/patient_3_exit.png" id="22_7t66q"]
+[ext_resource type="Texture2D" uid="uid://dp1iodoh6wmbb" path="res://assets/02 SAXOFONISTA/02 SAXOFONISTA IDDLE A.png" id="22_n3hf1"]
+[ext_resource type="Texture2D" uid="uid://4s7xtsi3sco4" path="res://assets/03 MOSQUITA/03 MOSQUITA HABLAR 1.png" id="22_rna3x"]
+[ext_resource type="Texture2D" uid="uid://cuirrrh7tm6wq" path="res://assets/03 MOSQUITA/03 MOSQUITA HABLAR 2.png" id="23_mdw54"]
+[ext_resource type="Texture2D" uid="uid://cysibxqgafiat" path="res://assets/02 SAXOFONISTA/02 SAXOFONISTA IDDLE B.png" id="23_ytvhx"]
+[ext_resource type="Texture2D" uid="uid://xntyv30s6jvh" path="res://assets/02 SAXOFONISTA/02 SAXOFONISTA 1.png" id="24_jt4yy"]
+[ext_resource type="Texture2D" uid="uid://c2sx64yn07dod" path="res://assets/03 MOSQUITA/03 MOSQUITA IDDLE 1.png" id="25_0omqn"]
+[ext_resource type="Texture2D" uid="uid://c7pq77hc28sbr" path="res://assets/02 SAXOFONISTA/02 SAXOFONISTA 2.png" id="25_v27yp"]
+[ext_resource type="Texture2D" uid="uid://b8nku4spymqjb" path="res://assets/03 MOSQUITA/03 MOSQUITA IDDLE 2.png" id="26_d5wvc"]
 [ext_resource type="PackedScene" path="res://scenes/transition.tscn" id="26_qrh6a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7votl"]
@@ -139,10 +148,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("15_ita8y")
+"texture": ExtResource("22_n3hf1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_qrh6a")
+"texture": ExtResource("23_ytvhx")
 }],
 "loop": true,
 "name": &"patient_2_idle",
@@ -150,10 +159,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("17_600jw")
+"texture": ExtResource("24_jt4yy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_fmo2r")
+"texture": ExtResource("25_v27yp")
 }],
 "loop": true,
 "name": &"patient_2_talk",
@@ -172,10 +181,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("15_ita8y")
+"texture": ExtResource("25_0omqn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_qrh6a")
+"texture": ExtResource("26_d5wvc")
 }],
 "loop": true,
 "name": &"patient_3_idle",
@@ -183,10 +192,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("17_600jw")
+"texture": ExtResource("22_rna3x")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_fmo2r")
+"texture": ExtResource("23_mdw54")
 }],
 "loop": true,
 "name": &"patient_3_talk",
@@ -281,14 +290,18 @@ script = ExtResource("6_ax250")
 [node name="base" type="Sprite2D" parent="doctor_pov" unique_id=841978618]
 texture = ExtResource("5_x7qaf")
 
+[node name="base2" type="Sprite2D" parent="doctor_pov" unique_id=958365712]
+z_index = 2
+texture = ExtResource("15_ytvhx")
+
 [node name="background" type="Sprite2D" parent="doctor_pov" unique_id=2055546398]
 texture = ExtResource("6_3fpf8")
 
 [node name="patient_anim" type="AnimatedSprite2D" parent="doctor_pov" unique_id=1161598085]
 scale = Vector2(-1, 1)
 sprite_frames = SubResource("SpriteFrames_vg3nb")
-animation = &"patient_2_exit"
-autoplay = "patient_1_idle"
+animation = &"patient_3_talk"
+frame_progress = 0.10660699
 
 [node name="table" type="Sprite2D" parent="doctor_pov" unique_id=1212338912]
 texture = ExtResource("7_ax250")
@@ -326,6 +339,7 @@ shape = SubResource("RectangleShape2D_2nhxp")
 
 [node name="ChooseMedicineView" parent="." unique_id=1201031482 instance=ExtResource("4_7votl")]
 visible = false
+z_index = 5
 position = Vector2(1, 1)
 
 [node name="red_button" type="Area2D" parent="." unique_id=2124783128]
