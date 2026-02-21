@@ -118,6 +118,7 @@ func _on_computer_area_mouse_exited() -> void:
 	mouse_on_computer = false
 
 func talking(character: String):
+	letters_displayed = 0
 	if character == "Doctor":
 		play_patient_anim("idle")
 		doctor_anim.play("talk")
@@ -138,7 +139,12 @@ func play_talking_sound() -> void:
 		pass
 		
 	if current_pov == "doctor":
-		pass
+		letters_displayed += 1
+		if letters_displayed % 2 == 0:
+			var talking_index = (randi() % 4) + 1
+			var sound = "res://assets/sounds/doctor_sound_" + str(talking_index) + ".wav"
+			talking_sound_player.stream = load(sound)
+			talking_sound_player.play()
 	else:
 		letters_displayed += 1
 		if letters_displayed % 2 == 0:
