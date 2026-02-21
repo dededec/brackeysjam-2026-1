@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pgqt84icsv5b"
-path="res://.godot/imported/cafetera.png-fb09c6cdbc564ec0ab7ebba5fe7ac5c3.ctex"
+uid="uid://c252yn7i2y62k"
+path="res://.godot/imported/cafetera.png-3ff83abd3542dead394fd0471486943e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/medicinas/cafetera.png"
-dest_files=["res://.godot/imported/cafetera.png-fb09c6cdbc564ec0ab7ebba5fe7ac5c3.ctex"]
+source_file="res://assets/medicinas/small/cafetera.png"
+dest_files=["res://.godot/imported/cafetera.png-3ff83abd3542dead394fd0471486943e.ctex"]
 
 [params]
 

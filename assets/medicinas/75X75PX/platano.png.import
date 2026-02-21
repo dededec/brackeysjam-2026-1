@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfo011qlvgw02"
-path="res://.godot/imported/01 AMBIENTADOR 50X50PX.png-542fff199e6fb44332dc0610a430de90.ctex"
+uid="uid://qh7nt35tphod"
+path="res://.godot/imported/platano.png-3e27aba4d140de7d6311452c465ef81b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/medicinas/50X50PX/01 AMBIENTADOR 50X50PX.png"
-dest_files=["res://.godot/imported/01 AMBIENTADOR 50X50PX.png-542fff199e6fb44332dc0610a430de90.ctex"]
+source_file="res://assets/medicinas/75X75PX/platano.png"
+dest_files=["res://.godot/imported/platano.png-3e27aba4d140de7d6311452c465ef81b.ctex"]
 
 [params]
 

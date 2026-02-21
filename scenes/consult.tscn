@@ -359,7 +359,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"red_button",
-"speed": 2.0
+"speed": 1.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pnvlt"]
@@ -483,7 +483,7 @@ texture = ExtResource("7_ax250")
 sprite_frames = SubResource("SpriteFrames_l3v13")
 animation = &"red_button"
 autoplay = "default"
-frame_progress = 0.60242283
+frame_progress = 0.57843536
 
 [node name="doctor_hands" type="AnimatedSprite2D" parent="doctor_pov" unique_id=948277116]
 sprite_frames = SubResource("SpriteFrames_pnvlt")
@@ -509,7 +509,7 @@ disabled = true
 visible = false
 sprite_frames = SubResource("SpriteFrames_k1tg0")
 autoplay = "default"
-frame_progress = 0.74895215
+frame_progress = 0.37915727
 
 [node name="computer_area" type="Area2D" parent="." unique_id=159649394]
 position = Vector2(317, 366)

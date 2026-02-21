@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh5r2pd0pkevv"
-path="res://.godot/imported/02 CAFETERA 75X75.png-3e47646d26bae2dff78fa98d0c49a659.ctex"
+uid="uid://cbbj6rj21k4x1"
+path="res://.godot/imported/cajagalletas.png-130feac4959315c98f9c9a56341c6afe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/medicinas/75X75PX/02 CAFETERA 75X75.png"
-dest_files=["res://.godot/imported/02 CAFETERA 75X75.png-3e47646d26bae2dff78fa98d0c49a659.ctex"]
+source_file="res://assets/medicinas/small/cajagalletas.png"
+dest_files=["res://.godot/imported/cajagalletas.png-130feac4959315c98f9c9a56341c6afe.ctex"]
 
 [params]
 

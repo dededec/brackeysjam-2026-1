@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpugnmwpatg87"
-path="res://.godot/imported/cebollo.png-54a957bd53c50d7b1830a9a109927719.ctex"
+uid="uid://du00a4acvekmx"
+path="res://.godot/imported/maligno.png-2acd5275c3999bb72f1bd24fc2832b1a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/medicinas/cebollo.png"
-dest_files=["res://.godot/imported/cebollo.png-54a957bd53c50d7b1830a9a109927719.ctex"]
+source_file="res://assets/medicinas/small/maligno.png"
+dest_files=["res://.godot/imported/maligno.png-2acd5275c3999bb72f1bd24fc2832b1a.ctex"]
 
 [params]
 

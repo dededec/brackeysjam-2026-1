@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ljeapumfkk17"
-path="res://.godot/imported/tudel.png-e6c82b245fee584f42fb352074900634.ctex"
+uid="uid://c2vbg2xqmc5hf"
+path="res://.godot/imported/maligno.png-5cfb8d9ee1a2fa1fcc450d60e1f6d516.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/medicinas/tudel.png"
-dest_files=["res://.godot/imported/tudel.png-e6c82b245fee584f42fb352074900634.ctex"]
+source_file="res://assets/medicinas/75X75PX/maligno.png"
+dest_files=["res://.godot/imported/maligno.png-5cfb8d9ee1a2fa1fcc450d60e1f6d516.ctex"]
 
 [params]
 

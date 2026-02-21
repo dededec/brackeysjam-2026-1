@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2vbg2xqmc5hf"
-path="res://.godot/imported/05 MALIGNO 75X75.png-966b8db9b6395a539351b43391b96134.ctex"
+uid="uid://dh5r2pd0pkevv"
+path="res://.godot/imported/cafetera.png-afeac3541d5f6b80951d15e54c3cfe5f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/medicinas/75X75PX/05 MALIGNO 75X75.png"
-dest_files=["res://.godot/imported/05 MALIGNO 75X75.png-966b8db9b6395a539351b43391b96134.ctex"]
+source_file="res://assets/medicinas/75X75PX/cafetera.png"
+dest_files=["res://.godot/imported/cafetera.png-afeac3541d5f6b80951d15e54c3cfe5f.ctex"]
 
 [params]
 

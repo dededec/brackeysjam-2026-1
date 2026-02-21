@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdudgakuk15qc"
-path="res://.godot/imported/ambientador.png-583ed52e5b4c0ec89e944c4803712579.ctex"
+uid="uid://bqcbm3acmpt3w"
+path="res://.godot/imported/cajagalletas.png-606d3a2e695f970f08b4fc6faabd56c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/medicinas/ambientador.png"
-dest_files=["res://.godot/imported/ambientador.png-583ed52e5b4c0ec89e944c4803712579.ctex"]
+source_file="res://assets/medicinas/75X75PX/cajagalletas.png"
+dest_files=["res://.godot/imported/cajagalletas.png-606d3a2e695f970f08b4fc6faabd56c0.ctex"]
 
 [params]
 

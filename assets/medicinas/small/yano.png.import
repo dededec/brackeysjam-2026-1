@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p556vb8hqf1t"
-path="res://.godot/imported/01 AMBIENTADOR 75X75.png-7a7eed7e08e0b8d58e6a0fced7f7d767.ctex"
+uid="uid://c6ugcd86ja1ai"
+path="res://.godot/imported/yano.png-ea757dae99ee44722bf9e7e87facf572.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/medicinas/75X75PX/01 AMBIENTADOR 75X75.png"
-dest_files=["res://.godot/imported/01 AMBIENTADOR 75X75.png-7a7eed7e08e0b8d58e6a0fced7f7d767.ctex"]
+source_file="res://assets/medicinas/small/yano.png"
+dest_files=["res://.godot/imported/yano.png-ea757dae99ee44722bf9e7e87facf572.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://va7jgddgrufx"
-path="res://.godot/imported/yano.png-cc5ff47461efe6d61bb156834dbdc845.ctex"
+uid="uid://dpj8np0k8t6u3"
+path="res://.godot/imported/saxo.png-b126353158955835e125fdd273bb55c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/medicinas/yano.png"
-dest_files=["res://.godot/imported/yano.png-cc5ff47461efe6d61bb156834dbdc845.ctex"]
+source_file="res://assets/medicinas/75X75PX/saxo.png"
+dest_files=["res://.godot/imported/saxo.png-b126353158955835e125fdd273bb55c5.ctex"]
 
 [params]
 

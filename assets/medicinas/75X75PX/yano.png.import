@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c252yn7i2y62k"
-path="res://.godot/imported/02 CAFETERA 50X50PX.png-fb6c83f312ebb3bef676ed2b2ec679e9.ctex"
+uid="uid://do4qxd7lv12j5"
+path="res://.godot/imported/yano.png-97cf4dc9be2f5fbbf43c98c81b126725.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/medicinas/50X50PX/02 CAFETERA 50X50PX.png"
-dest_files=["res://.godot/imported/02 CAFETERA 50X50PX.png-fb6c83f312ebb3bef676ed2b2ec679e9.ctex"]
+source_file="res://assets/medicinas/75X75PX/yano.png"
+dest_files=["res://.godot/imported/yano.png-97cf4dc9be2f5fbbf43c98c81b126725.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpj8np0k8t6u3"
-path="res://.godot/imported/07 TUDEL 75X75.png-419cfbb5fce8359a087757036e46b93c.ctex"
+uid="uid://bfo011qlvgw02"
+path="res://.godot/imported/ambientador.png-408441b4235d8037b9d1dcfe05f90423.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/medicinas/75X75PX/07 TUDEL 75X75.png"
-dest_files=["res://.godot/imported/07 TUDEL 75X75.png-419cfbb5fce8359a087757036e46b93c.ctex"]
+source_file="res://assets/medicinas/small/ambientador.png"
+dest_files=["res://.godot/imported/ambientador.png-408441b4235d8037b9d1dcfe05f90423.ctex"]
 
 [params]
 

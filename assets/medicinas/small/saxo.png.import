@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqcbm3acmpt3w"
-path="res://.godot/imported/04 CAJA 75X75.png-1b96738b5b61defe8dba352ca39cc960.ctex"
+uid="uid://tu0r2uta0eny"
+path="res://.godot/imported/saxo.png-f49386ec5112da2cd9881d3152203c22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/medicinas/75X75PX/04 CAJA 75X75.png"
-dest_files=["res://.godot/imported/04 CAJA 75X75.png-1b96738b5b61defe8dba352ca39cc960.ctex"]
+source_file="res://assets/medicinas/small/saxo.png"
+dest_files=["res://.godot/imported/saxo.png-f49386ec5112da2cd9881d3152203c22.ctex"]
 
 [params]
 

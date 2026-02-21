@@ -9,26 +9,15 @@ func reset() -> void:
 		slot.texture = null
 
 func show_medicine(medicine_name: String, index: int) -> void:
-	medicine_slots[index -1].texture = load("res://assets/00 PC_PANTALLA/00 PC_OBJETO PEQUEÑO.png")
-	medicine_slots[index -1].region_rect.position.x = 250
-	medicine_slots[index -1].region_rect.position.y = 330
-	medicine_slots[index -1].region_rect.size.x = 64
-	medicine_slots[index -1].region_rect.size.y = 64
-
-func fix_texture_region(index: int) -> void:
-	medicine_slots[index].region_rect.position.x = 250
-	medicine_slots[index].region_rect.position.y = 330
-	medicine_slots[index].region_rect.size.x = 64
-	medicine_slots[index].region_rect.size.y = 64
+	var resource = "res://assets/medicinas/small/" + medicine_name + ".png"
+	medicine_slots[index -1].texture = load(resource)
 	
 func move_sprites_back() -> void:
 	if medicine_slots[1].texture != null:
 		medicine_slots[0].texture = medicine_slots[1].texture
-		fix_texture_region(0)
 		medicine_slots[1].texture = null
 	if medicine_slots[2].texture != null:
 		medicine_slots[1].texture = medicine_slots[2].texture
-		fix_texture_region(1)
 		medicine_slots[2].texture = null
 
 func _on_first_button_down() -> void:

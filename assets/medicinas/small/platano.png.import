@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6ugcd86ja1ai"
-path="res://.godot/imported/08 YANO 50X50PX.png-160215d5fdfb2e3a5732fa154c41f444.ctex"
+uid="uid://d0mr6h7w1yimw"
+path="res://.godot/imported/platano.png-a94973ae185c13623c061b6cca960abf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/medicinas/50X50PX/08 YANO 50X50PX.png"
-dest_files=["res://.godot/imported/08 YANO 50X50PX.png-160215d5fdfb2e3a5732fa154c41f444.ctex"]
+source_file="res://assets/medicinas/small/platano.png"
+dest_files=["res://.godot/imported/platano.png-a94973ae185c13623c061b6cca960abf.ctex"]
 
 [params]
 
