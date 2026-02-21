@@ -430,7 +430,7 @@ disabled = true
 visible = false
 sprite_frames = SubResource("SpriteFrames_k1tg0")
 autoplay = "default"
-frame_progress = 0.7257049
+frame_progress = 0.46065733
 
 [node name="computer_area" type="Area2D" parent="." unique_id=159649394]
 position = Vector2(317, 366)
@@ -466,5 +466,6 @@ bus = &"Talking"
 [connection signal="input_event" from="red_button" to="." method="_on_red_button_input_event"]
 [connection signal="mouse_entered" from="red_button" to="." method="_on_red_button_mouse_entered"]
 [connection signal="mouse_exited" from="red_button" to="." method="_on_red_button_mouse_exited"]
+[connection signal="finished" from="TalkingSoundPlayer" to="." method="_on_talking_sound_player_finished"]
 
 [editable path="transition"]

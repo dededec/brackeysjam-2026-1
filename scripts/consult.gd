@@ -12,6 +12,7 @@ extends Node2D
 @onready var door_button: Button = $"doctor_pov/Door Button"
 @onready var door_knock: AnimatedSprite2D = $doctor_pov/DoorKnock
 @onready var talking_sound_player: AudioStreamPlayer2D = $TalkingSoundPlayer
+var is_siguiente = false
 
 func _ready() -> void: 
 	animation_player.play_backwards("close")
@@ -47,4 +48,11 @@ func _on_patient_anim_animation_finished() -> void:
 func _on_door_button_pressed() -> void:
 	door_knock.hide()
 	MedicineManager.current_patient+=1
-	Manager.start_dialog_1(MedicineManager.get_current_patient_label())
+	talking_sound_player.stream = load("res://assets/sounds/siguiente.wav")
+	talking_sound_player.play()
+	is_siguiente = true
+	
+func _on_talking_sound_player_finished() -> void:
+	if is_siguiente:
+		Manager.start_dialog_1(MedicineManager.get_current_patient_label())
+		is_siguiente = false
