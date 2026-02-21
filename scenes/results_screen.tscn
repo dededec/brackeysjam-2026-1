@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b1jmxlc40e7ww"]
+
+[ext_resource type="Texture2D" uid="uid://dpqxotrakrnah" path="res://assets/00 PC_PANTALLA/00 PC_BASE PANTALLA.png" id="1_fqf1x"]
+[ext_resource type="Script" uid="uid://dxoyvj0pqa4c7" path="res://scripts/results_screen.gd" id="1_j5vbe"]
+
+[node name="ResultsScreen" type="Node2D" unique_id=262881007]
+script = ExtResource("1_j5vbe")
+
+[node name="00PcBasePantalla" type="Sprite2D" parent="." unique_id=785261956]
+position = Vector2(262, 262)
+texture = ExtResource("1_fqf1x")
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1678989228]
+offset_left = 89.0
+offset_top = 316.0
+offset_right = 421.0
+offset_bottom = 400.0
+text = "SE HA ACABAO HAZ CLICK PA IR AL MENU"
