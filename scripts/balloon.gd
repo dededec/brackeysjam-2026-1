@@ -224,3 +224,6 @@ func _on_dialogue_label_started_typing() -> void:
 
 func _on_dialogue_label_finished_typing() -> void:
 	Manager.stop_talking()
+
+func _on_dialogue_label_spoke(letter: String, letter_index: int, speed: float) -> void:
+	Manager.play_talking_sound()

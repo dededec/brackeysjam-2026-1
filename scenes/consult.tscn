@@ -39,10 +39,12 @@
 [ext_resource type="Texture2D" uid="uid://b8nku4spymqjb" path="res://assets/03 MOSQUITA/03 MOSQUITA IDDLE 2.png" id="26_d5wvc"]
 [ext_resource type="PackedScene" path="res://scenes/transition.tscn" id="26_qrh6a"]
 [ext_resource type="Texture2D" uid="uid://b02hfegkcv4st" path="res://assets/04 FLORES/04 FLORES IDDLE 1.png" id="32_aht2x"]
+[ext_resource type="Texture2D" uid="uid://b1iqc4bxemv66" path="res://assets/exit/patient_4_exit.png" id="32_k1tg0"]
 [ext_resource type="Texture2D" uid="uid://bbtnjp8kvim67" path="res://assets/04 FLORES/04 FLORES IDDLE 2.png" id="33_krpwa"]
 [ext_resource type="Texture2D" uid="uid://cxt47jqrp8mal" path="res://assets/04 FLORES/04 FLORES HABLAR 1.png" id="34_1jdnx"]
 [ext_resource type="Texture2D" uid="uid://dpfgp750k3ary" path="res://assets/04 FLORES/04 FLORES HABLAR 2.png" id="35_2ym2e"]
 [ext_resource type="Texture2D" uid="uid://nli8gik430oc" path="res://assets/05 PAJARITO/05 PAAJRITO IDDLE A.png" id="36_5datv"]
+[ext_resource type="Texture2D" uid="uid://rf5ykpay6ava" path="res://assets/exit/patient_5_exit.png" id="37_s1p5x"]
 [ext_resource type="Texture2D" uid="uid://j5mmc8xsvgpg" path="res://assets/05 PAJARITO/05 PAAJRITO IDDLE B.png" id="37_uxwfe"]
 [ext_resource type="Texture2D" uid="uid://cgxpurhn8xkc7" path="res://assets/05 PAJARITO/05 PAAJRITO HABLAR 1.png" id="38_0crgj"]
 [ext_resource type="Script" uid="uid://5lpsm48e46o6" path="res://scripts/balloons.gd" id="39_jt4yy"]
@@ -219,7 +221,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 5.0,
-"texture": ExtResource("22_7t66q")
+"texture": ExtResource("32_k1tg0")
 }, {
 "duration": 1.0,
 "texture": null
@@ -252,7 +254,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 5.0,
-"texture": ExtResource("22_7t66q")
+"texture": ExtResource("37_s1p5x")
 }, {
 "duration": 1.0,
 "texture": null
@@ -396,6 +398,7 @@ texture = ExtResource("6_3fpf8")
 [node name="patient_anim" type="AnimatedSprite2D" parent="doctor_pov" unique_id=1161598085]
 scale = Vector2(-1, 1)
 sprite_frames = SubResource("SpriteFrames_vg3nb")
+animation = &"patient_5_exit"
 autoplay = "default"
 
 [node name="table" type="Sprite2D" parent="doctor_pov" unique_id=1212338912]
@@ -428,7 +431,7 @@ disabled = true
 visible = false
 sprite_frames = SubResource("SpriteFrames_k1tg0")
 autoplay = "default"
-frame_progress = 0.47338513
+frame_progress = 0.4549208
 
 [node name="computer_area" type="Area2D" parent="." unique_id=159649394]
 position = Vector2(317, 366)

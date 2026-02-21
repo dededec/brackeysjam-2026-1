@@ -12,8 +12,6 @@ extends Node2D
 @onready var door_button: Button = $"doctor_pov/Door Button"
 @onready var door_knock: AnimatedSprite2D = $doctor_pov/DoorKnock
 
-var hasCanvasLayer = false
-
 func _ready() -> void: 
 	animation_player.play_backwards("close")
 	randomize()
@@ -32,7 +30,6 @@ func _on_red_button_mouse_entered() -> void:
 
 func _on_red_button_mouse_exited() -> void:
 	Manager.red_button_flag = false
-
 
 func _on_patient_anim_animation_finished() -> void:
 	if patient_anim.animation.ends_with("exit"):

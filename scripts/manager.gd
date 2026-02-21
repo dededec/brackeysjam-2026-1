@@ -117,3 +117,9 @@ func stop_talking():
 func play_patient_anim(animation: String) -> void:
 	var current_patient = MedicineManager.get_current_patient_label()
 	patient_anim.play(current_patient + "_" + animation)
+
+func play_talking_sound() -> void:
+	if current_pov == "doctor":
+		pass
+	else:
+		pass
