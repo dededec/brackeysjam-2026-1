@@ -49,6 +49,7 @@
 [ext_resource type="Script" uid="uid://5lpsm48e46o6" path="res://scripts/balloons.gd" id="39_jt4yy"]
 [ext_resource type="Texture2D" uid="uid://b34cdeknfq0ov" path="res://assets/05 PAJARITO/05 PAAJRITO HABLAR 2.png" id="39_t6spj"]
 [ext_resource type="Texture2D" uid="uid://c7sbn2hnrgd13" path="res://assets/06 CAMISILLA/06 CAMISILLA IDDLE 1.png" id="42_15ubs"]
+[ext_resource type="Texture2D" uid="uid://b4b6l3pvwgj7w" path="res://assets/exit/patient_6_exit.png" id="42_bvhlu"]
 [ext_resource type="Texture2D" uid="uid://dx6o3gy0ecyci" path="res://assets/06 CAMISILLA/06 CAMISILLA IDDLE 2.png" id="43_l3v13"]
 [ext_resource type="Texture2D" uid="uid://bbvgo6n4t07fb" path="res://assets/06 CAMISILLA/06 CAMISILLA HABLAR 1.png" id="44_ufslw"]
 [ext_resource type="Texture2D" uid="uid://j5fyhnn8jt5x" path="res://assets/06 CAMISILLA/06 CAMISILLA HABLAR 2.png" id="45_8b8fh"]
@@ -297,7 +298,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 5.0,
-"texture": ExtResource("37_s1p5x")
+"texture": ExtResource("42_bvhlu")
 }, {
 "duration": 1.0,
 "texture": null
@@ -474,6 +475,7 @@ texture = ExtResource("6_3fpf8")
 [node name="patient_anim" type="AnimatedSprite2D" parent="doctor_pov" unique_id=1161598085]
 scale = Vector2(-1, 1)
 sprite_frames = SubResource("SpriteFrames_vg3nb")
+animation = &"patient_6_exit"
 autoplay = "default"
 
 [node name="table" type="Sprite2D" parent="doctor_pov" unique_id=1212338912]
@@ -483,7 +485,7 @@ texture = ExtResource("7_ax250")
 sprite_frames = SubResource("SpriteFrames_l3v13")
 animation = &"red_button"
 autoplay = "default"
-frame_progress = 0.57843536
+frame_progress = 0.16536315
 
 [node name="doctor_hands" type="AnimatedSprite2D" parent="doctor_pov" unique_id=948277116]
 sprite_frames = SubResource("SpriteFrames_pnvlt")
@@ -509,7 +511,7 @@ disabled = true
 visible = false
 sprite_frames = SubResource("SpriteFrames_k1tg0")
 autoplay = "default"
-frame_progress = 0.37915727
+frame_progress = 0.31384906
 
 [node name="computer_area" type="Area2D" parent="." unique_id=159649394]
 position = Vector2(317, 366)
