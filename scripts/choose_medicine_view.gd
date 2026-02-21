@@ -50,4 +50,5 @@ func _on_eye_button_pressed() -> void:
 
 func _on_ready_button_pressed() -> void:
 	Manager.pre_pill = selected_medicines
+	Manager.handle_pc_red_button_sprite()
 	Manager.deactivate_computer()

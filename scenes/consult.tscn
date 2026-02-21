@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://d2nu8xu7kg6kn" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_MESA.png" id="6_ymgu4"]
 [ext_resource type="Texture2D" uid="uid://cwjmpsxryymfy" path="res://assets/Doctor/00 DOCTOR 1_MESA BASE.png" id="7_ax250"]
 [ext_resource type="Texture2D" uid="uid://bsegdfqnboh4l" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_PC.png" id="7_ywfih"]
-[ext_resource type="Texture2D" uid="uid://rtykg7m0rujb" path="res://assets/Doctor/00 DOCTOR 1_ORDENADOR.png" id="8_jm02e"]
 [ext_resource type="Texture2D" uid="uid://co0wpd6ab3rdp" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_DOCTOR FONDO.png" id="8_xrrwh"]
 [ext_resource type="Texture2D" uid="uid://qig5u45rpccp" path="res://assets/Doctor/00 DOCTOR 1_MANOS A.png" id="9_6bh7u"]
 [ext_resource type="Texture2D" uid="uid://bxskjjwb8l5qe" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_DOCTOR BOCA 1.png" id="9_bsnwx"]
@@ -54,7 +53,11 @@
 [ext_resource type="Texture2D" uid="uid://bbvgo6n4t07fb" path="res://assets/06 CAMISILLA/06 CAMISILLA HABLAR 1.png" id="44_ufslw"]
 [ext_resource type="Texture2D" uid="uid://j5fyhnn8jt5x" path="res://assets/06 CAMISILLA/06 CAMISILLA HABLAR 2.png" id="45_8b8fh"]
 [ext_resource type="Texture2D" uid="uid://bcuc4pogvnu4p" path="res://assets/door_knock/00 EFECTO PUERTA A.png" id="46_0crgj"]
+[ext_resource type="Texture2D" uid="uid://l1y2ai3oo6b2" path="res://assets/00 ORDENADOR/00 DOCTOR 1_ORDENADOR.png" id="47_15ubs"]
 [ext_resource type="Texture2D" uid="uid://bxw3u65joxj8k" path="res://assets/door_knock/00 EFECTO PUERTA B.png" id="47_t6spj"]
+[ext_resource type="Texture2D" uid="uid://dqmq4647bx8iq" path="res://assets/00 ORDENADOR/00 DOCTOR 1_ORDENADOR EXCLAMACION.png" id="48_l3v13"]
+[ext_resource type="Texture2D" uid="uid://dmtf3rt7nldja" path="res://assets/00 ORDENADOR/00 DOCTOR 1_ORDENADOR BOTON ROJO 2.png" id="49_8b8fh"]
+[ext_resource type="Texture2D" uid="uid://ikduyk5e7ed5" path="res://assets/00 ORDENADOR/00 DOCTOR 1_ORDENADOR BOTON ROJO.png" id="50_bvhlu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7votl"]
 animations = [{
@@ -326,6 +329,39 @@ animations = [{
 "speed": 3.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_l3v13"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("47_15ubs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_l3v13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_15ubs")
+}],
+"loop": true,
+"name": &"medicating",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("49_8b8fh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_bvhlu")
+}],
+"loop": true,
+"name": &"red_button",
+"speed": 2.0
+}]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_pnvlt"]
 animations = [{
 "frames": [{
@@ -443,8 +479,11 @@ autoplay = "default"
 [node name="table" type="Sprite2D" parent="doctor_pov" unique_id=1212338912]
 texture = ExtResource("7_ax250")
 
-[node name="pc" type="Sprite2D" parent="doctor_pov" unique_id=1882604153]
-texture = ExtResource("8_jm02e")
+[node name="pc" type="AnimatedSprite2D" parent="doctor_pov" unique_id=1191029029]
+sprite_frames = SubResource("SpriteFrames_l3v13")
+animation = &"red_button"
+autoplay = "default"
+frame_progress = 0.60242283
 
 [node name="doctor_hands" type="AnimatedSprite2D" parent="doctor_pov" unique_id=948277116]
 sprite_frames = SubResource("SpriteFrames_pnvlt")
@@ -470,7 +509,7 @@ disabled = true
 visible = false
 sprite_frames = SubResource("SpriteFrames_k1tg0")
 autoplay = "default"
-frame_progress = 0.5233841
+frame_progress = 0.74895215
 
 [node name="computer_area" type="Area2D" parent="." unique_id=159649394]
 position = Vector2(317, 366)

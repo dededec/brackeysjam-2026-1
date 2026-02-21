@@ -11,6 +11,7 @@ var patient_anim: AnimatedSprite2D = null
 var ballon: Node2D = null
 var extra_canvas = null
 var first_dialog_ended: bool = false
+var pc_sprite: AnimatedSprite2D = null
 
 var pre_pill = null
 var pill_ready = false
@@ -27,6 +28,9 @@ const how_many_talking_sounds = {
 }
 
 var letters_displayed = 0
+
+func register_pc_sprite(sprite: AnimatedSprite2D) -> void:
+	pc_sprite = sprite
 
 func register_talking_player(player: AudioStreamPlayer2D) -> void:
 	talking_sound_player = player
@@ -68,16 +72,19 @@ func reset() -> void:
 func start_dialog_1(patient: String) -> void:
 	reset()
 	current_dialog = patient
+	pc_sprite.play("medicating")
 	ballon.start_dialog("res://dialogue/" + patient + "_1.dialogue")
 
 func start_dialog_2(patient: String) -> void:
 	first_dialog_ended = false
+	pc_sprite.play("default")
 	ScoreManager.heal_patient(pre_pill)
 	ballon.start_dialog("res://dialogue/" + patient + "_2.dialogue")
 	
 func dialog_finished_1() -> void:
 	current_dialog = ""
 	first_dialog_ended = true
+	handle_pc_red_button_sprite()
 	
 func dialog_finished_2() -> void:
 	current_dialog = ""
@@ -110,6 +117,10 @@ func deactivate_computer() -> void:
 		computer.set_process(false)
 	if ballon:
 		ballon.show_all()
+
+func handle_pc_red_button_sprite() -> void:
+	if pre_pill and first_dialog_ended:
+		pc_sprite.play("red_button")
 
 func _on_computer_area_mouse_entered() -> void:
 	mouse_on_computer = true

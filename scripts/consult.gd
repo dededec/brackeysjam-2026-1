@@ -12,6 +12,7 @@ extends Node2D
 @onready var door_button: Button = $"doctor_pov/Door Button"
 @onready var door_knock: AnimatedSprite2D = $doctor_pov/DoorKnock
 @onready var talking_sound_player: AudioStreamPlayer2D = $TalkingSoundPlayer
+@onready var pc_sprite: AnimatedSprite2D = $doctor_pov/pc
 var is_siguiente = false
 
 func _ready() -> void: 
@@ -22,6 +23,7 @@ func _ready() -> void:
 	Manager.register_patient(patient_pov,patient_anim)
 	Manager.register_computer(choose_medicine_view)
 	Manager.register_talking_player(talking_sound_player)
+	Manager.register_pc_sprite(pc_sprite)
 	computer_area.mouse_entered.connect(Manager._on_computer_area_mouse_entered)
 	computer_area.mouse_exited.connect(Manager._on_computer_area_mouse_exited)
 
