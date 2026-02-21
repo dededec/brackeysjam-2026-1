@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cssfnd70oasbj"
-path="res://.godot/imported/pajaro_sound_1.wav-b3ef880ee4b0f744e5cd35f8724261a5.sample"
+path="res://.godot/imported/patient_5_talking_1.wav-ed3557341e11409046ead491456a9079.sample"
 
 [deps]
 
-source_file="res://assets/sounds/pajaro_sound_1.wav"
-dest_files=["res://.godot/imported/pajaro_sound_1.wav-b3ef880ee4b0f744e5cd35f8724261a5.sample"]
+source_file="res://assets/sounds/patient_5_talking_1.wav"
+dest_files=["res://.godot/imported/patient_5_talking_1.wav-ed3557341e11409046ead491456a9079.sample"]
 
 [params]
 

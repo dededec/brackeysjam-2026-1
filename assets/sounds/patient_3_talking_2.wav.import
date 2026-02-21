@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://f84hbauc5mm8"
-path="res://.godot/imported/mosca_sound_2.wav-a399048580d3f6460c0314e5c4994963.sample"
+path="res://.godot/imported/patient_3_talking_2.wav-8820422ca5b925a78476bee36eaa4c9c.sample"
 
 [deps]
 
-source_file="res://assets/sounds/mosca_sound_2.wav"
-dest_files=["res://.godot/imported/mosca_sound_2.wav-a399048580d3f6460c0314e5c4994963.sample"]
+source_file="res://assets/sounds/patient_3_talking_2.wav"
+dest_files=["res://.godot/imported/patient_3_talking_2.wav-8820422ca5b925a78476bee36eaa4c9c.sample"]
 
 [params]
 

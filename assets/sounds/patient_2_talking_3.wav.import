@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://3ged51odkq1k"
-path="res://.godot/imported/saxo_audio_3.wav-9f63e1f66230b9c972780fbcc97c1c5f.sample"
+path="res://.godot/imported/patient_2_talking_3.wav-ca88835209a249b977d64c7f8e0e88b5.sample"
 
 [deps]
 
-source_file="res://assets/sounds/saxo_audio_3.wav"
-dest_files=["res://.godot/imported/saxo_audio_3.wav-9f63e1f66230b9c972780fbcc97c1c5f.sample"]
+source_file="res://assets/sounds/patient_2_talking_3.wav"
+dest_files=["res://.godot/imported/patient_2_talking_3.wav-ca88835209a249b977d64c7f8e0e88b5.sample"]
 
 [params]
 

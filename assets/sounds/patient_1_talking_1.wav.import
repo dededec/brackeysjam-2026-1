@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ct4om5l8fsodr"
-path="res://.godot/imported/sonrisas_sound_1.wav-0e174cb8bcfd666e53b676a8fd28e279.sample"
+path="res://.godot/imported/patient_1_talking_1.wav-d5b07763f039a49e642174ed6f15da82.sample"
 
 [deps]
 
-source_file="res://assets/sounds/sonrisas_sound_1.wav"
-dest_files=["res://.godot/imported/sonrisas_sound_1.wav-0e174cb8bcfd666e53b676a8fd28e279.sample"]
+source_file="res://assets/sounds/patient_1_talking_1.wav"
+dest_files=["res://.godot/imported/patient_1_talking_1.wav-d5b07763f039a49e642174ed6f15da82.sample"]
 
 [params]
 
