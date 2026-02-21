@@ -49,6 +49,5 @@ func _on_eye_button_pressed() -> void:
 	Manager.deactivate_computer()
 
 func _on_ready_button_pressed() -> void:
-	ScoreManager.heal_patient(selected_medicines)
 	Manager.pre_pill = selected_medicines
 	Manager.deactivate_computer()

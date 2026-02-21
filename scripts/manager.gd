@@ -53,6 +53,7 @@ func start_dialog_1(patient: String) -> void:
 	ballon.start_dialog("res://dialogue/" + patient + "_1.dialogue")
 
 func start_dialog_2(patient: String) -> void:
+	ScoreManager.heal_patient(pre_pill)
 	ballon.start_dialog("res://dialogue/" + patient + "_2.dialogue")
 	
 func dialog_finished_1() -> void:
@@ -61,6 +62,7 @@ func dialog_finished_2() -> void:
 	current_dialog = ""
 	play_patient_anim("exit")
 	patient_anim.scale.x = 1
+
 	
 func change_pov_patient() -> void:
 	current_pov = "patient"

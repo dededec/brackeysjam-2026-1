@@ -35,13 +35,12 @@ func _on_red_button_mouse_exited() -> void:
 
 func _on_patient_anim_animation_finished() -> void:
 	if patient_anim.animation.ends_with("exit"):
-		door_button.disabled = false
+		if ScoreManager.has_seen_all_patients():
+			get_tree().change_scene_to_file("res://scenes/results_screen.tscn")
+		else:
+			door_button.disabled = false
 		patient_anim.scale.x = -1
 
 func _on_door_button_pressed() -> void:
 	MedicineManager.current_patient+=1
 	Manager.start_dialog_1(MedicineManager.get_current_patient_label())
-
-
-func _on_child_entered_tree(node: Node) -> void:
-	pass
