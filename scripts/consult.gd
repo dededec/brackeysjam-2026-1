@@ -11,6 +11,7 @@ extends Node2D
 @onready var red_button: Area2D = $red_button
 @onready var door_button: Button = $"doctor_pov/Door Button"
 @onready var door_knock: AnimatedSprite2D = $doctor_pov/DoorKnock
+@onready var talking_sound_player: AudioStreamPlayer2D = $TalkingSoundPlayer
 
 func _ready() -> void: 
 	animation_player.play_backwards("close")
@@ -19,6 +20,7 @@ func _ready() -> void:
 	Manager.register_doctor(doctor_pov,doctor_anim)
 	Manager.register_patient(patient_pov,patient_anim)
 	Manager.register_computer(choose_medicine_view)
+	Manager.register_talking_player(talking_sound_player)
 	computer_area.mouse_entered.connect(Manager._on_computer_area_mouse_entered)
 	computer_area.mouse_exited.connect(Manager._on_computer_area_mouse_exited)
 

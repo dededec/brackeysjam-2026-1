@@ -16,6 +16,21 @@ var pre_pill = null
 var pill_ready = false
 var red_button_flag = false
 
+var talking_sound_player: AudioStreamPlayer2D = null
+const how_many_talking_sounds = {
+	"patient_1": 3,
+	"patient_2": 3,
+	"patient_3": 3,
+	"patient_4": 3,
+	"patient_5": 4,
+	"patient_6": 2,
+}
+
+var letters_displayed = 0
+
+func register_talking_player(player: AudioStreamPlayer2D) -> void:
+	talking_sound_player = player
+	
 func register_doctor(node: Node2D, doctor_anim_node: AnimatedSprite2D) -> void:
 	doctor = node
 	doctor_anim = doctor_anim_node
@@ -119,7 +134,16 @@ func play_patient_anim(animation: String) -> void:
 	patient_anim.play(current_patient + "_" + animation)
 
 func play_talking_sound() -> void:
+	if not talking_sound_player:
+		pass
+		
 	if current_pov == "doctor":
 		pass
 	else:
-		pass
+		letters_displayed += 1
+		if letters_displayed % 2 == 0:
+			var current_patient = MedicineManager.get_current_patient_label()
+			var talking_index = (randi() % how_many_talking_sounds[current_patient]) + 1
+			var sound = "res://assets/sounds/" + current_patient + "_talking_" + str(talking_index) + ".wav"
+			talking_sound_player.stream = load(sound)
+			talking_sound_player.play()
