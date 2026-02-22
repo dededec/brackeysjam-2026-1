@@ -73,9 +73,14 @@ func randomise_encounters() -> void:
 func has_healed_patient(medicines: Array[String]) -> bool:
 	var healed_symptoms = []
 	for medicine in medicines:
-		healed_symptoms.append(medicine_symptoms[medicine])
-	
-	for symptom in random_symptoms:
+		for cured_symptom in medicine_symptoms[medicine]:
+			healed_symptoms.append(cured_symptom)
+		
+	print(healed_symptoms)
+	print("---------")
+	print(chosen_symptoms_keys)
+	for symptom in chosen_symptoms_keys:
 		if not healed_symptoms.has(symptom):
+			print("does not have " + symptom)
 			return false 
 	return true

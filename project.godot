@@ -40,6 +40,7 @@ editor/new_file_template=""
 
 window/size/viewport_width=524
 window/size/viewport_height=524
+window/stretch/mode="viewport"
 
 [editor_plugins]
 

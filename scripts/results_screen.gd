@@ -16,4 +16,5 @@ func _input(event: InputEvent) -> void:
 
 func _on_end_sprite_animation_finished() -> void:
 	ScoreManager.reset()
+	MedicineManager.current_patient = 0
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
