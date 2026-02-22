@@ -57,8 +57,14 @@ func _on_door_button_pressed() -> void:
 	talking_sound_player.play()
 	is_siguiente = true
 	door_button.disabled = true
+	Manager.change_pov_doctor()
+	doctor_anim.play("next")
 	
 func _on_talking_sound_player_finished() -> void:
+	pass
+
+
+func _on_doctor_anim_animation_finished() -> void:
 	if is_siguiente:
 		Manager.start_dialog_1(MedicineManager.get_current_patient_label())
 		is_siguiente = false

@@ -110,7 +110,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("9_bsnwx")
 }],
-"loop": true,
+"loop": false,
 "name": &"next",
 "speed": 5.0
 }, {
@@ -493,9 +493,8 @@ texture = ExtResource("5_x7qaf")
 [node name="doctor_anim" type="AnimatedSprite2D" parent="patient_pov" unique_id=1937593774]
 position = Vector2(-3, -185)
 sprite_frames = SubResource("SpriteFrames_qrh6a")
-animation = &"idle"
+animation = &"next"
 autoplay = "idle"
-frame_progress = 0.48718563
 
 [node name="00DoctorFondo" type="Sprite2D" parent="patient_pov" unique_id=1420721010]
 position = Vector2(0, 1)
@@ -590,6 +589,7 @@ script = ExtResource("39_jt4yy")
 bus = &"Talking"
 
 [connection signal="animation_finished" from="transition/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="patient_pov/doctor_anim" to="." method="_on_doctor_anim_animation_finished"]
 [connection signal="animation_finished" from="doctor_pov/patient_anim" to="." method="_on_patient_anim_animation_finished"]
 [connection signal="timeout" from="doctor_pov/anim_timer" to="doctor_pov" method="_on_anim_timer_timeout"]
 [connection signal="pressed" from="doctor_pov/Door Button" to="." method="_on_door_button_pressed"]
