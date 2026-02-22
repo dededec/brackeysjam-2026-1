@@ -53,6 +53,7 @@ func _on_door_button_pressed() -> void:
 	talking_sound_player.stream = load("res://assets/sounds/siguiente.wav")
 	talking_sound_player.play()
 	is_siguiente = true
+	door_button.disabled = true
 	
 func _on_talking_sound_player_finished() -> void:
 	if is_siguiente:
