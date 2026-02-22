@@ -28,7 +28,10 @@ func _ready() -> void:
 	computer_area.mouse_exited.connect(Manager._on_computer_area_mouse_exited)
 
 func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
-	Manager.start_dialog_1(MedicineManager.get_current_patient_label())
+	if ScoreManager.has_seen_all_patients():
+		get_tree().change_scene_to_file("res://scenes/results_screen.tscn")
+	else:
+		Manager.start_dialog_1(MedicineManager.get_current_patient_label())
 
 func _on_red_button_mouse_entered() -> void:
 	Manager.red_button_flag = true
@@ -39,7 +42,7 @@ func _on_red_button_mouse_exited() -> void:
 func _on_patient_anim_animation_finished() -> void:
 	if patient_anim.animation.ends_with("exit"):
 		if ScoreManager.has_seen_all_patients():
-			get_tree().change_scene_to_file("res://scenes/results_screen.tscn")
+			animation_player.play("close")
 		else:
 			door_button.disabled = false
 			door_knock.show()
