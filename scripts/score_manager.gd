@@ -11,3 +11,7 @@ func heal_patient(medicines: Array[String]) -> void:
 
 func has_seen_all_patients() -> bool:
 	return seen_patients == NUM_OF_PATIENTS
+
+func reset() -> void:
+	seen_patients = 0
+	healed_patients = 0

@@ -2,6 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://dpqxotrakrnah" path="res://assets/00 PC_PANTALLA/00 PC_BASE PANTALLA.png" id="1_fqf1x"]
 [ext_resource type="Script" uid="uid://dxoyvj0pqa4c7" path="res://scripts/results_screen.gd" id="1_j5vbe"]
+[ext_resource type="Texture2D" uid="uid://cuglyctgbm6tu" path="res://assets/CUADRO DE TEXTO MARCO.png" id="3_cij7f"]
+[ext_resource type="FontFile" uid="uid://de8ebkk46mwsy" path="res://assets/font/ito-sans.ttf" id="3_d57yd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j5vbe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d57yd"]
 
 [node name="ResultsScreen" type="Node2D" unique_id=262881007]
 script = ExtResource("1_j5vbe")
@@ -10,9 +16,19 @@ script = ExtResource("1_j5vbe")
 position = Vector2(262, 262)
 texture = ExtResource("1_fqf1x")
 
-[node name="TextEdit" type="TextEdit" parent="." unique_id=1678989228]
-offset_left = 89.0
-offset_top = 316.0
-offset_right = 421.0
-offset_bottom = 400.0
+[node name="CuadroDeTextoMarco" type="Sprite2D" parent="." unique_id=2113437624]
+position = Vector2(259.75, -224.5)
+scale = Vector2(0.7719466, 1.9217558)
+texture = ExtResource("3_cij7f")
+
+[node name="TextEdit" type="Label" parent="." unique_id=1160197043]
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 526.0
+offset_bottom = 528.0
+theme_override_fonts/font = ExtResource("3_d57yd")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_j5vbe")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d57yd")
 text = "SE HA ACABAO HAZ CLICK PA IR AL MENU"
+horizontal_alignment = 1
+vertical_alignment = 1

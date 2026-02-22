@@ -8,8 +8,8 @@ const symptoms = {
 	"nostalgia": ["I reminisce about better days.", 
 			"Past times seem better to me.", 
 			"I think a lot about my childhood."],
-	"narcolepsy": ["I felt asleep while dreaming", 
-			"Sleep is my best friend", 
+	"narcolepsy": ["I felt asleep while dreaming.", 
+			"Sleep is my best friend.", 
 			"I...feel...drowsy..."],
 	"loneliness": ["I have no one with me.", 
 			"I need a hug.", 
@@ -55,6 +55,9 @@ func randomise_symptoms() -> void:
 	for i in range(3):
 		var symptom_key = "s" + str(i+1)
 		var random_symptom = symptoms.keys()[randi() % symptoms.keys().size()]
+		while random_symptom in chosen_symptoms_keys:
+			random_symptom = symptoms.keys()[randi() % symptoms.keys().size()]
+			
 		chosen_symptoms_keys.push_back(random_symptom)
 		temp_random_symptoms[symptom_key] = _get_random_sentence(random_symptom)
 	random_symptoms = temp_random_symptoms
