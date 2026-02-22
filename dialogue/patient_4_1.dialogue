@@ -8,7 +8,7 @@ do Manager.change_pov_doctor()
 Doctor: Hi Narciso, how have you been?
 
 do Manager.change_pov_patient()
-Narciso: I would like to go straight to point
+Narciso: I would like to go straight to the point
 Narciso: I am experiencing some glaring issues
 
 do Manager.change_pov_doctor()

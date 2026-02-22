@@ -2,7 +2,7 @@
 
 ~ start
 do Manager.change_pov_patient()
-Alto: You are the best doc!
+Alto: You are the best Doc!
 Alto: You should come to my next gig
 
 do Manager.change_pov_doctor()

@@ -9,7 +9,7 @@ do Manager.change_pov_doctor()
 Doctor: You know it Gorrión
 
 do Manager.change_pov_patient()
-Gorrión: Welp see you tomorrow lad
+Gorrión: Welp, see you tomorrow lad
 
 do Manager.dialog_finished_2()
 

@@ -9,23 +9,23 @@ Doctor: We saw each other yesterday Gorrión
 
 do Manager.change_pov_patient()
 Gorrión: Sure sure
-Gorrión: Do you have some sedes for me?
+Gorrión: Do you have some seeds for me?
 
 do Manager.change_pov_doctor()
 Doctor: Sadly no, but let me know what you are here for
 
 do Manager.change_pov_patient()
-Gorrión: Oooh I am feeling so bad Doctor
+Gorrión: Oooh, I am feeling so bad Doctor
 
 Gorrión: {{MedicineManager.random_symptoms["s1"]}}
 Gorrión: {{MedicineManager.random_symptoms["s2"]}}
 Gorrión: {{MedicineManager.random_symptoms["s3"]}}
 
 do Manager.change_pov_doctor()
-Doctor: It ill be fine, let me check my pill-o-nator a sec
+Doctor: It will be fine, let me check my Pill-o-nator a sec
 
 do Manager.change_pov_patient()
-Gorrión: Oh the young fellas
+Gorrión: Oh, the young fellas
 Gorrión: And your fancy tech
 
 do Manager.dialog_finished_1()

@@ -26,7 +26,7 @@ Olaf Popov aka Pierrot: {{MedicineManager.random_symptoms["s3"]}}
 
 
 do Manager.change_pov_doctor()
-Doctor: No problem give me a sec
+Doctor: No problem, give me a sec
 
 do Manager.change_pov_patient()
 do Manager.dialog_finished_1()

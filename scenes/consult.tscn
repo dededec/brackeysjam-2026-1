@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://i1hbfvmf2vcs" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_FONDO.png" id="5_6bh7u"]
 [ext_resource type="Texture2D" uid="uid://hm58viya07gc" path="res://assets/Doctor/00 DOCTOR 1_BASE.png" id="5_x7qaf"]
 [ext_resource type="Texture2D" uid="uid://bxuakrsokrlyu" path="res://assets/Doctor/00 DOCTOR 1_FONDO.png" id="6_3fpf8"]
-[ext_resource type="Script" path="res://scripts/doctor_pov.gd" id="6_ax250"]
+[ext_resource type="Script" uid="uid://bhwhnosk8rcbu" path="res://scripts/doctor_pov.gd" id="6_ax250"]
 [ext_resource type="Texture2D" uid="uid://d2nu8xu7kg6kn" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_MESA.png" id="6_ymgu4"]
 [ext_resource type="Texture2D" uid="uid://cwjmpsxryymfy" path="res://assets/Doctor/00 DOCTOR 1_MESA BASE.png" id="7_ax250"]
 [ext_resource type="Texture2D" uid="uid://bsegdfqnboh4l" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_PC.png" id="7_ywfih"]
@@ -36,7 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://c2sx64yn07dod" path="res://assets/03 MOSQUITA/03 MOSQUITA IDDLE 1.png" id="25_0omqn"]
 [ext_resource type="Texture2D" uid="uid://c7pq77hc28sbr" path="res://assets/02 SAXOFONISTA/02 SAXOFONISTA 2.png" id="25_v27yp"]
 [ext_resource type="Texture2D" uid="uid://b8nku4spymqjb" path="res://assets/03 MOSQUITA/03 MOSQUITA IDDLE 2.png" id="26_d5wvc"]
-[ext_resource type="PackedScene" path="res://scenes/transition.tscn" id="26_qrh6a"]
+[ext_resource type="PackedScene" uid="uid://dpsxqi3utda36" path="res://scenes/transition.tscn" id="26_qrh6a"]
 [ext_resource type="Texture2D" uid="uid://b02hfegkcv4st" path="res://assets/04 FLORES/04 FLORES IDDLE 1.png" id="32_aht2x"]
 [ext_resource type="Texture2D" uid="uid://b1iqc4bxemv66" path="res://assets/exit/patient_4_exit.png" id="32_k1tg0"]
 [ext_resource type="Texture2D" uid="uid://bbtnjp8kvim67" path="res://assets/04 FLORES/04 FLORES IDDLE 2.png" id="33_krpwa"]
@@ -107,7 +107,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("10_tcqct")
 }, {
-"duration": 1.0,
+"duration": 1.5,
 "texture": ExtResource("9_bsnwx")
 }],
 "loop": false,
