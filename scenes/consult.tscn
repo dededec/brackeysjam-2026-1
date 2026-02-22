@@ -58,7 +58,12 @@
 [ext_resource type="Texture2D" uid="uid://bxw3u65joxj8k" path="res://assets/door_knock/00 EFECTO PUERTA B.png" id="47_t6spj"]
 [ext_resource type="Texture2D" uid="uid://dqmq4647bx8iq" path="res://assets/00 ORDENADOR/00 DOCTOR 1_ORDENADOR EXCLAMACION.png" id="48_l3v13"]
 [ext_resource type="Texture2D" uid="uid://dmtf3rt7nldja" path="res://assets/00 ORDENADOR/00 DOCTOR 1_ORDENADOR BOTON ROJO 2.png" id="49_8b8fh"]
+[ext_resource type="Texture2D" uid="uid://c3dhftpm1btwj" path="res://assets/_ANIMACION PILDORA/01 ANIMACION PILDORA 1.png" id="49_akd2k"]
 [ext_resource type="Texture2D" uid="uid://ikduyk5e7ed5" path="res://assets/00 ORDENADOR/00 DOCTOR 1_ORDENADOR BOTON ROJO.png" id="50_bvhlu"]
+[ext_resource type="Texture2D" uid="uid://da8bekpc4qhqr" path="res://assets/_ANIMACION PILDORA/01 ANIMACION PILDORA 2.png" id="50_f4whg"]
+[ext_resource type="Texture2D" uid="uid://k067wa4br4mb" path="res://assets/_ANIMACION PILDORA/01 ANIMACION PILDORA 3 AZUL.png" id="51_w48u1"]
+[ext_resource type="Texture2D" uid="uid://q3k4bsw4ijsy" path="res://assets/_ANIMACION PILDORA/01 ANIMACION PILDORA 3 ROJO.png" id="52_1fr3e"]
+[ext_resource type="Texture2D" uid="uid://dx8i8gqy2pnsn" path="res://assets/_ANIMACION PILDORA/01 ANIMACION PILDORA 3 VERDE.png" id="53_sx3bg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7votl"]
 animations = [{
@@ -342,6 +347,38 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("49_akd2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_f4whg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_akd2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_f4whg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_akd2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_f4whg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_w48u1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_1fr3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_sx3bg")
+}],
+"loop": true,
+"name": &"generate_pill",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("48_l3v13")
 }, {
 "duration": 1.0,
@@ -483,9 +520,10 @@ texture = ExtResource("7_ax250")
 
 [node name="pc" type="AnimatedSprite2D" parent="doctor_pov" unique_id=1191029029]
 sprite_frames = SubResource("SpriteFrames_l3v13")
-animation = &"red_button"
+animation = &"generate_pill"
 autoplay = "default"
-frame_progress = 0.16536315
+frame = 8
+frame_progress = 0.8519517
 
 [node name="doctor_hands" type="AnimatedSprite2D" parent="doctor_pov" unique_id=948277116]
 sprite_frames = SubResource("SpriteFrames_pnvlt")
