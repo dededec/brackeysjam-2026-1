@@ -13,7 +13,11 @@ config_version=5
 config/name="brackeysjam"
 run/main_scene="uid://bpr7ol0gocjdd"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/stretch_mode=0
+boot_splash/image="uid://cuh36lck3mcib"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=3000
 
 [audio]
 
