@@ -52,3 +52,7 @@ func _on_ready_button_pressed() -> void:
 	Manager.pre_pill = selected_medicines
 	Manager.handle_pc_red_button_sprite()
 	Manager.deactivate_computer()
+
+
+func _on_manual_button_pressed() -> void:
+	OS.shell_open("https://en.wikipedia.org/wiki/Goosebumps")

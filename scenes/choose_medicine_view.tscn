@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://dpj8np0k8t6u3" path="res://assets/medicinas/75X75PX/saxo.png" id="13_b4u13"]
 [ext_resource type="Texture2D" uid="uid://pl23tabil3f8" path="res://assets/00 PC_PANTALLA/00 PC_BOTON READY 2.png" id="13_rf3qt"]
 [ext_resource type="Texture2D" uid="uid://p556vb8hqf1t" path="res://assets/medicinas/75X75PX/ambientador.png" id="14_eis08"]
+[ext_resource type="Texture2D" uid="uid://q6wqcai4r6yw" path="res://assets/_BOTON MANUAL/MANUAL 1.png" id="15_i02ip"]
+[ext_resource type="Texture2D" uid="uid://dshjfevu4bb25" path="res://assets/_BOTON MANUAL/MANUAL 2.png" id="16_nkbdb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q4ddm"]
 radius = 44.00824
@@ -137,6 +139,14 @@ position = Vector2(406, 227)
 texture = ExtResource("14_eis08")
 region_enabled = false
 
+[node name="ManualButton" type="TextureButton" parent="." unique_id=358512423]
+offset_left = 40.0
+offset_top = 304.0
+offset_right = 166.0
+offset_bottom = 397.0
+texture_normal = ExtResource("15_i02ip")
+texture_pressed = ExtResource("16_nkbdb")
+
 [node name="EyeButton" type="TextureButton" parent="." unique_id=1710012929]
 offset_left = 40.0
 offset_top = 438.0
@@ -170,6 +180,7 @@ texture_pressed = SubResource("AtlasTexture_rf3qt")
 [connection signal="medicine_dropped" from="Medicines/platano" to="." method="_on_medicine_dropped"]
 [connection signal="medicine_dropped" from="Medicines/saxo" to="." method="_on_medicine_dropped"]
 [connection signal="medicine_dropped" from="Medicines/ambientador" to="." method="_on_medicine_dropped"]
+[connection signal="pressed" from="ManualButton" to="." method="_on_manual_button_pressed"]
 [connection signal="pressed" from="EyeButton" to="." method="_on_eye_button_pressed"]
 [connection signal="pressed" from="ReadyButton" to="." method="_on_ready_button_pressed"]
 
