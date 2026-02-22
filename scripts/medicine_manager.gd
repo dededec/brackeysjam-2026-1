@@ -8,9 +8,9 @@ const symptoms = {
 	"nostalgia": ["I reminisce about better days.", 
 			"Past times seem better to me.", 
 			"I think a lot about my childhood."],
-	"insomnia": ["I cannot sleep at night.", 
-			"Every night, I go to bed at 4AM", 
-			"I am marathoning Friends in the wee hours."],
+	"narcolepsy": ["I felt asleep while dreaming", 
+			"Sleep is my best friend", 
+			"I...feel...drowsy..."],
 	"loneliness": ["I have no one with me.", 
 			"I need a hug.", 
 			"I feel lonely."],
@@ -32,7 +32,7 @@ const symptoms = {
 	}
 
 const medicine_symptoms = {
-	"cafetera": ["insomnia",],
+	"cafetera": ["narcolepsy",],
 	"yano": ["loneliness", "nostalgia",],
 	"maligno": ["creative_block", "goosebumps"],
 	"cebollo": ["loneliness", "goosebumps",],
