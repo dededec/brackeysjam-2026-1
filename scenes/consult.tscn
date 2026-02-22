@@ -535,10 +535,8 @@ texture = ExtResource("7_ax250")
 
 [node name="pc" type="AnimatedSprite2D" parent="doctor_pov" unique_id=1191029029]
 sprite_frames = SubResource("SpriteFrames_l3v13")
-animation = &"generate_pill"
+animation = &"red_pill"
 autoplay = "default"
-frame = 5
-frame_progress = 1.0
 
 [node name="doctor_hands" type="AnimatedSprite2D" parent="doctor_pov" unique_id=948277116]
 sprite_frames = SubResource("SpriteFrames_pnvlt")

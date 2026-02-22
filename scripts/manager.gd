@@ -12,6 +12,7 @@ var ballon: Node2D = null
 var extra_canvas = null
 var first_dialog_ended: bool = false
 var pc_sprite: AnimatedSprite2D = null
+var is_generating_pill = false
 
 var pre_pill = null
 var pill_ready = false
@@ -31,6 +32,7 @@ var letters_displayed = 0
 
 func register_pc_sprite(sprite: AnimatedSprite2D) -> void:
 	pc_sprite = sprite
+	pc_sprite.animation_finished.connect(on_pc_sprite_animation_finished)
 
 func register_talking_player(player: AudioStreamPlayer2D) -> void:
 	talking_sound_player = player
@@ -60,8 +62,8 @@ func _process(_delta: float) -> void:
 		activate_computer()
 	if  pre_pill and red_button_flag and first_dialog_ended and Input.is_action_just_pressed("left_clic"):
 		pill_ready = true
-		start_dialog_2(MedicineManager.randomised_patients[MedicineManager.current_patient])
-		#TODO SHOULD BE SET WHEN FINISHED ANIMATION OF CREATION OF PILL
+		pc_sprite.play("generate_pill")
+		is_generating_pill = true
 
 func reset() -> void:
 	pill_ready = false
@@ -77,7 +79,6 @@ func start_dialog_1(patient: String) -> void:
 
 func start_dialog_2(patient: String) -> void:
 	first_dialog_ended = false
-	pc_sprite.play("default")
 	ScoreManager.heal_patient(pre_pill)
 	ballon.start_dialog("res://dialogue/" + patient + "_2.dialogue")
 	
@@ -88,6 +89,7 @@ func dialog_finished_1() -> void:
 	
 func dialog_finished_2() -> void:
 	current_dialog = ""
+	pc_sprite.play("default")
 	play_patient_anim("exit")
 	patient_anim.scale.x = 1
 
@@ -164,3 +166,10 @@ func play_talking_sound() -> void:
 			var sound = "res://assets/sounds/" + current_patient + "_talking_" + str(talking_index) + ".wav"
 			talking_sound_player.stream = load(sound)
 			talking_sound_player.play()
+
+func on_pc_sprite_animation_finished():
+	if is_generating_pill:
+		var pill_animations = ["red_pill", "blue_pill", "green_pill"]
+		pc_sprite.play(pill_animations[randi() % 3])
+		is_generating_pill = false
+		start_dialog_2(MedicineManager.randomised_patients[MedicineManager.current_patient])
