@@ -1,0 +1,23 @@
+~ start
+do MedicineManager.randomise_symptoms()
+do Manager.change_pov_patient()
+Alto: Hello Doc so great to see you
+Alto: I've been having some issues recently
+
+do Manager.change_pov_doctor()
+Doctor: It has been to many times Alto 
+Doctor: We have already changed your reed a lot
+Doctor: Stop breaking them
+
+do Manager.change_pov_patient()
+Alto: No! This time is different
+Alto: {{MedicineManager.random_symptoms["s1"]}}
+Alto: {{MedicineManager.random_symptoms["s2"]}}
+Alto: {{MedicineManager.random_symptoms["s3"]}}
+
+do Manager.change_pov_doctor()
+Doctor: Okay man let me take a look 
+do Manager.change_pov_patient()
+do Manager.dialog_finished_1()
+
+=> END

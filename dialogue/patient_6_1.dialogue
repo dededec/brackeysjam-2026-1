@@ -1,0 +1,30 @@
+~ start
+do MedicineManager.randomise_symptoms()
+
+do Manager.change_pov_patient()
+Glaucoma: Ciao Dottore
+
+do Manager.change_pov_doctor()
+Doctor: Hello Mr Glaucoma
+
+do Manager.change_pov_patient()
+Glaucoma: I'll make you an offer you can't refuse
+Glaucoma: You cure me of my disease 
+Glaucoma: You get to spend one more day with your family
+
+do Manager.change_pov_doctor()
+Doctor: S-sure Mr Glaucoma, explain your symptoms
+
+do Manager.change_pov_patient()
+Glaucoma: {{MedicineManager.random_symptoms["s1"]}}
+Glaucoma: {{MedicineManager.random_symptoms["s2"]}}
+Glaucoma: {{MedicineManager.random_symptoms["s3"]}}
+
+do Manager.change_pov_doctor()
+Doctor: I am sure I'll be able to find something
+
+do Manager.change_pov_patient()
+Glaucoma: What an honorable man Dottore
+do Manager.dialog_finished_1()
+
+=> END

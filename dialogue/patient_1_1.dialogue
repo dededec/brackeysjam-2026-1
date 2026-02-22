@@ -1,0 +1,34 @@
+~ start
+do MedicineManager.randomise_symptoms()
+
+do Manager.change_pov_patient()
+Olaf Popov: hihihi hello doctor
+
+
+do Manager.change_pov_doctor()
+Doctor: H-Hi Olaf
+
+do Manager.change_pov_patient()
+Olaf Popov: hihi I've told you already
+Olaf Popov: my name is Pierrot
+
+
+do Manager.change_pov_doctor()
+Doctor: Sure Pierrot, why are you here today?
+
+do Manager.change_pov_patient()
+Olaf Popov aka Pierrot: so hihi sadly hihi 
+Olaf Popov aka Pierrot: i will not be able to perform today
+
+Olaf Popov aka Pierrot: {{MedicineManager.random_symptoms["s1"]}}
+Olaf Popov aka Pierrot: {{MedicineManager.random_symptoms["s2"]}}
+Olaf Popov aka Pierrot: {{MedicineManager.random_symptoms["s3"]}}
+
+
+do Manager.change_pov_doctor()
+Doctor: No problem give me a sec
+
+do Manager.change_pov_patient()
+do Manager.dialog_finished_1()
+
+=> END

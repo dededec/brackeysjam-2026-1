@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dpsxqi3utda36"]
+
+[ext_resource type="Shader" uid="uid://caqvufpaq4567" path="res://new_shader.gdshader" id="1_rerct"]
+
+[sub_resource type="Animation" id="Animation_f0i4t"]
+length = 0.53333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_px735"]
+resource_name = "close"
+length = 0.76666665
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.74),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xmi56"]
+_data = {
+&"RESET": SubResource("Animation_f0i4t"),
+&"close": SubResource("Animation_px735")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hi828"]
+shader = ExtResource("1_rerct")
+shader_parameter/radius = 1.0
+shader_parameter/center = Vector2(0.5, 0.5)
+shader_parameter/transition_color = Color(0, 0, 0, 1)
+
+[node name="transition" type="CanvasLayer" unique_id=193184028]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=735077533]
+libraries/ = SubResource("AnimationLibrary_xmi56")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=430982559]
+material = SubResource("ShaderMaterial_hi828")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9982364, 0.9948655)
+mouse_filter = 2

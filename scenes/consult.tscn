@@ -1,0 +1,603 @@
+[gd_scene format=3 uid="uid://los6yva0dv34"]
+
+[ext_resource type="Script" uid="uid://dyekaxhxmgf6x" path="res://scripts/consult.gd" id="1_2nhxp"]
+[ext_resource type="Texture2D" uid="uid://2012iggjksfo" path="res://assets/pov_doctor.png" id="1_hftaw"]
+[ext_resource type="Texture2D" uid="uid://cdcbk48hg3hkl" path="res://assets/pov_patient.png" id="2_2nhxp"]
+[ext_resource type="PackedScene" uid="uid://d35j4cqwebkal" path="res://scenes/choose_medicine_view.tscn" id="4_7votl"]
+[ext_resource type="Texture2D" uid="uid://i1hbfvmf2vcs" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_FONDO.png" id="5_6bh7u"]
+[ext_resource type="Texture2D" uid="uid://hm58viya07gc" path="res://assets/Doctor/00 DOCTOR 1_BASE.png" id="5_x7qaf"]
+[ext_resource type="Texture2D" uid="uid://bxuakrsokrlyu" path="res://assets/Doctor/00 DOCTOR 1_FONDO.png" id="6_3fpf8"]
+[ext_resource type="Script" path="res://scripts/doctor_pov.gd" id="6_ax250"]
+[ext_resource type="Texture2D" uid="uid://d2nu8xu7kg6kn" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_MESA.png" id="6_ymgu4"]
+[ext_resource type="Texture2D" uid="uid://cwjmpsxryymfy" path="res://assets/Doctor/00 DOCTOR 1_MESA BASE.png" id="7_ax250"]
+[ext_resource type="Texture2D" uid="uid://bsegdfqnboh4l" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_PC.png" id="7_ywfih"]
+[ext_resource type="Texture2D" uid="uid://co0wpd6ab3rdp" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_DOCTOR FONDO.png" id="8_xrrwh"]
+[ext_resource type="Texture2D" uid="uid://qig5u45rpccp" path="res://assets/Doctor/00 DOCTOR 1_MANOS A.png" id="9_6bh7u"]
+[ext_resource type="Texture2D" uid="uid://bxskjjwb8l5qe" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_DOCTOR BOCA 1.png" id="9_bsnwx"]
+[ext_resource type="Texture2D" uid="uid://c3bcti4odaxam" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_DOCTOR BOCA SIGUIENTE.png" id="10_tcqct"]
+[ext_resource type="Texture2D" uid="uid://dqmljnewdxaxf" path="res://assets/Doctor/00 DOCTOR 1_MANOS B.png" id="10_ymgu4"]
+[ext_resource type="Texture2D" uid="uid://bredgs30qyaf7" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_DOCTOR BOCA 2.png" id="11_f5tiu"]
+[ext_resource type="Texture2D" uid="uid://dce7ecwkbydlb" path="res://assets/Doctor/00 DOCTOR 1_MANOS TECLADO A.png" id="11_ywfih"]
+[ext_resource type="Texture2D" uid="uid://bqge8alte8r8m" path="res://assets/00 DOCTOR ESCENA 2/00 DOCTOR_DOCTOR BRAZOS.png" id="12_ita8y"]
+[ext_resource type="Texture2D" uid="uid://cb7m0syt6pc0e" path="res://assets/Doctor/00 DOCTOR 1_MANOS TECLADO B.png" id="12_nhjwn"]
+[ext_resource type="Texture2D" uid="uid://bs3u7awf7k7xy" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE A.png" id="15_ita8y"]
+[ext_resource type="Texture2D" uid="uid://cuglyctgbm6tu" path="res://assets/CUADRO DE TEXTO MARCO.png" id="15_ytvhx"]
+[ext_resource type="Texture2D" uid="uid://cuiau6xsp1y7p" path="res://assets/exit/patient_1_exit.png" id="16_600jw"]
+[ext_resource type="Texture2D" uid="uid://dlhrqhb3n610t" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE B.png" id="16_qrh6a"]
+[ext_resource type="Texture2D" uid="uid://vfhu23gi0hsp" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE A 1.png" id="17_600jw"]
+[ext_resource type="Texture2D" uid="uid://dvlarns1kwnoh" path="res://assets/01 SR SONRIENTE/01 SR SONRIENTE B 2.png" id="18_fmo2r"]
+[ext_resource type="Texture2D" uid="uid://b5hp3akq0fa8l" path="res://assets/exit/patient_2_exit.png" id="21_vg3nb"]
+[ext_resource type="Texture2D" uid="uid://deotmqunn3bj3" path="res://assets/exit/patient_3_exit.png" id="22_7t66q"]
+[ext_resource type="Texture2D" uid="uid://dp1iodoh6wmbb" path="res://assets/02 SAXOFONISTA/02 SAXOFONISTA IDDLE A.png" id="22_n3hf1"]
+[ext_resource type="Texture2D" uid="uid://4s7xtsi3sco4" path="res://assets/03 MOSQUITA/03 MOSQUITA HABLAR 1.png" id="22_rna3x"]
+[ext_resource type="Texture2D" uid="uid://cuirrrh7tm6wq" path="res://assets/03 MOSQUITA/03 MOSQUITA HABLAR 2.png" id="23_mdw54"]
+[ext_resource type="Texture2D" uid="uid://cysibxqgafiat" path="res://assets/02 SAXOFONISTA/02 SAXOFONISTA IDDLE B.png" id="23_ytvhx"]
+[ext_resource type="Texture2D" uid="uid://xntyv30s6jvh" path="res://assets/02 SAXOFONISTA/02 SAXOFONISTA 1.png" id="24_jt4yy"]
+[ext_resource type="Texture2D" uid="uid://c2sx64yn07dod" path="res://assets/03 MOSQUITA/03 MOSQUITA IDDLE 1.png" id="25_0omqn"]
+[ext_resource type="Texture2D" uid="uid://c7pq77hc28sbr" path="res://assets/02 SAXOFONISTA/02 SAXOFONISTA 2.png" id="25_v27yp"]
+[ext_resource type="Texture2D" uid="uid://b8nku4spymqjb" path="res://assets/03 MOSQUITA/03 MOSQUITA IDDLE 2.png" id="26_d5wvc"]
+[ext_resource type="PackedScene" path="res://scenes/transition.tscn" id="26_qrh6a"]
+[ext_resource type="Texture2D" uid="uid://b02hfegkcv4st" path="res://assets/04 FLORES/04 FLORES IDDLE 1.png" id="32_aht2x"]
+[ext_resource type="Texture2D" uid="uid://b1iqc4bxemv66" path="res://assets/exit/patient_4_exit.png" id="32_k1tg0"]
+[ext_resource type="Texture2D" uid="uid://bbtnjp8kvim67" path="res://assets/04 FLORES/04 FLORES IDDLE 2.png" id="33_krpwa"]
+[ext_resource type="Texture2D" uid="uid://cxt47jqrp8mal" path="res://assets/04 FLORES/04 FLORES HABLAR 1.png" id="34_1jdnx"]
+[ext_resource type="Texture2D" uid="uid://dpfgp750k3ary" path="res://assets/04 FLORES/04 FLORES HABLAR 2.png" id="35_2ym2e"]
+[ext_resource type="Texture2D" uid="uid://nli8gik430oc" path="res://assets/05 PAJARITO/05 PAAJRITO IDDLE A.png" id="36_5datv"]
+[ext_resource type="Texture2D" uid="uid://rf5ykpay6ava" path="res://assets/exit/patient_5_exit.png" id="37_s1p5x"]
+[ext_resource type="Texture2D" uid="uid://j5mmc8xsvgpg" path="res://assets/05 PAJARITO/05 PAAJRITO IDDLE B.png" id="37_uxwfe"]
+[ext_resource type="Texture2D" uid="uid://cgxpurhn8xkc7" path="res://assets/05 PAJARITO/05 PAAJRITO HABLAR 1.png" id="38_0crgj"]
+[ext_resource type="Script" uid="uid://5lpsm48e46o6" path="res://scripts/balloons.gd" id="39_jt4yy"]
+[ext_resource type="Texture2D" uid="uid://b34cdeknfq0ov" path="res://assets/05 PAJARITO/05 PAAJRITO HABLAR 2.png" id="39_t6spj"]
+[ext_resource type="Texture2D" uid="uid://c7sbn2hnrgd13" path="res://assets/06 CAMISILLA/06 CAMISILLA IDDLE 1.png" id="42_15ubs"]
+[ext_resource type="Texture2D" uid="uid://b4b6l3pvwgj7w" path="res://assets/exit/patient_6_exit.png" id="42_bvhlu"]
+[ext_resource type="Texture2D" uid="uid://dx6o3gy0ecyci" path="res://assets/06 CAMISILLA/06 CAMISILLA IDDLE 2.png" id="43_l3v13"]
+[ext_resource type="Texture2D" uid="uid://bbvgo6n4t07fb" path="res://assets/06 CAMISILLA/06 CAMISILLA HABLAR 1.png" id="44_ufslw"]
+[ext_resource type="Texture2D" uid="uid://j5fyhnn8jt5x" path="res://assets/06 CAMISILLA/06 CAMISILLA HABLAR 2.png" id="45_8b8fh"]
+[ext_resource type="Texture2D" uid="uid://bcuc4pogvnu4p" path="res://assets/door_knock/00 EFECTO PUERTA A.png" id="46_0crgj"]
+[ext_resource type="Texture2D" uid="uid://l1y2ai3oo6b2" path="res://assets/00 ORDENADOR/00 DOCTOR 1_ORDENADOR.png" id="47_15ubs"]
+[ext_resource type="Texture2D" uid="uid://bxw3u65joxj8k" path="res://assets/door_knock/00 EFECTO PUERTA B.png" id="47_t6spj"]
+[ext_resource type="Texture2D" uid="uid://dqmq4647bx8iq" path="res://assets/00 ORDENADOR/00 DOCTOR 1_ORDENADOR EXCLAMACION.png" id="48_l3v13"]
+[ext_resource type="Texture2D" uid="uid://dmtf3rt7nldja" path="res://assets/00 ORDENADOR/00 DOCTOR 1_ORDENADOR BOTON ROJO 2.png" id="49_8b8fh"]
+[ext_resource type="Texture2D" uid="uid://c3dhftpm1btwj" path="res://assets/_ANIMACION PILDORA/01 ANIMACION PILDORA 1.png" id="49_akd2k"]
+[ext_resource type="Texture2D" uid="uid://ikduyk5e7ed5" path="res://assets/00 ORDENADOR/00 DOCTOR 1_ORDENADOR BOTON ROJO.png" id="50_bvhlu"]
+[ext_resource type="Texture2D" uid="uid://da8bekpc4qhqr" path="res://assets/_ANIMACION PILDORA/01 ANIMACION PILDORA 2.png" id="50_f4whg"]
+[ext_resource type="Texture2D" uid="uid://k067wa4br4mb" path="res://assets/_ANIMACION PILDORA/01 ANIMACION PILDORA 3 AZUL.png" id="51_w48u1"]
+[ext_resource type="Texture2D" uid="uid://q3k4bsw4ijsy" path="res://assets/_ANIMACION PILDORA/01 ANIMACION PILDORA 3 ROJO.png" id="52_1fr3e"]
+[ext_resource type="Texture2D" uid="uid://dx8i8gqy2pnsn" path="res://assets/_ANIMACION PILDORA/01 ANIMACION PILDORA 3 VERDE.png" id="53_sx3bg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7votl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hftaw")
+}],
+"loop": true,
+"name": &"idle_doctor",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2nhxp")
+}],
+"loop": true,
+"name": &"idle_patient",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qrh6a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_xrrwh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_bsnwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tcqct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tcqct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tcqct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bsnwx")
+}],
+"loop": false,
+"name": &"next",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_bsnwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_f5tiu")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vg3nb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("16_600jw")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"patient_1_exit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_ita8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qrh6a")
+}],
+"loop": true,
+"name": &"patient_1_idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_600jw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_fmo2r")
+}],
+"loop": true,
+"name": &"patient_1_talk",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("21_vg3nb")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"patient_2_exit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_n3hf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ytvhx")
+}],
+"loop": true,
+"name": &"patient_2_idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_jt4yy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_v27yp")
+}],
+"loop": true,
+"name": &"patient_2_talk",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("22_7t66q")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"patient_3_exit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_0omqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_d5wvc")
+}],
+"loop": true,
+"name": &"patient_3_idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_rna3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_mdw54")
+}],
+"loop": true,
+"name": &"patient_3_talk",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("32_k1tg0")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"patient_4_exit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_aht2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_krpwa")
+}],
+"loop": true,
+"name": &"patient_4_idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_1jdnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_2ym2e")
+}],
+"loop": true,
+"name": &"patient_4_talk",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("37_s1p5x")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"patient_5_exit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_5datv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_uxwfe")
+}],
+"loop": true,
+"name": &"patient_5_idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_0crgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_t6spj")
+}],
+"loop": true,
+"name": &"patient_5_talk",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("42_bvhlu")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"patient_6_exit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_15ubs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_l3v13")
+}],
+"loop": true,
+"name": &"patient_6_idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_ufslw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_8b8fh")
+}],
+"loop": true,
+"name": &"patient_6_talk",
+"speed": 3.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l3v13"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_w48u1")
+}],
+"loop": true,
+"name": &"blue_pill",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("47_15ubs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("49_akd2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_f4whg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_akd2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_f4whg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_akd2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_f4whg")
+}],
+"loop": false,
+"name": &"generate_pill",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_sx3bg")
+}],
+"loop": true,
+"name": &"green_pill",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_l3v13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_15ubs")
+}],
+"loop": true,
+"name": &"medicating",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("49_8b8fh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_bvhlu")
+}],
+"loop": true,
+"name": &"red_button",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("52_1fr3e")
+}],
+"loop": true,
+"name": &"red_pill",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pnvlt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_6bh7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ymgu4")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_ywfih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nhjwn")
+}],
+"loop": true,
+"name": &"writing",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qrh6a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_600jw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fmo2r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vg3nb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7t66q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k1tg0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("46_0crgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_t6spj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2nhxp"]
+size = Vector2(67.30768, 113.999985)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qrh6a"]
+radius = 18.0
+
+[node name="Consult" type="Node2D" unique_id=1391024365]
+script = ExtResource("1_2nhxp")
+
+[node name="transition" parent="." unique_id=193184028 instance=ExtResource("26_qrh6a")]
+
+[node name="pov" type="AnimatedSprite2D" parent="." unique_id=1477936567]
+visible = false
+position = Vector2(261.00003, 202.00002)
+scale = Vector2(0.271875, 0.37407413)
+sprite_frames = SubResource("SpriteFrames_7votl")
+animation = &"idle_doctor"
+autoplay = "idle_patient"
+
+[node name="patient_pov" type="Node2D" parent="." unique_id=1858391808]
+visible = false
+position = Vector2(262, 262)
+
+[node name="base" type="Sprite2D" parent="patient_pov" unique_id=1926059439]
+texture = ExtResource("5_x7qaf")
+
+[node name="doctor_anim" type="AnimatedSprite2D" parent="patient_pov" unique_id=1937593774]
+position = Vector2(-3, -185)
+sprite_frames = SubResource("SpriteFrames_qrh6a")
+animation = &"next"
+autoplay = "idle"
+
+[node name="00DoctorFondo" type="Sprite2D" parent="patient_pov" unique_id=1420721010]
+position = Vector2(0, 1)
+texture = ExtResource("5_6bh7u")
+
+[node name="00DoctorMesa" type="Sprite2D" parent="patient_pov" unique_id=292371229]
+texture = ExtResource("6_ymgu4")
+
+[node name="00DoctorPc" type="Sprite2D" parent="patient_pov" unique_id=485858736]
+texture = ExtResource("7_ywfih")
+
+[node name="00DoctorDoctorBrazos" type="Sprite2D" parent="patient_pov" unique_id=1371154599]
+texture = ExtResource("12_ita8y")
+
+[node name="doctor_pov" type="Node2D" parent="." unique_id=1042157935]
+position = Vector2(262, 262)
+script = ExtResource("6_ax250")
+
+[node name="base" type="Sprite2D" parent="doctor_pov" unique_id=841978618]
+texture = ExtResource("5_x7qaf")
+
+[node name="base2" type="Sprite2D" parent="doctor_pov" unique_id=958365712]
+z_index = 2
+texture = ExtResource("15_ytvhx")
+
+[node name="background" type="Sprite2D" parent="doctor_pov" unique_id=2055546398]
+texture = ExtResource("6_3fpf8")
+
+[node name="patient_anim" type="AnimatedSprite2D" parent="doctor_pov" unique_id=1161598085]
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_vg3nb")
+animation = &"patient_3_talk"
+autoplay = "default"
+
+[node name="table" type="Sprite2D" parent="doctor_pov" unique_id=1212338912]
+texture = ExtResource("7_ax250")
+
+[node name="pc" type="AnimatedSprite2D" parent="doctor_pov" unique_id=1191029029]
+sprite_frames = SubResource("SpriteFrames_l3v13")
+animation = &"red_pill"
+autoplay = "default"
+
+[node name="doctor_hands" type="AnimatedSprite2D" parent="doctor_pov" unique_id=948277116]
+sprite_frames = SubResource("SpriteFrames_pnvlt")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.6787956
+
+[node name="anim_timer" type="Timer" parent="doctor_pov" unique_id=861157575]
+
+[node name="Door Button" type="Button" parent="doctor_pov" unique_id=728092003]
+offset_left = 90.0
+offset_top = -243.0
+offset_right = 208.0
+offset_bottom = -49.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qrh6a")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_600jw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fmo2r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vg3nb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7t66q")
+disabled = true
+
+[node name="DoorKnock" type="AnimatedSprite2D" parent="doctor_pov" unique_id=758571252]
+visible = false
+sprite_frames = SubResource("SpriteFrames_k1tg0")
+autoplay = "default"
+frame_progress = 0.31384906
+
+[node name="computer_area" type="Area2D" parent="." unique_id=159649394]
+position = Vector2(317, 366)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="computer_area" unique_id=1305414474]
+position = Vector2(-199.5, -133)
+scale = Vector2(1.5600002, 1)
+shape = SubResource("RectangleShape2D_2nhxp")
+
+[node name="ChooseMedicineView" parent="." unique_id=1201031482 instance=ExtResource("4_7votl")]
+visible = false
+z_index = 5
+position = Vector2(1, 1)
+
+[node name="red_button" type="Area2D" parent="." unique_id=2124783128]
+position = Vector2(191, 317)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="red_button" unique_id=144011879]
+shape = SubResource("CircleShape2D_qrh6a")
+
+[node name="Balloons" type="Node2D" parent="." unique_id=588299734]
+script = ExtResource("39_jt4yy")
+
+[node name="TalkingSoundPlayer" type="AudioStreamPlayer2D" parent="." unique_id=145168761]
+bus = &"Talking"
+
+[connection signal="animation_finished" from="transition/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="patient_pov/doctor_anim" to="." method="_on_doctor_anim_animation_finished"]
+[connection signal="animation_finished" from="doctor_pov/patient_anim" to="." method="_on_patient_anim_animation_finished"]
+[connection signal="timeout" from="doctor_pov/anim_timer" to="doctor_pov" method="_on_anim_timer_timeout"]
+[connection signal="pressed" from="doctor_pov/Door Button" to="." method="_on_door_button_pressed"]
+[connection signal="mouse_entered" from="computer_area" to="." method="_on_computer_area_mouse_entered"]
+[connection signal="mouse_exited" from="computer_area" to="." method="_on_computer_area_mouse_exited"]
+[connection signal="input_event" from="red_button" to="." method="_on_red_button_input_event"]
+[connection signal="mouse_entered" from="red_button" to="." method="_on_red_button_mouse_entered"]
+[connection signal="mouse_exited" from="red_button" to="." method="_on_red_button_mouse_exited"]
+[connection signal="finished" from="TalkingSoundPlayer" to="." method="_on_talking_sound_player_finished"]
+
+[editable path="transition"]

@@ -1,0 +1,32 @@
+#bytemyke source code for https://www.youtube.com/watch?v=neZ9tLVUDk4&feature=youtu.be
+extends AnimatableBody2D
+
+signal medicine_dropped(name: String)
+
+@onready var sprite: Sprite2D = $Sprite
+
+var is_dragging = false #state management
+var mouse_offset #center mouse on click
+var delay = .2
+
+var original_position
+
+func _ready() -> void:
+	original_position = self.position
+
+func _physics_process(delta):
+	if is_dragging == true:
+		var tween = get_tree().create_tween()
+		var final_position = get_global_mouse_position()-mouse_offset
+		tween.tween_property(self, "position", final_position, delay * delta)
+
+func _input(event):
+	if self.visible and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			if sprite.get_rect().has_point(to_local(event.position)):
+				is_dragging = true
+				mouse_offset = get_global_mouse_position() - global_position
+		elif is_dragging:
+			medicine_dropped.emit(self.name)
+			self.position = original_position
+			is_dragging = false

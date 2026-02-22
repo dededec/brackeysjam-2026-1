@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dleb8ga3qqh"
+path="res://.godot/imported/patient_3_2.dialogue-f14720c0b4bc43a7638a00c6de6aa6b0.tres"
+
+[deps]
+
+source_file="res://dialogue/patient_3_2.dialogue"
+dest_files=["res://.godot/imported/patient_3_2.dialogue-f14720c0b4bc43a7638a00c6de6aa6b0.tres"]
+
+[params]
+
+defaults=true

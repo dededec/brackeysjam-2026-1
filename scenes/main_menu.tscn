@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://bpr7ol0gocjdd"]
+
+[ext_resource type="Script" uid="uid://dd08ihw1smdy4" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://mbnpxh8ocgj7" path="res://assets/titulo.png" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://d115n1xhhrqos" path="res://assets/play_button.png" id="2_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://ccqp832wapgnu" path="res://assets/MENU/00 MENU A.png" id="3_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://df2wpjtrmpnr" path="res://assets/MENU/00 MENU B.png" id="4_oa1go"]
+[ext_resource type="PackedScene" path="res://scenes/transition.tscn" id="4_wu84c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ekxnf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_l6cm7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tbmy8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_rtw2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oa1go")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="MainMenu" type="Node2D" unique_id=1690231795]
+script = ExtResource("1_bqqt6")
+
+[node name="MainMenuBackground" type="AnimatedSprite2D" parent="." unique_id=1317883806]
+position = Vector2(262, 262)
+sprite_frames = SubResource("SpriteFrames_ekxnf")
+
+[node name="MainMenuBackground2" type="AnimatedSprite2D" parent="." unique_id=2072590893]
+position = Vector2(262, 262)
+sprite_frames = SubResource("SpriteFrames_tbmy8")
+autoplay = "default"
+frame_progress = 0.9774606
+
+[node name="transition" parent="." unique_id=193184028 instance=ExtResource("4_wu84c")]
+
+[node name="Button" type="Button" parent="." unique_id=465684483]
+visible = false
+offset_left = 189.0
+offset_top = 274.0
+offset_right = 325.0
+offset_bottom = 410.0
+icon = ExtResource("2_ekxnf")
+
+[node name="AllowStartTimer" type="Timer" parent="." unique_id=1223145140]
+wait_time = 0.2
+one_shot = true
+autostart = true
+
+[connection signal="animation_finished" from="transition/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="AllowStartTimer" to="." method="_on_allow_start_timer_timeout"]
+
+[editable path="transition"]

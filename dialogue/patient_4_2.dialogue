@@ -1,0 +1,16 @@
+#NO SE LANZA HASTA QUE TENGAS LA PILDORA
+
+~ start
+do Manager.change_pov_patient()
+Narciso: Thank you for this Doctor
+Narciso: How many should I have a day?
+
+do Manager.change_pov_doctor()
+Doctor: One per day for three days
+
+do Manager.change_pov_patient()
+Narciso: Good, see you soon
+
+do Manager.dialog_finished_2()
+
+=> END

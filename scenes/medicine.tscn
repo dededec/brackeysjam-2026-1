@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b4tbddb7wjg21"]
+
+[ext_resource type="Texture2D" uid="uid://d4fhpro5id73w" path="res://assets/00 PC_PANTALLA/00 PC_OBJETO GRANDE.png" id="2_nt3wt"]
+[ext_resource type="Script" uid="uid://bxwwtyfi2whc7" path="res://scripts/medicine.gd" id="2_r8o0g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r8o0g"]
+size = Vector2(64, 68)
+
+[node name="Medicine" type="AnimatableBody2D" unique_id=227287402]
+script = ExtResource("2_r8o0g")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1463226475]
+texture = ExtResource("2_nt3wt")
+region_enabled = true
+region_rect = Rect2(80, 90, 64, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1147173130]
+shape = SubResource("RectangleShape2D_r8o0g")
