@@ -55,4 +55,4 @@ func _on_ready_button_pressed() -> void:
 
 
 func _on_manual_button_pressed() -> void:
-	OS.shell_open("https://en.wikipedia.org/wiki/Goosebumps")
+	OS.shell_open("https://github.com/dededec/brackeysjam-2026-1/blob/main/00%20MANUAL_web.pdf")
