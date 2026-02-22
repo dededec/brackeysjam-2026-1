@@ -475,7 +475,7 @@ texture = ExtResource("6_3fpf8")
 [node name="patient_anim" type="AnimatedSprite2D" parent="doctor_pov" unique_id=1161598085]
 scale = Vector2(-1, 1)
 sprite_frames = SubResource("SpriteFrames_vg3nb")
-animation = &"patient_6_exit"
+animation = &"patient_3_talk"
 autoplay = "default"
 
 [node name="table" type="Sprite2D" parent="doctor_pov" unique_id=1212338912]

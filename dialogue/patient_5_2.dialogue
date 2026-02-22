@@ -1,16 +1,15 @@
 #NO SE LANZA HASTA QUE TENGAS LA PILDORA
 
 ~ start
+
 do Manager.change_pov_patient()
-Paco: DIOS MUCHAS GRACIAS DOCTOR
-Paco: GRACIAS POR ESTA GRAN PILDORA
+Gorrión: Always so efficient Doctor
 
 do Manager.change_pov_doctor()
-Doctor: Nada hombre 
-Doctor: Ten mucho cuidao
+Doctor: You know it Gorrión
 
 do Manager.change_pov_patient()
-#FUNCION PARA QUE ENTRE EL SIGUIENTE
+Gorrión: Welp see you tomorrow lad
 
 do Manager.dialog_finished_2()
 

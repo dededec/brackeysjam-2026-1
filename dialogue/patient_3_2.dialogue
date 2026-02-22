@@ -2,15 +2,13 @@
 
 ~ start
 do Manager.change_pov_patient()
-Antonio: DIOS MUCHAS GRACIAS DOCTOR
-Antonio: GRACIAS POR ESTA GRAN PILDORA
+Moscovitch: Good, I'll get going
 
 do Manager.change_pov_doctor()
-Doctor: Nada hombre 
-Doctor: Ten mucho cuidao
+Doctor: Good, and put it down
 
 do Manager.change_pov_patient()
-#FUNCION PARA QUE ENTRE EL SIGUIENTE
+Moscovitch: See you Doc
 
 do Manager.dialog_finished_2()
 

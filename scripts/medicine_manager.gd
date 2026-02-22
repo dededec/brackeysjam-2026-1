@@ -3,26 +3,43 @@ extends Node
 var chosen_symptoms_keys: Array[String] = []
 var random_symptoms = []
 var pill_ready = false
+
 const symptoms = {
-	"s1": ["s1-1", "s1-2", "s1-3"],
-	"s2": ["s2-2", "s2-2", "s2-3"],
-	"s3": ["s3-1", "s3-2", "s3-3"],
-	"s4": ["s4-1", "s4-2", "s4-3"],
-	"s5": ["s5-1", "s5-2", "s5-3"],
-	"s6": ["s6-1", "s6-2", "s6-3"],
-	"s7": ["s7-1", "s7-2", "s7-3"],
-	"s8": ["s8-1", "s8-2", "s8-3"],
+	"nostalgia": ["I reminisce about better days.", 
+			"Past times seem better to me.", 
+			"I think a lot about my childhood."],
+	"insomnia": ["I cannot sleep at night.", 
+			"Every night, I go to bed at 4AM", 
+			"I am marathoning Friends in the wee hours."],
+	"loneliness": ["I have no one with me.", 
+			"I need a hug.", 
+			"I feel lonely."],
+	"gases": ["I am gassy.", 
+			"I feel full all the time.", 
+			"My stomatch is bloated."],
+	"monotony": ["Everyday feels the same.", 
+			"Life's all work and chores.", 
+			"I feel trapped in routine."],
+	"creative_block": ["I haven't made music in ages.", 
+			"I cannot bring myself to write my memories.", 
+			"I can't think of new ideas for making a game."],
+	"throat_itch": ["My throat itches.", 
+			"EHEM EHEM Sorry, my throat feels itchy.", 
+			"I have a mouth but I cannot scream."],
+	"goosebumps": ["I've been reading R.L. Stine recently.", 
+			"This cold has me shaking uncontrollably.", 
+			"I watched a horror movie and cannot stop shaking."],
 	}
 
 const medicine_symptoms = {
-	"cafetera": ["s1", "s2", "s3"],
-	"yano": ["s1", "s2", "s3"],
-	"maligno": ["s1", "s2", "s3"],
-	"cebollo": ["s1", "s2", "s3"],
-	"cajagalletas": ["s1", "s2", "s3"],
-	"platano": ["s1", "s2", "s3"],
-	"saxo": ["s1", "s2", "s3"],
-	"ambientador": ["s1", "s2", "s3"],
+	"cafetera": ["insomnia",],
+	"yano": ["loneliness", "nostalgia",],
+	"maligno": ["creative_block", "goosebumps"],
+	"cebollo": ["loneliness", "goosebumps",],
+	"cajagalletas": ["nostalgia",],
+	"platano": ["gases", "monotony", ],
+	"saxo": ["monotony", "creative_block", ],
+	"ambientador": ["gases", "throat_itch",],
 }
 const patients = ["patient_1", "patient_2", "patient_3", 
 "patient_4", "patient_5", "patient_6"]
@@ -37,9 +54,9 @@ func randomise_symptoms() -> void:
 	chosen_symptoms_keys.clear()
 	for i in range(3):
 		var symptom_key = "s" + str(i+1)
-		var random_key = "s" + str(randi() % symptoms.keys().size() + 1)
-		chosen_symptoms_keys.push_back(random_key)
-		temp_random_symptoms[symptom_key] = _get_random_sentence(random_key)
+		var random_symptom = symptoms.keys()[randi() % symptoms.keys().size()]
+		chosen_symptoms_keys.push_back(random_symptom)
+		temp_random_symptoms[symptom_key] = _get_random_sentence(random_symptom)
 	random_symptoms = temp_random_symptoms
 	print(random_symptoms)
 

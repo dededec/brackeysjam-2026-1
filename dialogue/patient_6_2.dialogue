@@ -2,15 +2,15 @@
 
 ~ start
 do Manager.change_pov_patient()
-Paco: DIOS MUCHAS GRACIAS DOCTOR
-Paco: GRACIAS POR ESTA GRAN PILDORA
+Glaucoma: You shall be safe one more day Dottore
 
 do Manager.change_pov_doctor()
-Doctor: Nada hombre 
-Doctor: Ten mucho cuidao
+Doctor: Thanks Mr Glaucoma
 
 do Manager.change_pov_patient()
-#FUNCION PARA QUE ENTRE EL SIGUIENTE
+Glaucoma: And remember…
+Glaucoma: Behind every succesful fortune there is a crime
+Glaucoma: Goodbye Dottore
 
 do Manager.dialog_finished_2()
 

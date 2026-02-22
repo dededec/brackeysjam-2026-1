@@ -2,15 +2,14 @@
 
 ~ start
 do Manager.change_pov_patient()
-Paco: DIOS MUCHAS GRACIAS DOCTOR
-Paco: GRACIAS POR ESTA GRAN PILDORA
+Narciso: Thank you for this Doctor
+Narciso: How many should I have a day?
 
 do Manager.change_pov_doctor()
-Doctor: Nada hombre 
-Doctor: Ten mucho cuidao
+Doctor: One per day for three days
 
 do Manager.change_pov_patient()
-#FUNCION PARA QUE ENTRE EL SIGUIENTE
+Narciso: Good, see you soon
 
 do Manager.dialog_finished_2()
 

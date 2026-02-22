@@ -1,16 +1,18 @@
 #NO SE LANZA HASTA QUE TENGAS LA PILDORA
 
 ~ start
+
 do Manager.change_pov_patient()
-Paco: DIOS MUCHAS GRACIAS DOCTOR
-Paco: GRACIAS POR ESTA GRAN PILDORA
+Olaf Popov aka Pierrot: hihi you sure this are not giggling pills
+Olaf Popov aka Pierrot: i've been laughing since I started coming to this hospital
+Olaf Popov aka Pierrot: hihihi
 
 do Manager.change_pov_doctor()
-Doctor: Nada hombre 
-Doctor: Ten mucho cuidao
+Doctor: No Pierrot, this are actual pills
 
 do Manager.change_pov_patient()
-#FUNCION PARA QUE ENTRE EL SIGUIENTE
+Olaf Popov aka Pierrot: hihi sure sure
+Olaf Popov aka Pierrot: SEE YOU
 
 do Manager.dialog_finished_2()
 
